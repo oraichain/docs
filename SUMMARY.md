@@ -1,0 +1,59 @@
+# Table of contents
+
+* [Outline](README.md)
+* [Whitepaper](white-paper/README.md)
+  * [Introduction](white-paper/introduction.md)
+  * [Terminology](white-paper/terminology.md)
+  * [System Overview](white-paper/system-overview.md)
+  * [Decentralized Validator Sampling](white-paper/decentralized-validator-sampling.md)
+  * [Use Cases](white-paper/use-cases.md)
+  * [Token Economics](white-paper/token-economics.md)
+  * [Protocol Messages](white-paper/protocol-messages.md)
+
+## Developers
+
+***
+
+* [General](general/README.md)
+  * [Ecosystem](https://github.com/oraichain/ecosystem)
+  * [Blockchain details](general/blockchain-details.md)
+  * [Create Wallet](general/create-wallet.md)
+* [Validators](developer/README.md)
+  * [Become a Validator](developer/become-a-validator.md)
+  * [Validator Tutorial](developer/validatortutorial.md)
+  * [Become a data source provider](developer/become-a-data-source-provider.md)
+  * [Become a test case provider](developer/become-a-test-case-provider.md)
+  * [Become an oracle script developer](developer/become-an-oracle-script-developer.md)
+* [Guide](guide/README.md)
+  * [How To Convert ORAI ERC20 To BEP20 And Vice Versa?](guide/how-to-convert-orai-erc20-to-bep20-and-vice-versa.md)
+  * [How To Swap ERC20 or BEP20 Token To Native Token?](guide/how-to-swap-erc20-or-bep20-token-to-native-token.md)
+  * [Create An Oraichain Account](guide/create-an-oraichain-account.md)
+  * [Delegate Tokens To A Validator](guide/delegate-tokens-to-a-validator.md)
+* [Oraichain Studio](oraichain-studio/README.md)
+  * [Tutorial 01](https://medium.com/oraichain/oraichain-studio-live-demo-transcript-7be020783f03)
+* [Tools](tools/README.md)
+  * [Faucet](tools/faucet.md)
+* [Wallet](wallet/README.md)
+  * [Android Wallet](wallet/android-wallet.md)
+  * [IOS WALLET](wallet/ios-wallet.md)
+  * [Web Wallet](https://app.oraiwallet.io)
+
+## PRICE FEEDS
+
+* [Introduction](price-feeds/introduction.md)
+* [Binance Smart Chain](price-feeds/binance-smart-chain.md)
+
+***
+
+* [Deployed Contract Registry](deployed-contract-registry.md)
+
+## VRF 2.0 <a href="#vrf" id="vrf"></a>
+
+* [Introduction to Oraichain VRF 2.0](vrf/introduction.md)
+* [Get a Random Value Directly](vrf/get-a-random-value-directly.md)
+* [Get a Random Value from API](vrf/get-a-random-value-from-api/README.md)
+  * [Get VRF Value from different networks](vrf/get-a-random-value-from-api/get-vrf-value-from-different-networks.md)
+  * [Contract Addresses and Pricing](vrf/get-a-random-value-from-api/contract-addresses-and-pricing.md)
+* [API Reference](vrf/api-reference.md)
+* [Validate a Group Signature](vrf/validate-a-group-signature.md)
+* [Get Support from Oraichain team](vrf/get-support-from-oraichain-team.md)
