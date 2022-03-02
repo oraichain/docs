@@ -2,7 +2,7 @@
 
 ### A brief description of how to develop an oracle script on Oraichain:[#](https://docs.orai.io/docs/Developers/become-an-oracle-script-dev#a-brief-description-of-how-to-develop-an-oracle-script-on-oraichain)
 
-Oraichain currently only supports oracle scripts written in shell script
+Oraichain currently only supports oracle scripts written in shell
 
 For an oracle script, the number of input arguments must be at least two. The first one: _**$1**_ is reserved for execution type of the script. For now, the validators only accept three execution types: _**aiDataSource**_, _**testcase**_, and _**aggregation**_. Other types will not be read, and unexpected behaviours may happen. The first type collects all the AI data source names that the oracle wants to execute, while the second type gets all the test cases it prefers. The last type, on the other hand, is the business logic of the oracle script, which is responsible for processing all the results retrieved from the data sources. Indeed, all the results are put in a string passed to the second argument _**$2**_ with a delimiter, which is _**-**_, and it is the oracle script's job to process these values to come up with a final result to be returned back to Oraichain. An example of an oracle script that is syntaxtically correct is below:
 
