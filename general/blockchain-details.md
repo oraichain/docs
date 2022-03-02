@@ -37,8 +37,8 @@ https://lcd.orai.io
 ```
 
 ORAICHAIN TEST NET NODE:\
-&#x20;
-------
+
+
 
 ```
 18.191.154.185

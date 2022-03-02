@@ -12,8 +12,6 @@
 
 ## Developers
 
-***
-
 * [General](general/README.md)
   * [Ecosystem](https://github.com/oraichain/ecosystem)
   * [Blockchain details](general/blockchain-details.md)
