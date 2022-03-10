@@ -87,7 +87,11 @@ Validator is not much different from a full node. Nevertheless, in order to exec
 * The block height when the validator adds this report on-chain.
 * The aggregated result of the oracle script.
 
-Note that Oraichain uses reports from the validators to provide incentives for all participants. As a result, each validator must behave in an honest manner to earn trust within the community.
+Note that Oraichain uses reports from the validators to provide incentives for all participants. As a result, each validator must behave in an honest manner to earn trust within the community.&#x20;
+
+### Executors
+
+**Executors** play a role as a validator for the working of a subnetwork on Oraichain. Similar to a blockchain validator, an executor participates in the execution and verification of the computation, in this case, the calculation of the random data. However, compared to blockchain validators, **VRF** or **AI Execution** subnetwork executors require much less computing resources and don’t need to achieve 100% uptime.
 
 ### AI Result & Reward
 
