@@ -1,7 +1,6 @@
 # Table of contents
 
-* [Outline](README.md)
-* [Whitepaper](white-paper/README.md)
+* [Whitepaper](README.md)
   * [Introduction](white-paper/introduction.md)
   * [Terminology](white-paper/terminology.md)
   * [System Overview](white-paper/system-overview/README.md)

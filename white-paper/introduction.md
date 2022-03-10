@@ -1,9 +1,5 @@
 # Introduction
 
-As the _**world’s first AI-powered oracle and ecosystem for blockchains**_, **Oraichain** now transforms itself to become the first **AI Layer 1 for Data Economy and Oracle services** with a complete AI ecosystem, serving as a foundational layer for the creation of a new generation of smart contracts and Dapps.
-
-This whitepaper describes the Oraichain's terminology, system overview, use cases, and token economics. Oraichain stands for _Oracle Artificial Intelligence for Blockchain_.
-
 ### Why conventional blockchain doesn’t include AI models?[#](https://docs.orai.io/docs/WhitePaper/Introduction#why-conventional-blockchain-doesnt-include-ai-models)
 
 Current smart contracts cannot run AI models inside, and it is almost impossible to integrate an AI model into a smart contract. AI models should be complex approaches, such as SVM, neural network, and clustering. The reasons come from three characteristics of smart contracts as follows:
@@ -20,7 +16,7 @@ There are below scenarios where AI is very useful and necessary.
 * Comparison of two products from their photos
 * Evaluating the price of game items
 
-### Oraichain's Artificial Intelligence & Blockchains Interconnection
+### Oraichain's Solutions
 
 The proposed Oraichain could be a bridge to bring AI to smart contracts. The Oraichain mechanism seems similar to Band Protocol and Chainlink, but it focuses more on AI APIs and the quality of the provided AI models. In each user request, test cases are attached, and the providers’ API must pass a certain number of test cases to receive payment. The validators manage the features of test cases and AI model quality, and that makes Oraichain unique and different.
 
