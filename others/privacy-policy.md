@@ -6,15 +6,15 @@ Thank you for visiting [https://orai.io/](https://orai.io) (together with all ot
 
 The term “personal information” refers to all information that can be used to contact or identify you, including, but not limited to, a first and last name, personal profile, a home or other physical address and an email address or other contact information, whether at work or at home.
 
-We are committed to respecting your online privacy, and recognize your need for appropriate protection and management of any personal information.
+We are committed to respecting your online privacy and recognize your need for appropriate protection and management of any personal information.
 
 ### Collection of personal information
 
-We will obtain personal information about you when you visit us. Such information includes, but not limited to, IP address and other unique identifiers for the computer, mobile or other device you use to access the Site and any referring website. When you visit us, we may monitor the use of this Site through the use of cookies and similar tracking devices which shall be conducted in accordance with the cookies and tracking policy below.
+We will obtain personal information about you when you visit us. Such information includes, but is not limited to, IP address and other unique identifiers for the computer, mobile or other device you use to access the Site and any referring website. When you visit us, we may monitor the use of this Site through the use of cookies and similar tracking devices which shall be conducted in accordance with the cookies and tracking policy below.&#x20;
 
 You may also give us information about you by submitting information on the Site or by corresponding with us by email or otherwise. This includes information you provide when you register to use the Site, subscribe to the Site services, participate in discussion boards or other functions on the Site, and when you report a problem with the Site.
 
-Sometimes, the Site may permit interactions with third-party websites. This enables you to "like" a product or "share" content to third-party websites. In doing so, the information (i.e. that you "like" a certain product) will become public and the third-party website (like Facebook) will have access to this information. In addition, we may receive data about you if other users of a third-party website give us access to their profiles and you are one of their “connections”, or if information about you is otherwise accessible through your connection's social networking page.
+Sometimes, the Site may permit interactions with third-party websites. This enables you to "like" a product or "share" content with third-party websites. In doing so, the information (i.e. that you "like" a certain product) will become public and the third-party website (like Facebook) will have access to this information. In addition, we may receive data about you if other users of a third-party website give us access to their profiles and you are one of their “connections”, or if information about you is otherwise accessible through your connection's social networking page.
 
 ### Use of personal information
 
