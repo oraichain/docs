@@ -9,6 +9,7 @@
     * [Layer 2 Rollups and Subnetworks](white-paper/system-overview/layer-2-rollups-and-subnetworks.md)
     * [Verifiable and trustless AI Execution](white-paper/system-overview/verifiable-and-trustless-ai-execution.md)
     * [Decentralized Data and AI platform](white-paper/system-overview/decentralized-data-and-ai-platform.md)
+    * [IBC Integration](white-paper/system-overview/ibc-integration.md)
   * [Decentralized Validator Sampling](white-paper/decentralized-validator-sampling.md)
   * [Use Cases](white-paper/use-cases.md)
   * [Token Economics](white-paper/token-economics.md)
