@@ -6,4 +6,4 @@
 
 > The Cosmos ecosystem has a vision of creating the "internet of blockchains," or a network of independent chains that can communicate in a decentralized way. To reach this goal, the Inter‐Blockchain Communication protocol (IBC) was created.&#x20;
 
-As part of the CosmosSDK-based ecosystem, Oraichain integrate the IBC protocol to [OraiDEX](https://blog.orai.io/-eb20ca5c93fe), our CosmWasm smart contract-based decentralized exchange with multi-chain interoperability, optimal speed and lots of liquidity options for users.&#x20;
+As part of the CosmosSDK-based ecosystem, Oraichain integrates the IBC protocol to [OraiDEX](https://blog.orai.io/-eb20ca5c93fe), our CosmWasm smart contract-based decentralized exchange with multi-chain interoperability, optimal speed and lots of liquidity options for users.&#x20;
