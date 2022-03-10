@@ -1,0 +1,9 @@
+# Oraichain Wallet
+
+**Oraichain Wallet** comes as the major application for other existing and future products of the Oraichain AI Ecosystem.&#x20;
+
+**Web version:** https://api.wallet.orai.io
+
+**iOS:** https://orai.io/app/wallet/ios
+
+**Android:** https://orai.io/app/wallet/android

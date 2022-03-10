@@ -1,2 +1,0 @@
-# IOS WALLET
-

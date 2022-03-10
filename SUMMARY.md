@@ -43,10 +43,10 @@
   * [Tutorial 01](https://medium.com/oraichain/oraichain-studio-live-demo-transcript-7be020783f03)
 * [Tools](tools/README.md)
   * [Faucet](tools/faucet.md)
-* [Wallet](wallet/README.md)
-  * [Android Wallet](wallet/android-wallet.md)
-  * [IOS WALLET](wallet/ios-wallet.md)
-  * [Web Wallet](https://app.oraiwallet.io)
+
+***
+
+* [Oraichain Wallet](oraichain-wallet.md)
 
 ## PRICE FEEDS
 
