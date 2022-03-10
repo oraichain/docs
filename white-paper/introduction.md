@@ -1,6 +1,6 @@
 # Introduction
 
-Oraichain is a data oracle platform that aggregates and connects Artificial Intelligence APIs to smart contracts and regular applications. The world’s first oracle AI has arrived.
+Oraichain is the world’s first AI-powered oracle and ecosystem for blockchains. Navigating itself beyond just Oracle for blockchains, Oraichain aims to become the first AI Layer 1 in the Blockchain sphere with a complete AI ecosystem, serving as a foundational layer for the creation of a new generation of smart contracts and Dapps.
 
 This whitepaper describes the Oraichain's terminology, system overview, use cases, and token economics. Oraichain stands for _Oracle Artificial Intelligence for Blockchain_.
 
@@ -51,4 +51,3 @@ Oraichain provides an oracle that helps fetch external data securely and its arc
 * API marketplace and test-case marketplace
 * High scalability and performance
 * Cross-chain compatibility that is able to serve data to most publicly available blockchains. The target blockchains can verify data on Oraichain efficiently.
-
