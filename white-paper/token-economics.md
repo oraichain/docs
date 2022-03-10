@@ -2,23 +2,23 @@
 
 When we call **ORAI**, it means that it is native ORAI tokens created and contained in the Oraichain network. At the moment, there are three types of ORAI, including **ERC20 ORAI** on the Ethereum network, **BEP-20 ORAI** on Binance Smart Chain (BSC), and **Native ORAI** on the Oraichain Mainnet.
 
-### ORAI token distribution (%)
+### Token distribution (%)
 
-**Updating ORAI tokenomics for sustainable development (June 19, 2021):** [**https://blog.orai.io/updating-orai-tokenomics-for-sustainable-development-48536becdf49**](https://blog.orai.io/updating-orai-tokenomics-for-sustainable-development-48536becdf49)****
+**We updated the latest ORAI tokenomics for sustainable development on June 19, 2021:** [**https://blog.orai.io/updating-orai-tokenomics-for-sustainable-development-48536becdf49**](https://blog.orai.io/updating-orai-tokenomics-for-sustainable-development-48536becdf49)****
 
 **The token supply distribution is as follows:**
 
 ![](../.gitbook/assets/photo\_2022-03-10\_21-16-44.jpg)
 
-**Token release schedule (%) (:**
+**Planned token release schedule (%):**
 
 ![](../.gitbook/assets/token02.png)
 
 ![](../.gitbook/assets/token03.png)
 
-### ORAI token utility
+### Token utility
 
-Native ORAI tokens is required to secure and power the decentralized oracle network of validators. The native ORAI token is used in different scenarios below:
+Native ORAI tokens are required to secure and power the decentralized oracle network of validators. The native ORAI token is used in different scenarios below:
 
 * Staking for validators: all validators are required to stake ORAI in order to be selected to create a block or fulfill data requests.
 * Transaction fee: the ORAI token is required in order to run an AI request sent to the Oraichain network.
