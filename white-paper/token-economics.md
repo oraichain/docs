@@ -1,6 +1,6 @@
 # Token Economics
 
-When we call **ORAI**, it means that it is native ORAI tokens created and contained in the Oraichain network. At the beginning, we are basing on ERC20 to issue ORAI token on the Ethereum network that we call **ERC20-ORAI**.
+When we call **ORAI**, it means that it is native ORAI tokens created and contained in the Oraichain network. At the moment, there are three types of ORAI, including **ERC20 ORAI** on the Ethereum network, **BEP-20 ORAI** on Binance Smart Chain (BSC), and **Native ORAI** on the Oraichain Mainnet.
 
 ### ORAI token distribution (%)
 
