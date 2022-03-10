@@ -7,3 +7,7 @@
 **iOS:** https://orai.io/app/wallet/ios
 
 **Android:** https://orai.io/app/wallet/android
+
+{% embed url="https://www.youtube.com/watch?v=Rcnk7tSpLlQ" %}
+How to use Oraichain Wallet App
+{% endembed %}
