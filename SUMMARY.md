@@ -67,3 +67,8 @@
 * [API Reference](vrf/api-reference.md)
 * [Validate a Group Signature](vrf/validate-a-group-signature.md)
 * [Get Support from Oraichain team](vrf/get-support-from-oraichain-team.md)
+
+***
+
+* [Others](others/README.md)
+  * [Privacy Policy](others/privacy-policy.md)
