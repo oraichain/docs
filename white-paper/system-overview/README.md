@@ -10,7 +10,7 @@ The second task of the validators is to collect data from AI providers and valid
 
 ### System Architecture
 
-![](../.gitbook/assets/Oraichain\_request\_data\_flow-87cdf418be717d3ab68404be6b61bd46.jpg)
+![](../../.gitbook/assets/Oraichain\_request\_data\_flow-87cdf418be717d3ab68404be6b61bd46.jpg)
 
 The flow of requesting an AI API is illustrated in the Oraichain’s System Overview figure. To perform a request, users or smart contracts need to call an oracle script that is available on the ORAI gateway or marketplace. In an oracle script, there are AI data sources (provided by AI providers), test cases, test source (optional), and transaction fees for each request. When a request comes, a random willing validator is chosen to perform this request. The chosen validator will fetch data from one or more AI providers on behalf of the user after executing the test scenarios, and if the AI provider fails in testing, the request is canceled.
 
@@ -42,7 +42,7 @@ while the community tax is set to be 2% or 0.02
 
 **(4) power fraction = voting power / total voting power**
 
-**(5) a validator's reward = total fee **_**reward multiplier**_** power fraction**
+**(5) a validator's reward = total fee \_reward multiplier**\_\*\* power fraction\*\*
 
 **(6) remaining = remaining - reward for each validator**
 
@@ -60,7 +60,7 @@ The validators can actively participate in executing the oracle scripts to recei
 
 Here, we make sure that every Data Source and Test Case owner receives the correct amount that he requires after running the script. For example, an Oracle Script runs two AI Data Sources, 1 Test Case, each requires 0.05 ORAI to execute. As a result, the minimum fee needed is 1.5 ORAI, which is equal to total request fees within the previous block \* 0.5.
 
-**Validator reward = Provider reward **_**0.4 or total request fees within the previous block**_** 0.2**
+**Validator reward = Provider reward \_0.4 or total request fees within the previous block**\_\*\* 0.2\*\*
 
 In here, validators that participate in the Oracle Script execution process will receive their rewards according to their voting powers within the **validator reward**.
 
