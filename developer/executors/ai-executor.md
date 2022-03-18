@@ -29,8 +29,8 @@ Then you can move on to the next step.
 
 ***Shell (Mac, Linux):***
 
-```
-wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1q67XmqO-MCNjwfjyc2OW6Zl8ZvZHBE8R' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1q67XmqO-MCNjwfjyc2OW6Zl8ZvZHBE8R" -O executor.zip && rm /tmp/cookies.txt
+```bash
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=180aYBeOlakKorDpHsaHImR1pFlHEGZ26' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=180aYBeOlakKorDpHsaHImR1pFlHEGZ26" -O executor.zip && rm /tmp/cookies.txt && unzip executor.zip
 ```
 
 You would probably need to install ***unzip*** afterward if your dedicated host does not have it.
@@ -47,6 +47,12 @@ The .env file in the zip configures the network, wallet, and other basic variabl
 
 In the zip contains the ```aioracle-executor-process-*``` programs, please choose one that matches your OS and run it.
 
+If you see the following logs, then the program has run successfully:
+
+```
+Oraichain AI Executor program, v0.3.4
+```
+
 **For Linux and MacOS users:**
 
 ```
@@ -56,9 +62,3 @@ In the zip contains the ```aioracle-executor-process-*``` programs, please choos
 **For Windows users:**
 
 You can click on the exe file to start running!
-
-If you see the following logs, then the program has run successfully:
-
-```
-Oraichain AI Executor program, v0.1.0
-```
