@@ -10,6 +10,12 @@ Oraichain AI Ecosystem welcomes a new fundamental hub on its vision to accelerat
 
 _Access_ [_datahub.orai.io_](https://datahub.orai.io) _to experience the innovation!_
 
+### aiRight: NFT audit and copyright management
+
+In order to support a transparent and truly trustless NFT ecosystem, Oraichain has developed aiRight, a complete copyright management and farming platform for NFTs that harnesses the power of the world’s first AI Oracle to determine authenticity and point of origin for multimedia works minted on-chain.
+
+Link: [https://airight.io](https://airight.io)&#x20;
+
 ### New AI Marketplace
 
 The marketplace is providing access to AI products and APIs aiming to become the one-stop-shop for Artificial Intelligence services.
@@ -17,6 +23,8 @@ The marketplace is providing access to AI products and APIs aiming to become the
 Link (under maintenance): [https://market.orai.io](https://market.orai.io)
 
 100+ API: [https://blog.orai.io/the-road-to-100-ai-apis-and-test-cases-on-the-oraichain-ai-marketplace-54e763dea7f4](https://blog.orai.io/the-road-to-100-ai-apis-and-test-cases-on-the-oraichain-ai-marketplace-54e763dea7f4)
+
+
 
 ### Yield farming using AI services on Oraichain (yAI)
 
