@@ -30,6 +30,11 @@ services:
       - PIN=${PIN}
       - DOCKER=true
     restart: on-failure
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
+        max-file: "3"
     volumes:
       - ./:/workspace
     command: ./aioracle-executor-process
