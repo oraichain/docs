@@ -31,7 +31,7 @@ services:
       - DOCKER=true
     restart: on-failure
     logging:
-      driver: "json-file"
+      driver: "local"
       options:
         max-size: "100m"
         max-file: "3"
