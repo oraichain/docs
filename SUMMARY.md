@@ -17,9 +17,7 @@
 ## Developers
 
 * [General](general/README.md)
-  * [Ecosystem](https://github.com/oraichain/ecosystem)
   * [Blockchain details](general/blockchain-details.md)
-  * [Create Wallet](general/create-wallet.md)
 * [Networks](developer/networks/README.md)
   * [Joining Mainnet](developer/networks/mainnet/README.md)
     * [Become a Validator](developer/networks/mainnet/become-a-validator.md)
