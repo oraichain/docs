@@ -45,7 +45,7 @@ The .env file in the zip configures the network, wallet, and other basic variabl
 
 ### 4. File checksum (optional but recommended)
 
-Please follow [this guildeline](./ai-executor-checksum.md) to verify your executable.
+Please follow [this guildeline](https://docs.orai.io/developer/executors/ai-executor-checksum) to verify your executable.
 
 ### 5. Run the program
 

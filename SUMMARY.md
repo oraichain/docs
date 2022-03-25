@@ -27,6 +27,7 @@
   * [Manually recover your node data](developer/tutorials/manual-recovery.md)
   * [Migrate one Oraichain node to another](developer/tutorials/node-migration.md)
 * [AI Executors](developer/executors/README.md)
+  * [AI Executor File Integrity](developer/executors/ai-executor-checksum.md)
   * [Become a data source provider](developer/executors/become-a-data-source-provider.md)
   * [Become a test case provider](developer/executors/become-a-test-case-provider.md)
   * [Become an oracle script developer](developer/executors/become-an-oracle-script-developer.md)
