@@ -2,9 +2,9 @@
 
 File integrity is one of the most important factors when it comes to security check. One can inject a malicious program which reads & collects all sensitive data of your computer.
 
-As a result, the executors need to verify the integrity of the executable you are about to run. To do so, you need to compare the checksum of your program against the appropriate checksum shown here, which is provided by the Oraichain team. If they don't match, you must not run that program. Otherwise, you would risk losing your sensitive data, especially your wallet.
+As a result, the executors need to verify the integrity of the executable you are about to run. To do so, you need to compare the checksum of your program against the appropriate checksums shown here, which are provided by the Oraichain team. If they don't match, you must not run that program. Otherwise, you would risk losing your sensitive data, especially your wallet.
 
-Below is a list of checksums for Linux, Macos, and Windows:
+Below is the list of checksums for Linux, Macos, and Windows:
 
 ```
 Windows: 57bc5c3067a5aa16e34fd4a29c554e3d
