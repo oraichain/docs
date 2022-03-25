@@ -43,7 +43,11 @@ For Windows users, you can download the zip and unzip it directly.
 
 The .env file in the zip configures the network, wallet, and other basic variables for your program to use. All the key-value pairs are heavily commented already. If you still have questions about them, freel free to ask us, the Oraichain team.
 
-### 4. Run the program
+### 4. File checksum (optional but recommended)
+
+Please follow [this guildeline](./ai-executor-checksum.md) to verify your executable.
+
+### 5. Run the program
 
 In the zip contains the ```aioracle-executor-process-*``` programs, please choose one that matches your OS and run it.
 

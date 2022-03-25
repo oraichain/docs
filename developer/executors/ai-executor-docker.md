@@ -55,7 +55,11 @@ With windows, you can download using the following link: ```https://drive.google
 
 The .env file in the zip configures the network, wallet, and other basic variables for your program to use. All the key-value pairs are heavily commented already. If you still have questions about them, freel free to ask us, the Oraichain team.
 
-### 4. Start the container & program
+### 4. File checksum (optional but recommended)
+
+Please follow [this guildeline](./ai-executor-checksum.md) to verify your executable.
+
+### 5. Start the container & program
 
 ***Shell (Mac, Linux):***
 
@@ -75,7 +79,7 @@ $Env:PIN = "<your-pin-for-encrypted-mnemonic>" && docker-compose up -d
 
 If you do not use an encrypted mnemonic, then you don't have to type in the PIN variable.
 
-### 5. Monitoring the program
+### 6. Monitoring the program
 
 To view the program's log, please type the following: 
 
