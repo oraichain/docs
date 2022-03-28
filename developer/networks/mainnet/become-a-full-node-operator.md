@@ -63,11 +63,35 @@ wget -O /workspace/.oraid/config/genesis.json https://raw.githubusercontent.com/
 
 ### 5. Download Chain Data
 
-In the container, please type:
+- Select the tab to the desired node type (Default or Pruned)
 
-```bash
-wget -O - https://orai.s3.us-east-2.amazonaws.com/oraid-data-bk.tar.gz | tar -zxvf - && mv /workspace/data/* /workspace/.oraid/data/
+<!-- #region -->
+
+::::::: tabs :options="{ useUrlFragment: false }"
+
+:::::: tab Default
+::::: tabs :options="{ useUrlFragment: false }"
+
+``` bash
+docker-compose exec orai bash -c 'wget -O - https://orai.s3.us-east-2.amazonaws.com/oraid-data-wasm-bk.tar.gz | tar -zxvf -'
 ```
+
+:::::
+::::::
+
+:::::: tab Pruned
+::::: tabs :options="{ useUrlFragment: false }"
+
+``` bash
+docker-compose exec orai bash -c 'wget -O - https://orai.s3.us-east-2.amazonaws.com/oraid-data-wasm-pruned-bk.tar.gz | tar -zxvf -'
+```
+
+:::::
+::::::
+
+:::::::
+
+<!-- #endregion -->
 
 ### 6. Start the node
 
@@ -82,6 +106,7 @@ Please exit the container and follow the below steps to start the nodes
 59d49e39d507bb190e746bcf5590d65879c132e2@13.79.247.74:26656
 35c1f999d67de56736b412a1325370a8e2fdb34a@5.189.169.99:26656
 5ad3b29bf56b9ba95c67f282aa281b6f0903e921@64.225.53.108:26656
+d091cabe3584cb32043cc0c9199b0c7a5b68ddcb@seed.orai.synergynodes.com:26656
 ```
 
 
