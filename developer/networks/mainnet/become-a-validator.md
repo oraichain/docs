@@ -65,10 +65,24 @@ wget -O /workspace/.oraid/config/genesis.json https://raw.githubusercontent.com/
 
 ### 5. Download Chain Data
 
-```bash
-docker-compose exec orai bash -c 'wget -O /usr/bin/fn https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/mainnet-static-files/fn.sh && chmod +x /usr/bin/fn && wget -O - https://orai.s3.us-east-2.amazonaws.com/oraid-data-bk.tar.gz | tar -zxvf -'
+Download the latest chain data from a snapshot provider. Select the tab to the desired node type (Default or Pruned). A Pruned node will have the smallest disk size possible, but it will only keep the latest network state. Meanwhile, a Default node will store more network state history, but it will have larger size.
 
-mv -r workspace/data/* /workspace/.oraid/data/
+- Default:
+
+``` bash
+docker-compose exec orai bash -c 'wget -O - https://orai.s3.us-east-2.amazonaws.com/oraid-data-wasm-bk.tar.gz | tar -zxvf -'
+```
+
+- Pruned:
+
+``` bash
+docker-compose exec orai bash -c 'wget -O - https://orai.s3.us-east-2.amazonaws.com/oraid-data-wasm-pruned-bk.tar.gz | tar -zxvf -'
+```
+
+After extracting the chain data, you need to move such data into the .oraid/ directory:
+
+```bash
+docker-compose exec orai bash -c 'mv /workspace/data/ /workspace/.oraid && mv /workspace/wasm/ /workspace/.oraid' 
 ```
 
 ### 6. Initiate your validator wallet
@@ -94,6 +108,7 @@ Please exit the container and follow the below steps to start the nodes
 59d49e39d507bb190e746bcf5590d65879c132e2@13.79.247.74:26656
 35c1f999d67de56736b412a1325370a8e2fdb34a@5.189.169.99:26656
 5ad3b29bf56b9ba95c67f282aa281b6f0903e921@64.225.53.108:26656
+d091cabe3584cb32043cc0c9199b0c7a5b68ddcb@seed.orai.synergynodes.com:26656
 ```
 
 ### 1. Start the node
@@ -114,10 +129,10 @@ Please wait until your node is fully synchronized by typing: `oraid status &> st
 
 You need to store two following files: .oraid/config/node_key.json, .oraid/config/priv_validator_key.json. They contain your validator information for voting. Create backups for these files, otherwise you will lose your validator node if something wrong happens.
 
-You can check your wallet information by typing: `oraid query auth account <your-validator-wallet-address>` inside of the container or through the explorer, where you import your wallet. When your wallet has some tokens, please enter the container and type:
+You can check your wallet information by typing: `oraid query auth account <your-validator-wallet-address>` inside of the container or through the explorer, where you import your wallet. To prevent spamming, your wallet is not activated by default. As a result, it needs to receive at least one MsgSend transaction from a different account. In other words, you should receive some ORAI tokens (minimum of 10^-6 ORAI) to continue. When your wallet has some tokens, please enter the container and type:
 
 ```bash
-fn createValidator
+wget -O /usr/bin/fn https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/mainnet-static-files/fn.sh && chmod +x /usr/bin/fn && fn createValidator
 ```
 
 ### 5. Check your node status with voting power
