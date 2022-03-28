@@ -63,35 +63,25 @@ wget -O /workspace/.oraid/config/genesis.json https://raw.githubusercontent.com/
 
 ### 5. Download Chain Data
 
-- Select the tab to the desired node type (Default or Pruned)
+Download the latest chain data from a snapshot provider. Select the tab to the desired node type (Default or Pruned). A Pruned node will have the smallest disk size possible, but it will only keep the latest network state. Meanwhile, a Default node will store more network state history, but it will have larger size.
 
-<!-- #region -->
-
-::::::: tabs :options="{ useUrlFragment: false }"
-
-:::::: tab Default
-::::: tabs :options="{ useUrlFragment: false }"
+- Default:
 
 ``` bash
 docker-compose exec orai bash -c 'wget -O - https://orai.s3.us-east-2.amazonaws.com/oraid-data-wasm-bk.tar.gz | tar -zxvf -'
 ```
 
-:::::
-::::::
-
-:::::: tab Pruned
-::::: tabs :options="{ useUrlFragment: false }"
+- Pruned:
 
 ``` bash
 docker-compose exec orai bash -c 'wget -O - https://orai.s3.us-east-2.amazonaws.com/oraid-data-wasm-pruned-bk.tar.gz | tar -zxvf -'
 ```
 
-:::::
-::::::
+After extracting the chain data, you need to move such data into the .oraid/ directory:
 
-:::::::
-
-<!-- #endregion -->
+```bash
+docker-compose exec orai bash -c 'mv /workspace/data/ /workspace/.oraid && mv /workspace/wasm/ /workspace/.oraid' 
+```
 
 ### 6. Start the node
 
