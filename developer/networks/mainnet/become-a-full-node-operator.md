@@ -74,7 +74,7 @@ docker-compose exec orai bash -c 'wget -O - https://orai.s3.us-east-2.amazonaws.
 - Pruned:
 
 ``` bash
-docker-compose exec orai bash -c 'wget -O - https://orai.s3.us-east-2.amazonaws.com/oraid-data-wasm-pruned-bk.tar.gz | tar -zxvf -'
+docker-compose exec orai bash -c 'wget -O - https://orai.s3.us-east-2.amazonaws.com/oraid-data-pruned-wasm-bk.tar.gz | tar -zxvf -'
 ```
 
 After extracting the chain data, you need to move such data into the .oraid/ directory:
