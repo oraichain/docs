@@ -68,7 +68,7 @@ Download the latest chain data from a snapshot provider. Select the tab to the d
 - Default:
 
 ``` bash
-docker-compose exec orai bash -c 'wget -O - https://orai.s3.us-east-2.amazonaws.com/oraid-data-wasm-bk.tar.gz | tar -zxvf -'
+docker-compose exec orai bash -c 'wget -O - https://orai.s3.us-east-2.amazonaws.com/oraid-ms2-bk.tar.gz | tar -zxvf -'
 ```
 
 - Pruned:
@@ -80,7 +80,7 @@ docker-compose exec orai bash -c 'wget -O - https://orai.s3.us-east-2.amazonaws.
 After extracting the chain data, you need to move such data into the .oraid/ directory:
 
 ```bash
-docker-compose exec orai bash -c 'mv /workspace/data/ /workspace/.oraid && mv /workspace/wasm/ /workspace/.oraid' 
+docker-compose exec orai bash -c 'mv /workspace/data/* /workspace/.oraid/data && mv /workspace/wasm/ /workspace/.oraid && rmdir /workspace/data'
 ```
 
 ### 6. Start the node
