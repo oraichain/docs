@@ -75,7 +75,6 @@ contract VrfOracleOraichainExample {
     }
 
 }
-
 ```
 
 ### Native token based VRF Oracle (Avalanche, Fantom, etc.)
@@ -127,6 +126,51 @@ contract VrfOracleOraichainExample {
     }
 
 }
+```
 
+### Specific example
+
+Say you have to pick 3 winners out of 1000 participants. First, number the 1000 participants (from 1 to 1000). Then use fuction randomPlayer like the example below after getting a VRF value from Orachain.
+
+```
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.5.16;
+
+
+interface IVRFOracleOraichain {
+    function randomnessRequest(uint256 _seed, bytes calldata _data) external payable returns (bytes32 reqId);
+
+    function getFee() external returns (uint256);
+}
+
+contract VrfOracleOraichainExample {
+
+    address public oracle;
+    uint256 public random1;
+    uint256 public random2;
+    uint256 public random3;
+    bytes32 public reqId;
+
+    constructor (address _oracle) public {
+        oracle = _oracle;
+    }
+
+    function randomnessRequest(uint256 _seed) public {
+        uint256 fee = IVRFOracleOraichain(oracle).getFee();
+        bytes memory data = abi.encode(address(this), this.fulfillRandomness.selector);
+        reqId = IVRFOracleOraichain(oracle).randomnessRequest.value(fee)(_seed, data);
+    }
+
+    // get three randomnesses range(0:1000) from Oraichain randomness
+    function fulfillRandomness(bytes32 _reqId, uint256 oraichainRandomness) public {
+        random1 = random(oraichainRandomness, 1000);
+        random2 = random(random1, 1000);
+        random3 = random(random2, 1000);
+    }
+
+    function random(uint256 _oraiNumber, uint256 _weight) public returns (uint256){
+        return uint256(keccak256(abi.encodePacked(_oraiNumber, block.difficulty, block.timestamp, block.coinbase, block.number, msg.sender))) % (_weight);
+    }
+} 
 ```
 
