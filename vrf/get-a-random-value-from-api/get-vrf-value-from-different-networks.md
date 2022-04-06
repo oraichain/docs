@@ -25,12 +25,17 @@ VrfOracleOraichain: address oracle
 ### ORAI token based VRF Oracle (BSC)
 
 ```
-pragma solidity ^0.8.0;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.5.16;
 
-import "@openzeppelin/contracts/utils/Address.sol";
-import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import "@openzeppelin/contracts/utils/math/SafeMath.sol";
-import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
+
+interface IERC20 {
+
+    function transfer(address recipient, uint256 amount) external returns (bool);
+
+    function approve(address spender, uint256 amount) external returns (bool);
+}
+
 
 interface IVRFOracleOraichain {
     function randomnessRequest(uint256 _seed, bytes calldata _data) external returns (bytes32 reqId);
@@ -38,18 +43,11 @@ interface IVRFOracleOraichain {
     function getFee() external returns (uint256);
 }
 
-contract VrfOracleOraichainExample {
-
-    using SafeERC20 for IERC20;
-
-    uint256 public  fee;
+contract VRFConsumerExample {
 
     address public orai;
-
     address public oracle;
-
     uint256 public random;
-
     bytes32 public reqId;
 
     constructor (address _oraiToken, address _oracle) public {
@@ -58,22 +56,22 @@ contract VrfOracleOraichainExample {
     }
 
     function randomnessRequest(uint256 _seed) public {
-
         IERC20(orai).approve(oracle, IVRFOracleOraichain(oracle).getFee());
-
         bytes memory data = abi.encode(address(this), this.fulfillRandomness.selector);
-
         reqId = IVRFOracleOraichain(oracle).randomnessRequest(_seed, data);
     }
 
     function fulfillRandomness(bytes32 _reqId, uint256 _random) external {
         random = _random;
     }
-    
-    function claim(IERC20 token, address to, uint256 amount) external {
-        token.safeTransfer(to, amount);
+
+    function setOracle(address _oracle) public {
+        oracle = _oracle;
     }
 
+    function claim(IERC20 token, address to, uint256 amount) external {
+        token.transfer(to, amount);
+    }
 }
 ```
 
@@ -118,6 +116,8 @@ contract VRFConsumerExampleNativeFee {
 
 }
 ```
+
+#### Here are more tested examples for [Fantom](https://ftmscan.com/address/0x943Df3CF0796A902ab37ceaA0de2ce694339EF5f#code) and [Avalanche](https://snowtrace.io/address/0x3c58947e167b87520c2e9210847939a4b9660f4d#code) developers.
 
 ### Specific example
 
