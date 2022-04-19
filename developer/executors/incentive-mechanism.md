@@ -2,7 +2,7 @@
 
 There are two ways for executors to receive executor rewards. One is constantly keeping the program online, while the other is through executing the requests.
 
-## 1. Passive incentive
+## 1. Passive income
 
 When the executor program is running, it will periodically invoke a ping transaction onto the ping smart contract, which will increment the number of times the executor pings. The ping number is used as proof that the executor is online. It is also a value to calculate the total reward that an executor will receive.
 
@@ -21,7 +21,7 @@ where the ```base_reward_unit``` is a contract parameter set by the contract own
 
 After sending the reward successfully, the executor's total ping will reset to 0.
 
-## 2. Executing AI Oracle requests
+## 2. Rewards from executing AI Oracle requests
 
 ### 2.1 Accumulating the reward pool
 
