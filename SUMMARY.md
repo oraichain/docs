@@ -72,3 +72,8 @@
 
 * [Others](others/README.md)
   * [Privacy Policy](others/privacy-policy.md)
+
+## OraiDEX
+
+* [Introduction to OraiDEX](oraidex/introduction-to-oraidex.md)
+* [ORAIX Token](oraidex/oraix-token.md)

@@ -25,12 +25,17 @@ VrfOracleOraichain: address oracle
 ### ORAI token based VRF Oracle (BSC)
 
 ```
-pragma solidity ^0.8.0;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.5.16;
 
-import "@openzeppelin/contracts/utils/Address.sol";
-import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import "@openzeppelin/contracts/utils/math/SafeMath.sol";
-import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
+
+interface IERC20 {
+
+    function transfer(address recipient, uint256 amount) external returns (bool);
+
+    function approve(address spender, uint256 amount) external returns (bool);
+}
+
 
 interface IVRFOracleOraichain {
     function randomnessRequest(uint256 _seed, bytes calldata _data) external returns (bytes32 reqId);
@@ -38,18 +43,11 @@ interface IVRFOracleOraichain {
     function getFee() external returns (uint256);
 }
 
-contract VrfOracleOraichainExample {
-
-    using SafeERC20 for IERC20;
-
-    uint256 public  fee;
+contract VRFConsumerExample {
 
     address public orai;
-
     address public oracle;
-
     uint256 public random;
-
     bytes32 public reqId;
 
     constructor (address _oraiToken, address _oracle) public {
@@ -58,38 +56,80 @@ contract VrfOracleOraichainExample {
     }
 
     function randomnessRequest(uint256 _seed) public {
-
         IERC20(orai).approve(oracle, IVRFOracleOraichain(oracle).getFee());
-
         bytes memory data = abi.encode(address(this), this.fulfillRandomness.selector);
-
         reqId = IVRFOracleOraichain(oracle).randomnessRequest(_seed, data);
     }
 
     function fulfillRandomness(bytes32 _reqId, uint256 _random) external {
         random = _random;
     }
-    
-    function claim(IERC20 token, address to, uint256 amount) external {
-        token.safeTransfer(to, amount);
+
+    function setOracle(address _oracle) public {
+        oracle = _oracle;
     }
 
+    function claim(IERC20 token, address to, uint256 amount) external {
+        token.transfer(to, amount);
+    }
 }
-
 ```
 
 ### Native token based VRF Oracle (Avalanche, Fantom, etc.)
 
 ```
-pragma solidity ^0.8.0;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.6.12;
 
-import "@openzeppelin/contracts/utils/Address.sol";
-import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import "@openzeppelin/contracts/utils/math/SafeMath.sol";
-import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
 
 interface IVRFOracleOraichain {
-    function randomnessRequest(uint256 _seed, bytes calldata _data) external returns (bytes32 reqId);
+    function randomnessRequest(uint256 _seed, bytes calldata _data) external payable returns (bytes32 reqId);
+
+    function getFee() external returns (uint256);
+}
+
+contract VRFConsumerExampleNativeFee {
+
+    address public oracle;
+    uint256 public random;
+    bytes32 public reqId;
+
+    constructor (address _oracle) public payable {
+        oracle = _oracle;
+    }
+
+    fallback() external payable {}
+
+    function randomnessRequest(uint256 _seed) public {
+        uint256 fee = IVRFOracleOraichain(oracle).getFee();
+        bytes memory data = abi.encode(address(this), this.fulfillRandomness.selector);
+        reqId = IVRFOracleOraichain(oracle).randomnessRequest.value(fee)(_seed, data);
+    }
+
+    function fulfillRandomness(bytes32 _reqId, uint256 _random) external {
+        random = _random;
+    }
+
+    function clearNativeCoin(address payable _to, uint256 amount) public payable {
+        _to.transfer(amount);
+    }
+
+}
+```
+
+#### Here are more tested examples for [Fantom](https://ftmscan.com/address/0x943Df3CF0796A902ab37ceaA0de2ce694339EF5f#code) and [Avalanche](https://snowtrace.io/address/0x3c58947e167b87520c2e9210847939a4b9660f4d#code) developers.
+
+### Specific example
+
+Say you have to pick 3 winners out of 1000 participants. First, number the 1000 participants (from 1 to 1000). Then use fuction randomPlayer like the example below after getting a VRF value from Oraichain.
+
+```
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.5.16;
+
+
+interface IVRFOracleOraichain {
+    function randomnessRequest(uint256 _seed, bytes calldata _data) external payable returns (bytes32 reqId);
 
     function getFee() external returns (uint256);
 }
@@ -97,36 +137,31 @@ interface IVRFOracleOraichain {
 contract VrfOracleOraichainExample {
 
     address public oracle;
-
-    uint256 public random;
-
-    bytes  public reqId;
-
-    bytes public reqId2;
+    uint256 public random1;
+    uint256 public random2;
+    uint256 public random3;
+    bytes32 public reqId;
 
     constructor (address _oracle) public {
         oracle = _oracle;
     }
 
-    function randomnessRequest(uint256 _seed) public payable {
+    function randomnessRequest(uint256 _seed) public {
         uint256 fee = IVRFOracleOraichain(oracle).getFee();
-
         bytes memory data = abi.encode(address(this), this.fulfillRandomness.selector);
-
-        (bool success, bytes memory returndata) = address(oracle).call{value : fee}(abi.encodeWithSignature("randomnessRequest(uint256,bytes)", _seed, data));
-
-        reqId = returndata;
+        reqId = IVRFOracleOraichain(oracle).randomnessRequest.value(fee)(_seed, data);
     }
 
-    function fulfillRandomness(bytes32 _reqId, uint256 _random) external {
-        random = _random;
+    // get three randomnesses range(0:1000) from Oraichain randomness
+    function fulfillRandomness(bytes32 _reqId, uint256 oraichainRandomness) public {
+        random1 = random(oraichainRandomness, 1000);
+        random2 = random(random1, 1000);
+        random3 = random(random2, 1000);
     }
 
-    function claimBNB(address payable to) external {
-        to.transfer(address(this).balance);
+    function random(uint256 _oraiNumber, uint256 _weight) public returns (uint256){
+        return uint256(keccak256(abi.encodePacked(_oraiNumber, block.difficulty, block.timestamp, block.coinbase, block.number, msg.sender))) % (_weight);
     }
-
-}
-
+} 
 ```
 
