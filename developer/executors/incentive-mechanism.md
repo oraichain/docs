@@ -4,9 +4,9 @@ There are two ways for executors to receive executor rewards. One is constantly 
 
 ## 1. Passive income
 
-When the executor program is running, it will periodically invoke a ping transaction onto the ping smart contract, which will increment the number of times the executor pings. The ping number is used as proof that the executor is online. It is also a value to calculate the total reward that an executor will receive.
+When the executor program is running, it periodically invokes a ping transaction onto a ping smart contract, which will increment the number of times the executor pings. The total ping value is used as proof that the executor is online. It is also a value to calculate the total reward that an executor will receive.
 
-An executor can claim the reward anytime by invoking the claim reward transaction function. However, the transaction will fail if the contract does not have enough funds, and the Oraichain team will have to top it up.
+An executor can claim the ping reward anytime by invoking the claim reward transaction function through Oraiscan or CLI. However, the transaction will fail if the contract does not have enough funds, and the Oraichain team will have to deposit some tokens before anyone can claim.
 
 One note is that, at the moment, there is a maximum reward parameter for executors which is used as an upper bound for the reward one can receive. If an executor receives, for example, 5 ORAI in total due to not claiming the rewards for a long time while the maximum reward value is 4 ORAI, then that executor can only receive 4 ORAI. The purpose of the parameter is to limit the executor rewards within the first months. When the AI Oracle becomes more stable, we will remove this parameter.
 
