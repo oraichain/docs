@@ -33,6 +33,7 @@
   * [Become an oracle script developer](developer/executors/become-an-oracle-script-developer.md)
   * [Become an AI Executor](developer/executors/ai-executor.md)
   * [Become an AI Executor with Docker](developer/executors/ai-executor-docker.md)
+  * [AI Executor Incentive Mechanism](developer/executors/incentive-mechanism.md)
 * [Guide](guide/README.md)
   * [How To Convert ORAI ERC20 To BEP20 And Vice Versa?](guide/how-to-convert-orai-erc20-to-bep20-and-vice-versa.md)
   * [How To Swap ERC20 or BEP20 Token To Native Token?](guide/how-to-swap-erc20-or-bep20-token-to-native-token.md)
