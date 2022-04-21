@@ -18,7 +18,8 @@ description: >-
 
 |        Address | 0x5Bd894d35fDbA2ba86A5F01d2f8E659a20AEa100                                                                                                                                 |
 | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|  Faucet token  | [https://testnet.bscscan.com/address/0x47706B5Ec3f764A10b3EF47Be9d6250772F2823A#code](https://testnet.bscscan.com/address/0x47706B5Ec3f764A10b3EF47Be9d6250772F2823A#code) |
+| Faucet token   | [https://testnet.bscscan.com/address/0x47706B5Ec3f764A10b3EF47Be9d6250772F2823A#code](https://testnet.bscscan.com/address/0x47706B5Ec3f764A10b3EF47Be9d6250772F2823A#code) |
+| Service        | 0.2 ORAI                                                                                                                                                                   |
 
 ### **Avalanche**
 
@@ -28,9 +29,9 @@ description: >-
 
 ### **Avalanche Testnet**
 
-|       Address                              |
-| ------------------------------------------ |
-| 0x36d2A54624fBC67cB1f1d2F696FEb6554D973832 |
+|       Address | 0x36d2A54624fBC67cB1f1d2F696FEb6554D973832 |
+| ------------- | ------------------------------------------ |
+| Service       | 0.015 AVAX                                 |
 
 ### Fantom
 
@@ -40,6 +41,6 @@ description: >-
 
 ### **Fantom** Testnet
 
-|       Address                              |
-| ------------------------------------------ |
-| 0x5Dbb6aE294b983778a95B086992b37D62759ae5B |
+|       Address | 0x5Dbb6aE294b983778a95B086992b37D62759ae5B |
+| ------------- | ------------------------------------------ |
+| Service       | 0.8 FTM                                    |
