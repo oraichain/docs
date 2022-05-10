@@ -10,14 +10,6 @@
 4. Pay NFT Bridge fee
 5. Buy airdrop NFT tickets of newly listed projects on OraiDEX
 
-**Utilities:**
-
-1. Pay meta-staking fee (the fee is taken directly from profits)
-2. Pay pool creation fee
-3. Pay OraiBridge fee
-4. Pay NFT Bridge fee
-5. Buy airdrop NFT tickets of newly listed projects on OraiDEX
-
 **Governance:**
 
 1. Fee structures
@@ -32,7 +24,7 @@
 * Developer pool: 15%
 * Community pool: 5%
 
-**Listing price on OraiDEX will be voted by ORAI holders in mid April (below is an example):**
+**Listing price on OraiDEX will be voted by ORAI holders (below is an example):**
 
 * Listing price: $0.025
 * Initial circulating supply: 20,000,000 ORAIX
