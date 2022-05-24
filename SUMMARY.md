@@ -22,6 +22,7 @@
   * [Joining Mainnet](developer/networks/mainnet/README.md)
     * [Become a Validator](developer/networks/mainnet/become-a-validator.md)
     * [Become a Full Node Operator](developer/networks/mainnet/become-a-full-node-operator.md)
+  * [Joining Testnet](developer/networks/testnet/README.md)
 * [Oraichain Tutorials](developer/tutorials/README.md)
   * [Manually upgrade your Oraichain node](developer/tutorials/manual-upgrade.md)
   * [Manually recover your node data](developer/tutorials/manual-recovery.md)
