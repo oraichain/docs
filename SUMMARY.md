@@ -65,15 +65,16 @@
   * [Get VRF Value from different networks](vrf/get-a-random-value-from-api/get-vrf-value-from-different-networks.md)
   * [Contract Addresses and Pricing](vrf/get-a-random-value-from-api/contract-addresses-and-pricing.md)
 * [API Reference](vrf/api-reference.md)
+* [Security Remarks](vrf/security-remarks.md)
 * [Validate a Group Signature](vrf/validate-a-group-signature.md)
 * [Get Support from Oraichain team](vrf/get-support-from-oraichain-team.md)
-
-***
-
-* [Others](others/README.md)
-  * [Privacy Policy](others/privacy-policy.md)
 
 ## OraiDEX
 
 * [Introduction to OraiDEX](oraidex/introduction-to-oraidex.md)
 * [ORAIX Token](oraidex/oraix-token.md)
+
+***
+
+* [Others](others/README.md)
+  * [Privacy Policy](others/privacy-policy.md)
