@@ -1,2 +1,0 @@
-# Oraichain Studio
-
