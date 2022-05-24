@@ -1,6 +1,6 @@
 # Welcome to CosmWasm IDE Extension - an open-source project for CosmWasm smart contract developers
 
-![orai](https://raw.githubusercontent.com/oraichain/vscode-cosmwasm/docs/contributing/public/logo-128.png)
+![CosmWasm IDE](https://raw.githubusercontent.com/oraichain/vscode-cosmwasm/docs/contributing/public/logo-128.png)
 
 ## 1. Setting up the CosmWasm development environment
 
