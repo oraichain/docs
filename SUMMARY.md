@@ -40,8 +40,9 @@
   * [How To Swap ERC20 or BEP20 Token To Native Token?](guide/how-to-swap-erc20-or-bep20-token-to-native-token.md)
   * [Create An Oraichain Account](guide/create-an-oraichain-account.md)
   * [Delegate Tokens To A Validator](guide/delegate-tokens-to-a-validator.md)
-* [Oraichain Studio](oraichain-studio/README.md)
-  * [Tutorial 01](https://medium.com/oraichain/oraichain-studio-live-demo-transcript-7be020783f03)
+* [CosmWasm IDE](cosmwasm-ide/README.md)
+  * [Tutorial 01](cosmwasm-ide/tutorial-01.md)
+  * [Tutorial 02](https://medium.com/oraichain/oraichain-studio-live-demo-transcript-7be020783f03)
 * [Tools](tools/README.md)
   * [Faucet](tools/faucet.md)
 
