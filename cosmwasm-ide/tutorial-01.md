@@ -1,9 +1,7 @@
 # Welcome to CosmWasm IDE Extension
 
-<p align="center">
-  <a target="_blank" rel="noopener noreferrer"><img width="100" src="https://raw.githubusercontent.com/oraichain/vscode-cosmwasm/docs/contributing/public/cosmos-ide.png" alt="CosmWasm IDE logo"></a> &nbsp
-  <a href="https://orai.io" target="_blank" rel="noopener noreferrer"><img width="100" src="https://raw.githubusercontent.com/oraichain/vscode-cosmwasm/docs/contributing/public/logo-128.png" alt="Oraichain logo"></a>
-</p>
+![orai](https://raw.githubusercontent.com/oraichain/vscode-cosmwasm/docs/contributing/public/logo-128.png)
+![cosmwasm-ide](https://raw.githubusercontent.com/oraichain/vscode-cosmwasm/docs/contributing/public/cosmos-ide.png)
 
 <h1 align="center">
     CosmosWasm IDE - An open-source project for CosmWasm smart contract developers  
@@ -45,9 +43,7 @@ You should navigate to the **Extensions** tab in the VS Code tab bar & install t
 
 - Next, choose an arbitrary file in the project.
 
-<p align="center">
-  <a target="_blank" rel="noopener noreferrer"><img width="600" src="https://raw.githubusercontent.com/oraichain/cosmwasm-gitpod/master/docs/assets/choose-a-file.png" alt="Choose a project file"></a>
-</p>
+![choose-a-file](https://raw.githubusercontent.com/oraichain/cosmwasm-gitpod/master/docs/assets/choose-a-file.png)
 
 <h4 align="center">
     An example of choosing a project file
@@ -66,9 +62,7 @@ You should navigate to the **Extensions** tab in the VS Code tab bar & install t
 
 - After finishing building, the CosmWasm IDE should move to a new page with basic information for contract deployment like in the image below.
 
-<p align="center">
-  <a target="_blank" rel="noopener noreferrer"><img width="300" src="https://raw.githubusercontent.com/oraichain/cosmwasm-gitpod/master/docs/assets/interact.png" alt="contract interaction"></a>
-</p>
+![interact](https://raw.githubusercontent.com/oraichain/cosmwasm-gitpod/master/docs/assets/interact.png)
 
 <h4 align="center">
     Contract interaction with VsCode CosmWasm extension
@@ -80,7 +74,5 @@ You should navigate to the **Extensions** tab in the VS Code tab bar & install t
 
 After deploying or instantiating, the webview will display the deployed contract address & two interaction options: Execute & Query. You can freely play with it to suit your needs.
 
-<p align="center">
-  <a target="_blank" rel="noopener noreferrer"><img width="300" src="https://raw.githubusercontent.com/oraichain/cosmwasm-gitpod/master/docs/assets/interaction.png" alt="contract interaction"></a>
-</p>
+![interaction](https://raw.githubusercontent.com/oraichain/cosmwasm-gitpod/master/docs/assets/interaction.png)
 ```
