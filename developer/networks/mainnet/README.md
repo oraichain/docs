@@ -1,45 +1,23 @@
 # Joining Oraichain mainnet
 
-Basic Oraichain mainnet metadata & properties:
+## Basic Oraichain mainnet metadata & properties:
 
-## 1. Chain ID
+**Chain ID:** Oraichain
 
-Oraichain
+**Coin minimal denom:** orai
 
-## 2. Coin minimal denom
+**Coin decimal:** 6
 
-orai
+**Wallet URL:** https://api.wallet.orai.io
 
-## 3. Coin decimal
+**Bip44 Coin type:** 118
 
-6
+**Light Client Daemon (LCD):** https://lcd.orai.io
 
-## 4. Wallet URL
+**Remote Procedural Call (RPC):** https://rpc.orai.io
 
-https://api.wallet.orai.io
+**Google Remote Procedural Call (gRPC):** http://18.223.242.70:9090, http://18.116.209.76:9090
 
-## 5. Bip44 Coin type
+**Cosmos SDK version:** v0.42.11
 
-118
-
-## 6. Light Client Daemon (LCD):
-
-https://lcd.orai.io
-
-## 7. Remote Procedural Call (RPC):
-
-https://rpc.orai.io
-
-## 8. Google Remote Procedural Call (gRPC):
-
-http://18.223.242.70:9090
-
-http://18.116.209.76:9090
-
-## 9. Cosmos SDK version
-
-v0.42.11
-
-## 10. Tendermint version
-
-v0.34.14
+**Tendermint version:** v0.34.14
