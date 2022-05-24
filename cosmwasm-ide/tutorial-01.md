@@ -1,11 +1,6 @@
-# Welcome to CosmWasm IDE Extension
+# Welcome to CosmWasm IDE Extension - an open-source project for CosmWasm smart contract developers
 
 ![orai](https://raw.githubusercontent.com/oraichain/vscode-cosmwasm/docs/contributing/public/logo-128.png)
-![cosmwasm-ide](https://raw.githubusercontent.com/oraichain/vscode-cosmwasm/docs/contributing/public/cosmos-ide.png)
-
-<h1 align="center">
-    CosmosWasm IDE - An open-source project for CosmWasm smart contract developers  
-</h1>
 
 ## 1. Setting up the CosmWasm development environment
 
@@ -43,11 +38,7 @@ You should navigate to the **Extensions** tab in the VS Code tab bar & install t
 
 - Next, choose an arbitrary file in the project.
 
-![choose-a-file](https://raw.githubusercontent.com/oraichain/cosmwasm-gitpod/master/docs/assets/choose-a-file.png)
-
-<h4 align="center">
-    An example of choosing a project file
-</h4>
+![An example of choosing a project file](https://raw.githubusercontent.com/oraichain/cosmwasm-gitpod/master/docs/assets/choose-a-file.png)
 
 - Then, please click **Build Cosmwasm** to build the smart contract.
 
@@ -62,11 +53,7 @@ You should navigate to the **Extensions** tab in the VS Code tab bar & install t
 
 - After finishing building, the CosmWasm IDE should move to a new page with basic information for contract deployment like in the image below.
 
-![interact](https://raw.githubusercontent.com/oraichain/cosmwasm-gitpod/master/docs/assets/interact.png)
-
-<h4 align="center">
-    Contract interaction with VsCode CosmWasm extension
-</h4>
+![Contract interaction with VsCode CosmWasm extension](https://raw.githubusercontent.com/oraichain/cosmwasm-gitpod/master/docs/assets/interact.png)
 
 - After filling all the needed information, you can click **Deploy / Upload / Instantiate CosmWasm** to to deploy / upload / instantiate the contract.
 
@@ -74,5 +61,5 @@ You should navigate to the **Extensions** tab in the VS Code tab bar & install t
 
 After deploying or instantiating, the webview will display the deployed contract address & two interaction options: Execute & Query. You can freely play with it to suit your needs.
 
-![interaction](https://raw.githubusercontent.com/oraichain/cosmwasm-gitpod/master/docs/assets/interaction.png)
+![IDE webview interaction](https://raw.githubusercontent.com/oraichain/cosmwasm-gitpod/master/docs/assets/interaction.png)
 ```
