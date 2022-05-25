@@ -34,7 +34,9 @@ You should navigate to the **Extensions** tab in the VS Code tab bar & install t
 
 ## 3. Build & deploy a contract
 
-- Since you are developing locally, you need a wallet to deploy & interact with the contract. Hence, you need to create a **.env** file under the workspace root, and insert your test wallet mnemonic. 
+- If you use Gitpod, then it is recommended to install Keplr wallet, as the extension works well with it when it comes to developing contracts on the browser.
+
+- If you don't want to use Gitpod, or you are developing locally, you will need a wallet to deploy & interact with the contract. Hence, please create a **.env** file under the workspace root, and insert your test wallet mnemonic. 
 
 - Next, choose an arbitrary file in the project.
 
