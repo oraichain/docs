@@ -26,7 +26,7 @@ services:
       - ./:/code
 ```
 
-Please note that the workspace that you run the container on should has a Cargo.toml file under its workspace root directory. Otherwise, the CosmWasm IDE will not display its interface to prevent unexpected errors.
+Please note that the workspace that you run the container on should has a **Cargo.toml** file under its workspace root directory. Otherwise, the CosmWasm IDE will not display its interface to prevent unexpected errors.
 
 ## 2. Install the CosmWasm IDE extension (for local development users only)
 
