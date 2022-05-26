@@ -49,7 +49,7 @@ Once you're on the correct tag, you can build:
 ```bash
 # in orai dir
 go get ./...
-make build
+make build LEDGER_ENABLED=false BUILD_TAGS=muslc GOMOD_FLAGS=
 ```
 
 To confirm that the installation has succeeded, you can run:
