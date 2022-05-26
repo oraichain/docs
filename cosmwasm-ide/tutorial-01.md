@@ -6,7 +6,7 @@
 
 ### Gitpod users
 
-To setup your workspace with all the neccessary tools & libraries for developing the CosmWasm smart contracts, please click button ```Open in Gitpod``` below. Gitpod will automatically install everything you need to deploy a smart contract.
+To setup your workspace with all the neccessary tools & libraries for developing the CosmWasm smart contracts, please click button `Open in Gitpod` below. Gitpod will automatically install everything you need to deploy a smart contract.
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/oraichain/cosmwasm-gitpod)
 
@@ -36,20 +36,22 @@ You should navigate to the **Extensions** tab in the VS Code tab bar & install t
 
 - If you use Gitpod, then it is recommended to install Keplr wallet, as the extension works well with it when it comes to developing contracts on the browser.
 
-- If you don't want to use Gitpod, or you are developing locally, you will need a wallet to deploy & interact with the contract. Hence, please create a **.env** file under the workspace root, and insert your test wallet mnemonic. 
+- If you don't want to use Gitpod, or you are developing locally, you will need a wallet to deploy & interact with the contract. Hence, please create a **.env** file under the workspace root, and insert your test wallet mnemonic.
 
 - Next, choose an arbitrary file in the project.
+
+* Note: the file in the following picture can be found in https://github.com/oraichain/oraiwasm_scaffold
 
 ![An example of choosing a project file](https://raw.githubusercontent.com/oraichain/cosmwasm-gitpod/master/docs/assets/choose-a-file.png)
 
 - Then, please click **Build Cosmwasm** to build the smart contract.
 
-* Note: The extension provides four custom VS Code buttons: ```Build CosmWasm```,  ```Deploy CosmWasm```, ```Upload CosmWasm``` and ```Instantiate CosmWasm``` under the status bar of Vs Code and a ```CosmWasm IDE Explorer``` under the ```Explorer``` tab of VS Code.
+* Note: The extension provides four custom VS Code buttons: `Build CosmWasm`, `Deploy CosmWasm`, `Upload CosmWasm` and `Instantiate CosmWasm` under the status bar of Vs Code and a `CosmWasm IDE Explorer` under the `Explorer` tab of VS Code. If you installed dark mode extension for your browser or dark theme on gitpod, sometimes the `CosmWasm IDE Explorer` icon seems to missing but it is still there. Pressing the following button in order to deploy the contract.
 
-  - ```Build CosmWasm``` button will build the smart contract to the .wasm file based on the file you open in VS Code.
-  - ```Deploy Cosmwasm``` button will deploy your contract onto a network that you choose on the CosmWasm IDE explorer.
-  - ```Upload CosmWasm``` button will upload your smart contract code.
-  - ```Instantiate CosmWasm``` button will instantiate your smart contract given a code id.
+  - `Build CosmWasm` button will build the smart contract to the .wasm file based on the file you open in VS Code.
+  - `Deploy Cosmwasm` button will deploy your contract onto a network that you choose on the CosmWasm IDE explorer.
+  - `Upload CosmWasm` button will upload your smart contract code.
+  - `Instantiate CosmWasm` button will instantiate your smart contract given a code id.
 
 * Please note that the IDE will read all the json schemas of a project from the location **artifacts/schema** or **schema**. As a result, if the schemas are in a different location, the IDE will not be able to move to the next stage.
 
@@ -64,4 +66,7 @@ You should navigate to the **Extensions** tab in the VS Code tab bar & install t
 After deploying or instantiating, the webview will display the deployed contract address & two interaction options: Execute & Query. You can freely play with it to suit your needs.
 
 ![IDE webview interaction](https://raw.githubusercontent.com/oraichain/cosmwasm-gitpod/master/docs/assets/interaction.png)
+
+```
+
 ```
