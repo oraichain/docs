@@ -24,6 +24,7 @@
     * [Become a Full Node Operator](developer/networks/mainnet/become-a-full-node-operator.md)
   * [Joining Testnet](developer/networks/testnet/README.md)
 * [Oraichain Tutorials](developer/tutorials/README.md)
+  * [Build binary from source](developer/tutorials/getting-setup.md)
   * [Manually upgrade your Oraichain node](developer/tutorials/manual-upgrade.md)
   * [Manually recover your node data](developer/tutorials/manual-recovery.md)
   * [Migrate one Oraichain node to another](developer/tutorials/node-migration.md)
