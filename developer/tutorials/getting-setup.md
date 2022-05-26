@@ -62,4 +62,4 @@ oraid version
 
 To connect to the Oraichain network you can either run your own node or connect to a public node's RPC endpoint. To find a public node to connect to consider looking in the official [chain registry](https://github.com/cosmos/chain-registry/blob/master/oraichain/chain.json) of Cosmos. Connecting to a public node requires the least configuration but you should be sure that you trust whatever node that you choose.
 
-This tutorial allows you to build the orai binary from source. Nonetheless, we also have [another tutorial](./become-a-validator.md) that already automates this process, which is suitable for those who want to setup a quick node and connect to the Oraichain network.
+This tutorial allows you to build the orai binary from source. Nonetheless, we also have [another tutorial](https://docs.orai.io/developers/networks/mainnet/become-a-full-node-operator) that already automates this process, which is suitable for those who want to setup a quick node and connect to the Oraichain network.
