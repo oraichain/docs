@@ -43,6 +43,8 @@
 * [CosmWasm IDE](cosmwasm-ide/README.md)
   * [Tutorial 01](cosmwasm-ide/tutorial-01.md)
   * [Tutorial 02](https://medium.com/oraichain/oraichain-studio-live-demo-transcript-7be020783f03)
+* [Tutorials](developer/tutorials/README.md)
+  * [Build binary from source](developer/tutorials/getting-setup.md)
 * [Tools](tools/README.md)
   * [Faucet](tools/faucet.md)
 
