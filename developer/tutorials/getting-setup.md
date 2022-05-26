@@ -36,10 +36,6 @@ git checkout <tag>
 
 The `<version-tag>` will need to be set to either a testnet or the latest mainnet version tag.
 
-oraid version
-exit
-```
-
 {% hint style="warning" %}
 For genesis, the current mainnet version tag will be `v0.40.4-ibc-beta` - i.e:
 
