@@ -21,3 +21,5 @@
 **Cosmos SDK version:** v0.42.11
 
 **Tendermint version:** v0.34.14
+
+**Cosmwasm-std version:** v0.13.2 (with no CustomQuery feature). Documentation: https://oraiwasm.web.app

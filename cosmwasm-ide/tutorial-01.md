@@ -38,6 +38,12 @@ You should navigate to the **Extensions** tab in the VS Code tab bar & install t
 
 - If you don't want to use Gitpod, or you are developing locally, you will need a wallet to deploy & interact with the contract. Hence, please create a **.env** file under the workspace root, and insert your test wallet mnemonic. 
 
+Example of the **.env** file:
+
+```bash
+column fly toy delay blouse unable hundred story whale toast uniform hope
+```
+
 - Next, choose an arbitrary file in the project.
 
 ![An example of choosing a project file](https://raw.githubusercontent.com/oraichain/cosmwasm-gitpod/master/docs/assets/choose-a-file.png)
