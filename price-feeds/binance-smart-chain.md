@@ -1,10 +1,10 @@
-# BNB Chain
+# Binance Smart Chain
 
 ## Introduction
 
-**Oraichain Oracle Price Feeds** enable developers to integrate on-chain price data from crypto markets into their smart contracts with ease.
+**Oraichain Oracle Price Feeds** enable developers to integrate on-chain price data from crypto markets into their smart contracts with ease.&#x20;
 
-**Oraichain Oracle Price Feeds** meanwhile supports a wide range of blockchain networks such as Ethereum, BNB Chain, Oraichain, and more in the future.
+Oraichain Oracle Price Feeds meanwhile supports a wide range of blockchain networks such as Ethereum, Binance Chain, Oraichain, and more in the future.&#x20;
 
 Data have been extracted from trustworthy exchanges in addition to timely updates with low latency.
 
@@ -27,9 +27,9 @@ Data have been extracted from trustworthy exchanges in addition to timely update
 
 Contract address: [0x48D21bb7DbC0b6214018766C8415DB508147CC38](https://testnet.bscscan.com/address/0x48D21bb7DbC0b6214018766C8415DB508147CC38#readContract)
 
-**Price Data Requests**
+Price Data Requests
 
-1. Basically, there are two types of getting price data for developers: getPrice() and getPriceBulk(). Via smart contract 'OraiOraclerPriceDataProxy', developers can use NodeJs or smart contract to request price date on blockchain networks like Oraichain Network, Binance Chain, Ethereum.
+1. Basically, there are two types of getting price data for developers: getPrice() and getPriceBulk(). Via smart contract 'OraiOraclerPriceDataProxy', developers can use NodeJs or smart contract to request price date on blockchain networks like Oraichain Network, Binance Chain, Ethereum.&#x20;
 2. At the moment, Oraichain Oracle supports 3 networks (Oraichain, Binance Chain, Ethereum) with corresponding addresses for Oraichain Oracle Price.
 
 **getPrice():** Input includes symbols of two assets and output results in the ratio between them and the latest timestamp of the update.
@@ -130,6 +130,7 @@ contract Example {
     }
 
 }
+
 ```
 
 #### Integrate with Node.js
@@ -147,3 +148,4 @@ oraiPriceFeed.methods.getPrice("BNB","USDT").call()
         console.log("result", result);
     })
 ```
+

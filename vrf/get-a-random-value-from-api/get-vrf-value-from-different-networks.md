@@ -1,14 +1,14 @@
 ---
 description: >-
   This section showcases how to get a random value inside a smart contract from
-  different blockchain networks like BSC and Fantom, etc.
+  different blockchain networks like BNB Chain, Avalanche, Fantom, and more.
 ---
 
 # Get VRF Value from different networks
 
-![How VRF values are generated from different netw](<../../.gitbook/assets/image (13).png>)
+![How VRF values are generated from a different network](<../../.gitbook/assets/image (13).png>)
 
-VRF execution flow from Binance Smart Chain (BSC), Avalanche (AVAX) and Fantom (FTM):
+VRF execution flow from BNB Chain (formerly Binance Smart Chain), Avalanche (AVAX) and Fantom (FTM):
 
 * First of all, smart contract users must pay fees (in OraiToken with BSC network and native tokens with AVAX and FTM) and make a request to generate random numbers with VRFOracleOraichain contract
 * Next, the VRFOracleOraichain contract checks the request of the user and the fee, if everything is verified, the VRFOracleOraichain will generate a corresponding reqId and return it to the user.
@@ -27,7 +27,7 @@ To generate a VRF value from your blockchain of choice, your contract needs to i
 
 ## Examples for best practices
 
-### ORAI token based VRF Oracle (BSC)
+### ORAI token based VRF Oracle (BNB Chain)
 
 ```
 // SPDX-License-Identifier: MIT
