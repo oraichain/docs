@@ -54,7 +54,7 @@
 ## PRICE FEEDS
 
 * [Introduction](price-feeds/introduction.md)
-* [Binance Smart Chain](price-feeds/binance-smart-chain.md)
+* [BNB Chain](price-feeds/binance-smart-chain.md)
 
 ***
 
