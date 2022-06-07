@@ -56,4 +56,6 @@ The simplest way to have a data source contract is to deploy an [empty contract]
 
 ## 3. Deploy an oracle script contract
 
-The oracle script is used to aggregate your data source result after it is called multiple times by the AI executors.
+The oracle script is used to aggregate your data source result after it is called multiple times by the AI executors. When writing an oracle script, you need to have at least one `Aggregate` query message. Please take a look at a simple example of the oracle script classification [here](https://github.com/oraichain/oraiwasm/tree/master/package/aioracle/oscript_flower_classification)
+
+After deploying the oracle script, please send us the two addresses & your service name (in string) so we can add them in the list of services. At the moment, only chosen services are added due to security & simplicity purposes.
