@@ -18,7 +18,7 @@ description: >-
 
 |        Address | 0x731b8bab775d3768D1D25Aa926D729db4e91a517                                                                                                                                 |
 | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|  Faucet token  | [https://testnet.bscscan.com/address/0x47706B5Ec3f764A10b3EF47Be9d6250772F2823A#code](https://testnet.bscscan.com/address/0x47706B5Ec3f764A10b3EF47Be9d6250772F2823A#code) |
+|  Faucet token  | [https://testnet.bscscan.com/address/0xe07D3c721F1f26fB49e93DE77589fAC2fD963780#code](https://testnet.bscscan.com/address/0xe07D3c721F1f26fB49e93DE77589fAC2fD963780#code) |
 | Service        | 0.2 ORAI                                                                                                                                                                   |
 
 ### **Avalanche**
