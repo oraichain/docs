@@ -7,12 +7,12 @@ As a result, the executors need to verify the integrity of the executable you ar
 Below is the list of checksums for Linux, Macos, and Windows:
 
 ```
-Windows: 364650bcd34a89378264acd243eb295b
-MacOS: 002a6c17fab4f92eb20ec553b47c5254
-Linux: 6da5f0d17c3072ff8e62dd13188fb576
+Windows: de81c183009bfa5a564e8587c38eba3a
+MacOS: 7863c0856349c070f6e8a0c31050072c
+Linux: 467952e3460878f108876c1030fbe6c3
 ```
 
-These checksums will be updated accordingly to the latest executable's version. As of now, the current version of the executable is v0.3.4.3.
+These checksums will be updated accordingly to the latest executable's version. As of now, the current version of the executable is v0.3.4.4.
 
 Please follow the step below depending on the type of machine you are using to generate your local checksum:
 
