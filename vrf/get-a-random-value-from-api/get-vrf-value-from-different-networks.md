@@ -126,7 +126,7 @@ contract VRFConsumerExampleNativeFee {
     }
 
     function fulfillRandomness(bytes32 _reqId, uint256 _random) external {
-        require(msg.sender == address(this), "Caller must is oracle");
+        require(msg.sender == oracle, "Caller must is oracle");
         random = _random;
     }
 
