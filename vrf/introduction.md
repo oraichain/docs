@@ -1,14 +1,14 @@
 # Introduction to Oraichain VRF 2.0
 
-#### Currently available on Oraichain Mainnet 2.0, supporting most prominent blockchains: BSC, ETH, Polygon, Solana, Cosmos, Fantom, Polkadot and Avalanche.
+#### Currently available on Oraichain Mainnet 2.0, supporting most prominent blockchains: BNB Chain, Ethereum, Polygon, Solana, Cosmos, Fantom, Polkadot and Avalanche.
 
-**Please** [**contact us**](https://landing.mailerlite.com/webforms/landing/t0c1f1) **for more information.**
+**Please** [**contact us**](https://docs.google.com/forms/d/e/1FAIpQLSc1S4vCb8xJJvkukcB1vNfRKRTGppr0isv6VmXGnVo3ZKbUVA/viewform?usp=sf\_link) **for more information.**
 
 ## **The need for provably-fair randomness in the crypto world**
 
-Random number generators (RNG) are utilized across a multitude of fields including academia, investment back-testing, and gaming. In the crypto space, the need for randomness is also apparent, as astute users and investors demand a bias-free distribution of opportunity. This is where **VRF** (Verifiable Random Function) comes into play. It serves as an oracle for smart contracts by which applications can generate unpredictable values with on-chain proof ensuring none of the involved parties tampered with the outcomes.
+Random number generators (RNG) are utilized across a multitude of fields including academia, investment back-testing, and gaming. In the crypto space, the need for randomness is also apparent, as astute users and investors demand a bias-free distribution of opportunity. This is where **VRF** **(Verifiable Random Function)** comes into play. It serves as an oracle for smart contracts by which applications can generate unpredictable values with on-chain proof ensuring none of the involved parties tampered with the outcomes.
 
-As a result, **VFR** plays an important role in the transparency and fairness of decentralized applications as well as normal applications. Utilizations include such as:&#x20;
+As a result, **VRF** plays an important role in the transparency and fairness of decentralized applications as well as normal applications. Utilizations include such as:
 
 * NFT/ game item creation with varied rarities
 * Winning odds for gambling/ casino-like projects

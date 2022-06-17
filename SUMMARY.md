@@ -28,6 +28,8 @@
   * [Manually upgrade your Oraichain node](developer/tutorials/manual-upgrade.md)
   * [Manually recover your node data](developer/tutorials/manual-recovery.md)
   * [Migrate one Oraichain node to another](developer/tutorials/node-migration.md)
+* [AI Providers](developer/ai-provider/README.md)
+  * [AI Provider Integration](developer/ai-provider/ai-provider-integration.md)
 * [AI Executors](developer/executors/README.md)
   * [AI Executor File Integrity](developer/executors/ai-executor-checksum.md)
   * [Become a data source provider](developer/executors/become-a-data-source-provider.md)
