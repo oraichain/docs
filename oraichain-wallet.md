@@ -18,7 +18,7 @@ A wallet that supports both Cosmos-based and EVM-based networks including Cosmos
 
 **Android:** [**https://play.google.com/store/apps/details?id=io.orai.wallet\&hl=en\&gl=US**](https://play.google.com/store/apps/details?id=io.orai.wallet\&hl=en\&gl=US) \*\*\*\*
 
-**Web version (only for registered users):** [**https://api.wallet.orai.io**](https://api.wallet.orai.io) \*\*\*\*
+**Web version:** [**https://api.wallet.orai.io**](https://api.wallet.orai.io) \*\*\*\*
 
 {% embed url="https://www.youtube.com/watch?v=Rcnk7tSpLlQ" %}
 How to use Oraichain Wallet App
