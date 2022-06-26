@@ -14,4 +14,4 @@ description: This section showcases how to get a random value directly using Ora
 
 **Step 4:** Connect to your **Oraichain Wallet** to confirm the request. Note that your wallet needs to complete at least 01 transaction before requesting for a VRF output.
 
-![Easily generate a publicly verifiable random value with Oraichain VRF 2.0](<../.gitbook/assets/Untitled Project1a931ff9.autosave (1).gif>)
+![Easily generate a publicly verifiable random value with Oraichain VRF 2.0](<../.gitbook/assets/Untitled Project1a931ff9.autosave.gif>)
