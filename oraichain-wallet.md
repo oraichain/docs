@@ -8,7 +8,7 @@ A wallet that supports both Cosmos-based and EVM-based networks including Cosmos
 
 **Android:** [**https://play.google.com/store/apps/details?id=com.io.owallet**](https://play.google.com/store/apps/details?id=com.io.owallet) ****&#x20;
 
-**Chrome extension:** Coming soon in June 2022
+**Chrome extension:** Coming soon in July 2022
 
 **Official website:** [**https://owallet.dev**](https://owallet.dev/)****
 
