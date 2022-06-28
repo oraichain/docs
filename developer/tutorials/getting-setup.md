@@ -58,6 +58,8 @@ To confirm that the installation has succeeded, you can run:
 oraid version
 ```
 
+The current binary version is v0.40.4_ibc, which has the checksum value: ```58bac3b5cbcddbf7714cfd16d70b52e3```
+
 ## Connecting to the network
 
 To connect to the Oraichain network you can either run your own node or connect to a public node's RPC endpoint. To find a public node to connect to consider looking in the official [chain registry](https://github.com/cosmos/chain-registry/blob/master/oraichain/chain.json) of Cosmos. Connecting to a public node requires the least configuration but you should be sure that you trust whatever node that you choose.
