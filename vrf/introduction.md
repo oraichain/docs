@@ -2,7 +2,7 @@
 
 #### Currently available on Oraichain Mainnet 2.0, supporting most prominent blockchains: BNB Chain, Ethereum, Polygon, Solana, Cosmos, Fantom, Polkadot and Avalanche.
 
-**Please** [**contact us**](https://docs.google.com/forms/d/e/1FAIpQLSc1S4vCb8xJJvkukcB1vNfRKRTGppr0isv6VmXGnVo3ZKbUVA/viewform?usp=sf\_link) **for more information.**
+**Please** [**contact us** ](https://landing.mailerlite.com/webforms/landing/t0c1f1)**for more information.**
 
 ## **The need for provably-fair randomness in the crypto world**
 
