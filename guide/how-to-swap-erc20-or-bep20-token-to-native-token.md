@@ -22,7 +22,7 @@ Then copy your wallet address:
 
 Step 3: Paste your address into the Address field, check out both the disclaimers present below it then tick them off and fill in the amount of token.
 
-![](<../.gitbook/assets/image (13) (1) (1) (1) (1) (2) (1) (2) (9).png>)
+![](<../.gitbook/assets/image (13) (1) (1) (1) (1) (2) (1) (2) (1) (1) (8).png>)
 
 Then click Next Step 4: Verify information and submit your swapping request.
 
@@ -34,4 +34,4 @@ After you submit, MetaMask will require your confirmation, check out the gas fee
 
 Step 5: Click to the History to see all your swap transactions
 
-![](<../.gitbook/assets/image (20) (1) (1) (1) (1) (2) (1) (2) (2).png>)
+![](<../.gitbook/assets/image (20) (1) (1) (1) (1) (2) (1) (2) (1) (2).png>)
