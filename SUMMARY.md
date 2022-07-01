@@ -51,7 +51,7 @@
 
 ***
 
-* [Oraichain Wallet](oraichain-wallet.md)
+* [Oraichain Wallets](oraichain-wallets.md)
 
 ## PRICE FEEDS
 
