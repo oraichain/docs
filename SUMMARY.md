@@ -51,7 +51,12 @@
 
 ***
 
-* [Oraichain Wallets](oraichain-wallets.md)
+* [Page 1](page-1.md)
+
+## Wallets
+
+* [OWallet](wallets/owallet.md)
+* [Oraichain Wallet](wallets/oraichain-wallets.md)
 
 ## PRICE FEEDS
 
@@ -70,17 +75,16 @@
 * [Get a Random Value from API](vrf/get-a-random-value-from-api/README.md)
   * [Get VRF Value from different networks](vrf/get-a-random-value-from-api/get-vrf-value-from-different-networks.md)
   * [Contract Addresses and Pricing](vrf/get-a-random-value-from-api/contract-addresses-and-pricing.md)
+  * [Validate a Group Signature](vrf/get-a-random-value-from-api/validate-a-group-signature.md)
 * [Security Remarks](vrf/security-remarks.md)
 * [API Reference](vrf/api-reference.md)
 * [Security Remarks](vrf/security-remarks-1.md)
-* [Validate a Group Signature](vrf/validate-a-group-signature.md)
-* [Get Support from Oraichain team](vrf/get-support-from-oraichain-team.md)
+* [Get support from Oraichain team](vrf/get-support-from-oraichain-team.md)
 
 ## OraiDEX
 
 * [Introduction to OraiDEX](oraidex/introduction-to-oraidex.md)
 * [ORAIX Token](oraidex/oraix-token.md)
-* [OWallet](oraidex/owallet.md)
 
 ***
 
