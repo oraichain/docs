@@ -49,10 +49,6 @@
 * [Tools](tools/README.md)
   * [Faucet](tools/faucet.md)
 
-***
-
-* [Page 1](page-1.md)
-
 ## Wallets
 
 * [OWallet](wallets/owallet.md)
