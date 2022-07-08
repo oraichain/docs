@@ -11,6 +11,6 @@ The field _**Verified**_ shows you the status a group signature:
 1. _**True**_ means the group signature you searched had been successfully aggregated and verified on-chain with Oraichain Smart Contract
 2. _**False**_ means the group signature you searched are either being verified or did not have the required signatures to form a group signature
 
-![Easily check the validity of a group signature without the knowledge of smart contract](<../.gitbook/assets/1Untitled Project1a931ff9.autosave.gif>)
+![Easily check the validity of a group signature without the knowledge of smart contract](<../../.gitbook/assets/1Untitled Project1a931ff9.autosave.gif>)
 
 Search for a round of your choice at the field _**Search**_**.** Note that the round value entered should not be larger than the current round displayed.
