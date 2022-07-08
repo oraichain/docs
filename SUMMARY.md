@@ -51,9 +51,7 @@
 
 ## Wallets
 
-## Wallets
-
-* [Guide](wallets/README.md)
+* [Wallets](wallets/README.md)
   * [OWallet](oraidex/owallet.md)
 
 ## PRICE FEEDS
