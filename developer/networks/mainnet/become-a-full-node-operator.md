@@ -65,36 +65,19 @@ wget -O /workspace/.oraid/config/genesis.json https://raw.githubusercontent.com/
 
 Download the latest chain data from a snapshot provider. Select the tab to the desired node type (Default or Pruned). A Pruned node will have the smallest disk size possible, but it will only keep the latest network state, which is recommended for sentry, seed nodes & light clients. Meanwhile, a Default node will store more network state history, but it will have larger size, which is suitable for validators.
 
+Below are the chain data download URLs from different regions:
 
-<div style="margin-left: 5rem;">
-<md>
+|              | Default                                                                                | Pruned                                                            |
+| :---         | :---                                                                                   | :----                                                         |
+| Stockholm    | https://orai-stockholm.s3.eu-north-1.amazonaws.com/mainnet_default_bk.tar.gz                                                                                 | https://orai-stockholm.s3.eu-north-1.amazonaws.com/mainnet_pruned_bk.tar.gz                                                             |
+| Singapore    | https://orai-singapore.s3.ap-southeast-1.amazonaws.com/mainnet_default_bk.tar.gz                                                                              | https://orai-singapore.s3.ap-southeast-1.amazonaws.com/mainnet_pruned_bk.tar.gz                                                              |
+| US-East      | https://orai.s3.us-east-2.amazonaws.com/mainnet_default_bk.tar.gz                      | https://orai.s3.us-east-2.amazonaws.com/mainnet_pruned_bk.tar.gz  |
 
-First Table| Description |
-- |:-: |
-hey | hey yo
-hey | hey yo
-</md></div>
 
-<div style="margin-left: 15rem;">
-<md>
-
-Table second| Description |
-- |:-: |
-hey | hey yo
-hey | hey yo
-
-</md></div>
-
-- Default:
+- Command:
 
 ``` bash
-docker-compose exec orai bash -c 'wget -O - https://orai.s3.us-east-2.amazonaws.com/mainnet_default_bk.tar.gz | tar -zxvf -'
-```
-
-- Pruned:
-
-``` bash
-docker-compose exec orai bash -c 'wget -O - https://orai.s3.us-east-2.amazonaws.com/mainnet_pruned_bk.tar.gz | tar -zxvf -'
+docker-compose exec orai bash -c 'wget -O - <chain-dara-url> | tar -zxvf -'
 ```
 
 After extracting the chain data, you need to move such data into the .oraid/ directory:
