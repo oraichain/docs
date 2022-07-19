@@ -65,14 +65,7 @@ wget -O /workspace/.oraid/config/genesis.json https://raw.githubusercontent.com/
 
 Download the latest chain data from a snapshot provider. Select the tab to the desired node type (Default or Pruned). A Pruned node will have the smallest disk size possible, but it will only keep the latest network state, which is recommended for sentry, seed nodes & light clients. Meanwhile, a Default node will store more network state history, but it will have larger size, which is suitable for validators.
 
-Below are the chain data download URLs from different regions:
-
-| Region       | Default                                                                                | Pruned                                                            |
-| :---         | :---                                                                                   | :----                                                         |
-| Stockholm    | https://orai-stockholm.s3.eu-north-1.amazonaws.com/mainnet_default_bk.tar.gz                                                                                 | https://orai-stockholm.s3.eu-north-1.amazonaws.com/mainnet_pruned_bk.tar.gz                                                             |
-| Singapore    | https://orai-singapore.s3.ap-southeast-1.amazonaws.com/mainnet_default_bk.tar.gz                                                                              | https://orai-singapore.s3.ap-southeast-1.amazonaws.com/mainnet_pruned_bk.tar.gz                                                              |
-| US-East      | https://orai.s3.us-east-2.amazonaws.com/mainnet_default_bk.tar.gz                      | https://orai.s3.us-east-2.amazonaws.com/mainnet_pruned_bk.tar.gz  |
-
+Click [Here](./README.md#chain-data-download-urls) to view the chain data download URLs from different regions.
 
 - Command:
 
