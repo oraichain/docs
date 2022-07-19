@@ -65,6 +65,26 @@ wget -O /workspace/.oraid/config/genesis.json https://raw.githubusercontent.com/
 
 Download the latest chain data from a snapshot provider. Select the tab to the desired node type (Default or Pruned). A Pruned node will have the smallest disk size possible, but it will only keep the latest network state, which is recommended for sentry, seed nodes & light clients. Meanwhile, a Default node will store more network state history, but it will have larger size, which is suitable for validators.
 
+
+<div style="margin-left: 5rem;">
+<md>
+
+First Table| Description |
+- |:-: |
+hey | hey yo
+hey | hey yo
+</md></div>
+
+<div style="margin-left: 15rem;">
+<md>
+
+Table second| Description |
+- |:-: |
+hey | hey yo
+hey | hey yo
+
+</md></div>
+
 - Default:
 
 ``` bash
