@@ -6,7 +6,7 @@ You should back up all the node information before migrating to recover if somet
 
 ## 2. Create a new node
 
-To start migrating, you can create a new node to initialize all the configuration files needed. For more information relating to creating a new node, you can follow the sentry node creation tutorial [here](https://github.com/oraichain/oraichain-static-files/blob/master/mainnet-static-files/Validator-fast.md#setup-your-sentry-nodes-optional). You can use the same moniker as the current node's
+To start migrating, you can create a new node to initialize all the configuration files needed. For more information relating to creating a new node, you can follow the full node operator creation tutorial [here](https://docs.orai.io/developers/networks/mainnet/become-a-full-node-operator). You can use the same moniker as the current node's
 
 ## 3. Start your new node with appropriate persistent connection to an existing node in the network
 
