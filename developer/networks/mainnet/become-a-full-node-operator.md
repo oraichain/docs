@@ -65,16 +65,12 @@ wget -O /workspace/.oraid/config/genesis.json https://raw.githubusercontent.com/
 
 Download the latest chain data from a snapshot provider. Select the tab to the desired node type (Default or Pruned). A Pruned node will have the smallest disk size possible, but it will only keep the latest network state, which is recommended for sentry, seed nodes & light clients. Meanwhile, a Default node will store more network state history, but it will have larger size, which is suitable for validators.
 
-- Default:
+Click [Here](./README.md#chain-data-download-urls) to view the chain data download URLs from different regions.
+
+- Command:
 
 ``` bash
-docker-compose exec orai bash -c 'wget -O - https://orai.s3.us-east-2.amazonaws.com/mainnet_default_bk.tar.gz | tar -zxvf -'
-```
-
-- Pruned:
-
-``` bash
-docker-compose exec orai bash -c 'wget -O - https://orai.s3.us-east-2.amazonaws.com/mainnet_pruned_bk.tar.gz | tar -zxvf -'
+docker-compose exec orai bash -c 'wget -O - <chain-dara-url> | tar -zxvf -'
 ```
 
 After extracting the chain data, you need to move such data into the .oraid/ directory:
