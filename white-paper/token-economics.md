@@ -56,7 +56,7 @@ There are two ways to mint ORAI tokens on the Oraichain Mainnet 2.0:&#x20;
 
 ### Inflation, Staking, and Slashing
 
-In order to keep the value of ORAI token, holders can stake their token to the Oraichain network and earn **an estimated APR of 29%**. The rewarding token is divided based on the number of tokens that a holder is staking to a validator.
+In order to keep the value of ORAI token, holders can stake their token to the Oraichain network. The rewarding token is divided based on the number of tokens that a holder is staking to a validator.
 
 [**Slashing**](https://blog.orai.io/updating-orai-tokenomics-for-sustainable-development-48536becdf49) is a mechanism to penalize misbehaviors of validators in aspects of AI API quality, response time, and availability.
 
