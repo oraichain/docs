@@ -6,7 +6,7 @@ Since OWallet Extension is based on [Keplr Wallet](https://github.com/chainapsis
 
 The OWallet object is injected into the `window` object as window.owallet or window.keplr for backward compatibility with the Keplr Wallet. If it is **undefined**, then you will need to install it on the browser first. Similarly to the Keplr's documentation, there are a few ways to check the object's status:
 
-```js
+```javascript
 window.onload = async () => {
     if (!window.owallet) {
         alert("Please install owallet extension");
@@ -19,7 +19,7 @@ window.onload = async () => {
 
 or you can check the browser document's state:
 
-```js
+```javascript
 function getOWallet(): Promise<OWallet | undefined> {
     if (window.owallet) {
         return window.owallet;
@@ -246,7 +246,7 @@ Similar to how Keplr [connects with CosmJS](https://docs.keplr.app/api/cosmjs.ht
 
 You can get the signer via:
 
-```js
+```javascript
 
 var offlineSigner = window.getOfflineSigner(chainId);
 // or
@@ -258,7 +258,7 @@ var offlineSigner = window.getOfflineSignerOnlyAmino(chainId);
 
 then you can pass the `offlineSigner` variable into the `SigningCosmosClient`:
 
-```js
+```javascript
 // Initialize the gaia api with the offline signer that is injected by Keplr extension.
 const cosmJS = new SigningCosmosClient(
     "https://rpc.orai.io",
@@ -275,7 +275,7 @@ dApps can request the wallet to add new Cosmos chains that are not supported by 
 
 Below is the `ChainInfo` interface of the OWallet extension:
 
-```js
+```javascript
 interface ChainInfo {
     readonly rpc?: string;
     /**
@@ -332,13 +332,13 @@ interface ChainInfo {
 
 the suggest chain API is:
 
-```js
+```javascript
 experimentalSuggestChain(chainInfo: SuggestingChainInfo): Promise<void>
 ```
 
 examples:
 
-```js
+```javascript
 await window.keplr.experimentalSuggestChain({
     chainId: "Oraichain",
     chainName: "Oraichain",
