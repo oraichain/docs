@@ -49,10 +49,6 @@ function getOWallet(): Promise<OWallet | undefined> {
 
 We share the same features as Keplr's when it comes to the Cosmos-based networks. Hence, the below documentation about the features are brought from the [Keplr Wallet documentation website](https://docs.keplr.app/api/) with slight modifications.
 
-If you were able to connect Keplr with CosmJS, you may skip to the [Use Keplr with CosmJS](./cosmjs.md) section.
-
-While Keplr supports an easy way to connect to CosmJS, there are additional functions specific to Keplr which provides additional features.
-
 ### Using with Typescript
 **`window.d.ts`**
 ```javascript
