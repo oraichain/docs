@@ -4,7 +4,7 @@ Since OWallet Extension is based on [Keplr Wallet](https://github.com/chainapsis
 
 ## How to detect OWallet Extension for Cosmos-based networks
 
-The OWallet object is injected into the `window` object as window.owallet or window.keplr for backward compatibility with the Keplr Wallet. If it is **undefined**, then you will need to install it on the browser first. Similarly to the Keplr's documentation, there are a few ways to check the object's status:
+The OWallet object is injected into the `window` object as `window.owallet` or `window.keplr` for backward compatibility with the Keplr Wallet. If it is **undefined**, then you will need to install it on the browser first. Similarly to the Keplr's documentation, there are a few ways to check the object's status:
 
 ```javascript
 window.onload = async () => {
