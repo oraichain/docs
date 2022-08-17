@@ -52,7 +52,9 @@
 ## Wallets
 
 * [Wallets](wallets/README.md)
-  * [OWallet](wallets/owallet.md)
+  * [OWallet](wallets/owallet/README.md)
+    * [OWallet Cosmos-based API](wallets/owallet/cosmos-api.md)
+    * [OWallet EVM-based API](wallets/owallet/evm-api.md)
 
 ## PRICE FEEDS
 
