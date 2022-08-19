@@ -4,31 +4,9 @@ This tutorial helps validators and full nodes quickly synchronize with the Oraic
 
 If you want to synchronize your node using the traditional method, please follow [this tutorial](https://github.com/oraichain/oraichain-static-files/blob/master/mainnet-static-files/Validator.md) instead.
 
-## Hardware specifications for an Oraichain node:
+## Hardware specifications for an Oraichain node
 
-A dedicated node that can run Docker amd64.
-
-**Minimum requirements**
-
-```
-The number of CPUs: 2vCPUs
-RAM: 2GB
-Storage: 200GB SSD
-```
-
-**Recommended requirements**
-
-```
-The number of CPUs: 2vCPUs
-RAM: 2GB
-Storage: 200GB SSD
-```
-
-**Estimated cost for a node with minimum requirements using Digital Ocean: $25/month**
-
-![droplet](https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/mainnet-static-files/droplet.jpg)
-
-![disk](https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/mainnet-static-files/disk.jpg)
+Please take a look [here](./README.md#node-hardwarde-specification)
 
 ## Setup the validator node
 

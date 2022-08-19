@@ -22,6 +22,32 @@
 
 **Cosmwasm-std version:** v0.13.2 (with no CustomQuery feature). Documentation: https://oraiwasm.web.app
 
+### Node hardwarde specification:
+
+A dedicated node that can run Docker amd64.
+
+**Minimum requirements**
+
+```
+The number of CPUs: 2vCPUs
+RAM: 4GB
+Storage: 200GB SSD
+```
+
+**Recommended requirements**
+
+```
+The number of CPUs: 2vCPUs
+RAM: 4GB
+Storage: 200GB SSD
+```
+
+**Estimated cost for a node with minimum requirements using Digital Ocean: $25/month**
+
+![droplet](https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/mainnet-static-files/droplet.jpg)
+
+![disk](https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/mainnet-static-files/disk.jpg)
+
 ### Chain Data Download URLs:
 
 | Region       | Default                                                                                | Pruned                                                            |

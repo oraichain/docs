@@ -4,29 +4,7 @@ This tutorial helps full node operators quickly synchronize with the Oraichain m
 
 ## Hardware specifications for an Oraichain node:
 
-A dedicated node that can run Docker amd64.
-
-**Minimum requirements**
-
-```
-The number of CPUs: 2vCPUs
-RAM: 2GB
-Storage: 200GB SSD
-```
-
-**Recommended requirements**
-
-```
-The number of CPUs: 2vCPUs
-RAM: 2GB
-Storage: 200GB SSD
-```
-
-**Estimated cost for a node with minimum requirements using Digital Ocean: $25/month**
-
-![droplet](https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/mainnet-static-files/droplet.jpg)
-
-![disk](https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/mainnet-static-files/disk.jpg)
+Please take a look [here](./README.md#node-hardwarde-specification)
 
 ## Setup the node
 
