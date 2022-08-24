@@ -7,9 +7,9 @@ As a result, the executors need to verify the integrity of the executable you ar
 Below is the list of checksums for Linux, Macos, and Windows:
 
 ```
-Windows: de81c183009bfa5a564e8587c38eba3a
-MacOS: 7863c0856349c070f6e8a0c31050072c
-Linux: 467952e3460878f108876c1030fbe6c3
+Windows: 0e719128676a117596c21a1964cc5c20
+MacOS: 40a1cad78f20e9f433572b24240e8e07
+Linux: e32f6d68e187ce3ad4b2bf3cbf4be577
 ```
 
 These checksums will be updated accordingly to the latest executable's version. As of now, the current version of the executable is v0.3.4.4.
