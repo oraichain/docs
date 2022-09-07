@@ -28,11 +28,11 @@ The then-generated mnemonic phrase acts as a private key for your wallet, so you
 
 **Step 5:** Click **Next** to set up a PIN password and confirm it once again. You must remember the password - if not, you’ll never be able to recover your account.
 
-![](<../.gitbook/assets/image (28).png>)
+![](<../.gitbook/assets/image (29).png>)
 
 **Step 6:** Lastly, you’ll be redirected to an **Encrypted Mnemonic Phrase**. Just copy and paste it underneath, and then hit **Connect**.
 
-![](<../.gitbook/assets/image (29).png>)
+![](<../.gitbook/assets/image (28).png>)
 
 Congratulations, now you’re good to flick through **Oraiscan**!
 

@@ -1,3 +1,3 @@
 # Faucet
 
-Link: [https://testnet-faucet.web.app](https://testnet-faucet.web.app/)
+Link: [https://faucet.orai.network/](https://faucet.orai.network/)
