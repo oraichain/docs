@@ -81,6 +81,7 @@
 
 * [Introduction to OraiDEX](oraidex/introduction-to-oraidex.md)
 * [ORAIX Token](oraidex/oraix-token.md)
+* [Contracts](oraidex/contracts.md)
 
 ***
 
