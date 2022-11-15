@@ -11,7 +11,7 @@ Please take a look [here](./README.md#node-hardwarde-specification)
 ### 1. Download and run the setup file
 
 ```bash
-curl -OL https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/mainnet-static-files/docker-compose.fast.yml && curl -OL https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/mainnet-static-files/orai.env && mv docker-compose.fast.yml docker-compose.yml
+curl -OL https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/docker-compose.yml && curl -OL https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/orai.env
 ```
 
 ### 2. Edit your moniker in the orai.env file you have just downloaded
@@ -35,7 +35,7 @@ oraid init "$MONIKER" --home /workspace/.oraid
 then, you need to download the network's genesis file by using the following command inside your container:
 
 ```bash
-wget -O /workspace/.oraid/config/genesis.json https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/mainnet-static-files/genesis.json
+wget -O /workspace/.oraid/config/genesis.json https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/genesis.json
 
 ```
 

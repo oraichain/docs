@@ -44,9 +44,9 @@ Storage: 200GB SSD
 
 **Estimated cost for a node with minimum requirements using Digital Ocean: $25/month**
 
-![droplet](https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/mainnet-static-files/droplet.jpg)
+![droplet](https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/droplet.jpg)
 
-![disk](https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/mainnet-static-files/disk.jpg)
+![disk](https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/disk.jpg)
 
 ### Chain Data Download URLs:
 
