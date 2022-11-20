@@ -23,7 +23,7 @@ pkill oraid
 ## 1. Download the docker-compose file
 
 ```bash
-mkdir $PWD/snapshot && cd snapshot && wget -O ./docker-compose.yml https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/mainnet-static-files/docs/manual_snapshot/docker-compose.yml
+mkdir $PWD/snapshot && cd snapshot && wget -O ./docker-compose.yml https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/docs/manual_snapshot/docker-compose.yml
 ```
 
 ## 2. Copy the snapshot directory from the container to the host

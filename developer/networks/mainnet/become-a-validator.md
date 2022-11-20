@@ -4,7 +4,7 @@
 
 This tutorial helps validators and full nodes quickly synchronize with the Oraichain mainnet by downloading a storage snapshot prepared by the team. The downloading speed is much faster than synchronizing from the first block, which allows fast set up to join the network in no time!
 
-If you want to synchronize your node using the traditional method, please follow [this tutorial](https://github.com/oraichain/oraichain-static-files/blob/master/mainnet-static-files/Validator.md) instead.
+If you want to synchronize your node using the traditional method, please follow [this tutorial](https://github.com/oraichain/oraichain-static-files/blob/master/Validator.md) instead.
 
 ### Hardware specifications for an Oraichain node
 
@@ -15,7 +15,7 @@ Please take a look [here](./#node-hardwarde-specification)
 #### 1. Download and run the setup file
 
 ```bash
-curl -OL https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/mainnet-static-files/docker-compose.fast.yml && curl -OL https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/mainnet-static-files/orai.env && mv docker-compose.fast.yml docker-compose.yml
+curl -OL https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/docker-compose.yml && curl -OL https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/orai.env
 ```
 
 #### 2. Edit wallet name and moniker you prefer to create a new wallet and validator in the orai.env file you have just downloaded
@@ -39,7 +39,7 @@ oraid init "$MONIKER" --home /workspace/.oraid
 then, you need to download the network's genesis file by using the following command inside your container:
 
 ```bash
-wget -O /workspace/.oraid/config/genesis.json https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/mainnet-static-files/genesis.json
+wget -O /workspace/.oraid/config/genesis.json https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/genesis.json
 ```
 
 #### 5. Download Chain Data
@@ -107,7 +107,7 @@ You need to store two following files: .oraid/config/node\_key.json, .oraid/conf
 You can check your wallet information by typing: `oraid query auth account <your-validator-wallet-address>` inside of the container or through the explorer, where you import your wallet. To prevent spamming, your wallet is not activated by default. As a result, it needs to receive at least one MsgSend transaction from a different account. In other words, you should receive some ORAI tokens (minimum of 10^-6 ORAI) to continue. When your wallet has some tokens, please enter the container and type:
 
 ```bash
-wget -O /usr/bin/fn https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/mainnet-static-files/fn.sh && chmod +x /usr/bin/fn && fn createValidator
+wget -O /usr/bin/fn https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/fn.sh && chmod +x /usr/bin/fn && fn createValidator
 ```
 
 #### 5. Check your node status with voting power
