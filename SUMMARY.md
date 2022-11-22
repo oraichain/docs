@@ -11,7 +11,7 @@
     * [IBC Integration](whitepaper/system-overview/ibc-integration.md)
   * [Decentralized Validator Sampling](whitepaper/decentralized-validator-sampling.md)
   * [Use Cases](whitepaper/use-cases.md)
-  * [Token Economics](whitepaper/token-economics.md)
+  * [Token Economics](whitepaper/tokenomics.md)
   * [Protocol Messages](whitepaper/protocol-messages.md)
 
 ## Developers
