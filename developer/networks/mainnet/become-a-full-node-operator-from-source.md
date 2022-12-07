@@ -59,9 +59,9 @@ To confirm that the installation has succeeded, you can run:
 oraid version
 ```
 
-The current binary version for Linux users is v0.41.1, the checksum value may vary due to go.mod being updated after `go get ./...`
+The current binary version for Linux users is v0.41.1, the checksum value may vary due to go.mod being updated after ```go get ./...```
 
-Libwasmvm version: `oraid query wasm libwasmvm-version`, which should give: 1.1.2
+Libwasmvm version: ```oraid query wasm libwasmvm-version```, which should give: 1.1.2
 
 ## Connecting to the network as a full-node operator
 
@@ -69,7 +69,7 @@ Libwasmvm version: `oraid query wasm libwasmvm-version`, which should give: 1.1.
 
 First, we need to initiate config files for the node:
 
-`oraid init foobar --chain-id Oraichain`
+```oraid init foobar --chain-id Oraichain```
 
 The default directory of .oraid is located in $PWD, not $HOME like other Cosmos networks.
 
@@ -77,17 +77,17 @@ The default directory of .oraid is located in $PWD, not $HOME like other Cosmos 
 
 Next, replace the '.oraid/config/genesis.json' to the official genesis file of the Oraichain network: 
 
-`wget -O $PWD/.oraid/config/genesis.json https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/genesis.json`
+```wget -O $PWD/.oraid/config/genesis.json https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/genesis.json```
 
 ### Download the network's snapshot
 
-`wget -O - <chain-dara-url> | tar -zxvf -`
+```wget -O - <chain-dara-url> | tar -zxvf -```
 
 where `<chain-data-url>` can be found in [Here](./README.md#chain-data-download-urls)
 
 then move all data & wasm files into .oraid directory:
 
-`mv data/* .oraid/data && mv wasm/ .oraid`
+```mv data/* .oraid/data && mv wasm/ .oraid```
 
 ### Choose persistent peers
 
@@ -101,4 +101,4 @@ Below are also several options you can choose from to connect to the network:
 
 ### Start the node
 
-oraid start --p2p.persistent_peers "<node-id1>@<pubclic-ip1>:26656,<node-id2>@<public-ip2>:26656"
+```oraid start --p2p.persistent_peers "<node-id1>@<pubclic-ip1>:26656,<node-id2>@<public-ip2>:26656"```
