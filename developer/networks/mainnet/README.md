@@ -50,8 +50,18 @@ Storage: 200GB SSD
 
 ### Chain Data Download URLs:
 
+- 1st option:
+
 | Region       | Default                                                                                | Pruned                                                            |
 | :---         | :---                                                                                   | :----                                                         |
-| Stockholm    | https://orai-stockholm.s3.eu-north-1.amazonaws.com/mainnet_default_bk.tar.gz                                                                                 | https://orai-stockholm.s3.eu-north-1.amazonaws.com/mainnet_pruned_bk.tar.gz                                                             |
-| Singapore    | https://orai-singapore.s3.ap-southeast-1.amazonaws.com/mainnet_default_bk.tar.gz                                                                              | https://orai-singapore.s3.ap-southeast-1.amazonaws.com/mainnet_pruned_bk.tar.gz                                                              |
-| US-East      | https://orai.s3.us-east-2.amazonaws.com/mainnet_default_bk.tar.gz                      | https://orai.s3.us-east-2.amazonaws.com/mainnet_pruned_bk.tar.gz  |
+| Stockholm    |                                                                                 | https://orai-stockholm.s3.eu-north-1.amazonaws.com/mainnet_statesync_data_9077207_wasm_at_9149946_v0410.tar.gz                                                             |
+| Singapore    |                                                                               | https://orai-singapore.s3.ap-southeast-1.amazonaws.com/mainnet_statesync_data_9077207_wasm_at_9149946_v0410.tar.gz                                                              |
+| US-East      | https://orai.s3.us-east-2.amazonaws.com/mainnet_default_bk.tar.gz                      | https://orai.s3.us-east-2.amazonaws.com/mainnet_statesync_data_9077207_wasm_at_9149946_v0410.tar.gz  |
+
+- 2nd option:
+
+| Region       | Pruned                                                            |
+| :---         | :----                                                         |
+| Stockholm    | https://orai-stockholm.s3.eu-north-1.amazonaws.com/mainnet_statesync_data_9149946_wasm_at_9149946_v0410.tar.gz                                                             |
+| Singapore    | https://orai-singapore.s3.ap-southeast-1.amazonaws.com/mainnet_statesync_data_9149946_wasm_at_9149946_v0410.tar.gz                                                              |
+| US-East      | https://orai.s3.us-east-2.amazonaws.com/mainnet_statesync_data_9149946_wasm_at_9149946_v0410.tar.gz  |

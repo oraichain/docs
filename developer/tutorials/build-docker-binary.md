@@ -1,5 +1,5 @@
 ---
-description: Instruction to install the oraid binary
+description: Instruction to install the oraid binary in docker
 ---
 
 # Oraid Installation and setup
@@ -37,7 +37,7 @@ git checkout <tag>
 The `<version-tag>` will need to be set to either a testnet or the latest mainnet version tag.
 
 {% hint style="warning" %}
-For genesis, the current mainnet version tag will be `v0.41.0` - i.e:
+The current mainnet version tag will be `v0.41.0` - i.e:
 
 ```bash
 git checkout v0.41.0
@@ -46,9 +46,9 @@ git checkout v0.41.0
 
 Next, you should verify the /lib/libwasmvm_muslc.a file located in the container to see if it matches the one that is published on the [Oraichain mainnet release](https://github.com/oraichain/orai/releases/download/v0.41.0/libwasmvm_muslc.a) using its checksum:
 
-```md5sum /lib/libwasmvm_muslc.a  | cut -d ' ' -f 1```
+```sha256sum /lib/libwasmvm_muslc.a  | cut -d ' ' -f 1```
 
-The current checksum of the file should be: ```767ec1695ea6566524e5b3010d1df833```
+The current checksum of the file should be: ```6da1ce5882c02ff763f5bea6323cbb1636cd984878447794bd15c8ac696306c0```
 
 Next, you should be able to build the binary file using the below command:
 
@@ -64,10 +64,7 @@ To confirm that the installation has succeeded, you can run:
 oraid version
 ```
 
-The current binary version is v0.41.0, which has the checksum value:
-
-- Uncompressed: ```58bac3b5cbcddbf7714cfd16d70b52e3```
-- Compressed: ```a59cf862cb3dc2d8c522f7f8aafd0374``` (UPX 3.96, Markus Oberhumer, Laszlo Molnar & John Reiser, Jan 23rd 2020) with command: ```upx --best --lzma /workspace/build/oraid```
+The current binary version is v0.41.0, the checksum value may vary due to go.mod being updated after `go get ./...`
 
 ## Connecting to the network
 
