@@ -1,18 +1,18 @@
 # Table of contents
 
 * [Whitepaper](README.md)
-  * [Introduction](white-paper/introduction.md)
-  * [Terminology](white-paper/terminology.md)
-  * [System Overview](white-paper/system-overview/README.md)
-    * [AI Layer 1 for Data Economy & Oracle services](white-paper/system-overview/ai-layer-1-for-data-economy-and-oracle-services.md)
-    * [Layer 2 Rollups and Subnetworks](white-paper/system-overview/layer-2-rollups-and-subnetworks.md)
-    * [Verifiable and trustless AI Execution](white-paper/system-overview/verifiable-and-trustless-ai-execution.md)
-    * [Decentralized Data and AI platform](white-paper/system-overview/decentralized-data-and-ai-platform.md)
-    * [IBC Integration](white-paper/system-overview/ibc-integration.md)
-  * [Decentralized Validator Sampling](white-paper/decentralized-validator-sampling.md)
-  * [Use Cases](white-paper/use-cases.md)
-  * [Token Economics](white-paper/token-economics.md)
-  * [Protocol Messages](white-paper/protocol-messages.md)
+  * [Introduction](whitepaper/introduction.md)
+  * [Terminology](whitepaper/terminology.md)
+  * [System Overview](whitepaper/system-overview/README.md)
+    * [AI Layer 1 for Data Economy & Oracle services](whitepaper/system-overview/ai-layer-1-for-data-economy-and-oracle-services.md)
+    * [Layer 2 Rollups and Subnetworks](whitepaper/system-overview/layer-2-rollups-and-subnetworks.md)
+    * [Verifiable and trustless AI Execution](whitepaper/system-overview/verifiable-and-trustless-ai-execution.md)
+    * [Decentralized Data and AI platform](whitepaper/system-overview/decentralized-data-and-ai-platform.md)
+    * [IBC Integration](whitepaper/system-overview/ibc-integration.md)
+  * [Decentralized Validator Sampling](whitepaper/decentralized-validator-sampling.md)
+  * [Use Cases](whitepaper/use-cases.md)
+  * [Token Economics](whitepaper/tokenomics.md)
+  * [Protocol Messages](whitepaper/protocol-messages.md)
 
 ## Developers
 
