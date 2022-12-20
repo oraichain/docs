@@ -1,34 +1,10 @@
 # Oraichain
 
-## Introduction
-
-**Oraichain Oracle Price Feeds** enable developers to integrate on-chain price data from crypto markets into their smart contracts with ease.&#x20;
-
-Oraichain Oracle Price Feeds meanwhile supports a wide range of blockchain networks such as Ethereum, Binance Chain, Oraichain, and more in the future.&#x20;
-
-Data have been extracted from trustworthy exchanges in addition to timely updates with low latency.
-
-**Supported assets** supported by Oraichain Oracle at the moment are as follows:
-
-* USDT
-* ORAI
-* BTC
-* ETH
-* BNB
-* XRP
-* DOGE
-* LINK
-* UNI
-* USDC
-* DAI
-* And [more](https://scan.orai.io/price-feeds) ...
-* [Request Token](https://orai.io)
-
 ## Smart contract
 
-Contract address on Oraichain testnet: [orai1s60a2vntfuv2ps6fs75fcrlrmea9xzr4k65zlg](https://testnet.scan.orai.io/smart-contract/orai1s60a2vntfuv2ps6fs75fcrlrmea9xzr4k65zlg)
+Contract address on Oraichain Testnet: [orai1s60a2vntfuv2ps6fs75fcrlrmea9xzr4k65zlg](https://testnet.scan.orai.io/smart-contract/orai1s60a2vntfuv2ps6fs75fcrlrmea9xzr4k65zlg)
 
-Price Data Requests
+## Price Data Requests
 
 #### Integrate with Node.js
 
@@ -198,4 +174,3 @@ const collectReports = async (url, contractAddr, requestId) => {
 
 demo();
 ```
-

@@ -4,7 +4,7 @@
 
 Contract address: [0x48D21bb7DbC0b6214018766C8415DB508147CC38](https://testnet.bscscan.com/address/0x48D21bb7DbC0b6214018766C8415DB508147CC38#readContract)
 
-**Price Data Requests**
+## **Price Data Requests**
 
 1. Basically, there are two types of getting price data for developers: getPrice() and getPriceBulk(). Via smart contract 'OraiOraclerPriceDataProxy', developers can use NodeJs or smart contract to request price date on blockchain networks like Oraichain Network, Binance Chain, Ethereum.
 2. At the moment, Oraichain Oracle supports 3 networks (Oraichain, Binance Chain, Ethereum) with corresponding addresses for Oraichain Oracle Price.
