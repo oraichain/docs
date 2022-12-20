@@ -1,10 +1,10 @@
-# Become a full node operator
+# Become a Full Node Operator
 
 This tutorial helps full node operators quickly synchronize with the Oraichain mainnet by downloading a storage snapshot prepared by the team. The downloading speed is much faster than synchronizing from the first block, which allows fast set up to join the network in no time!
 
 ## Hardware specifications for an Oraichain node:
 
-Please take a look [here](./README.md#node-hardwarde-specification)
+Please take a look [here](./#node-hardwarde-specification)
 
 ## Setup the node
 
@@ -36,18 +36,17 @@ then, you need to download the network's genesis file by using the following com
 
 ```bash
 wget -O /workspace/.oraid/config/genesis.json https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/genesis.json
-
 ```
 
 ### 5. Download Chain Data
 
 Download the latest chain data from a snapshot provider. Select the tab to the desired node type (Default or Pruned). A Pruned node will have the smallest disk size possible, but it will only keep the latest network state, which is recommended for sentry, seed nodes & light clients. Meanwhile, a Default node will store more network state history, but it will have larger size, which is suitable for validators.
 
-Click [Here](./README.md#chain-data-download-urls) to view the chain data download URLs from different regions.
+Click [Here](./#chain-data-download-urls) to view the chain data download URLs from different regions.
 
-- Command:
+* Command:
 
-``` bash
+```bash
 docker-compose exec orai bash -c 'wget -O - <chain-dara-url> | tar -zxvf -'
 ```
 
@@ -72,11 +71,10 @@ bf083c57ed53a53ccd31dc160d69063c73b340e9@3.17.175.62:26656,
 d091cabe3584cb32043cc0c9199b0c7a5b68ddcb@seed.orai.synergynodes.com:26656
 ```
 
-
 ```bash
 docker-compose restart orai && docker-compose exec -d orai bash -c 'oraivisor start --p2p.pex false --p2p.persistent_peers "<node-id1>@<pubclic-ip1>:26656,<node-id2>@<public-ip2>:26656"'
 ```
 
-If you do not specify the **--p2p.persistent_peers** flags, you must add at least a persistent peer connection in the **.oraid/config/config.toml** file before running the below command, otherwise your node will not be able to connect to the Oraichain network.
+If you do not specify the **--p2p.persistent\_peers** flags, you must add at least a persistent peer connection in the **.oraid/config/config.toml** file before running the below command, otherwise your node will not be able to connect to the Oraichain network.
 
 The above commands run as the background process so when you turn off your Terminal, it is still running. You can always run them in the foreground process by removing the "-d" flag.

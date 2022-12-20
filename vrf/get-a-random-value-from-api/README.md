@@ -70,7 +70,7 @@ const queryRoundInput = JSON.stringify({
 /${contract}/smart/${Buffer.from(queryRoundInput).toString("base64")}`);
 ```
 
-_**contract**_ is the contract address of the VRF issued by Oraichain and can be reviewed on Oraiscan any time**.**
+_**contract**_ is the contract address of the VRF issued by Oraichain and can be reviewed on Oraiscan any time\*\*.\*\*
 
 If the round result has not displayed the randomness output, you just need to wait for some time before querying again.
 
@@ -242,7 +242,6 @@ export const myKeystation = new Keystation({
    path: "44/118/0/0/0",
    keystationUrl: "https://api.wallet.orai.io",
 });
-
 ```
 
 #### Step 3: **Create a randomness request**
@@ -292,7 +291,6 @@ Function _**getChildKey()**_ is as follow:
        window.addEventListener("message", handler);
    });
 };
-
 ```
 
 #### **Step 4: Repeat the previously mentioned step 3 and 4 to get the random value and round information**
