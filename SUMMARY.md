@@ -51,8 +51,8 @@
 
 ## Wallets
 
-* [Wallets](wallets/README.md)
-  * [OWallet](wallets/owallet.md)
+* [OWallet](wallets/owallet.md)
+* [Oraichain Wallet (OBSOLETE)](wallets/oraichain-wallet.md)
 
 ## PRICE FEEDS
 
