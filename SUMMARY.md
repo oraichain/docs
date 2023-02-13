@@ -58,6 +58,7 @@
 
 * [Introduction](price-feeds/introduction.md)
 * [BNB Chain](price-feeds/binance-smart-chain.md)
+* [Ethereum](price-feeds/ethereum.md)
 * [Oraichain](price-feeds/oraichain.md)
 
 ***

@@ -44,3 +44,9 @@ description: >-
 |       Address | 0xf8E8E574fa6f0E0797F05fFeA17FE231ACD7d81b |
 | ------------- | ------------------------------------------ |
 | Service       | 0.8 FTM                                    |
+
+### Ethereum Mainnet
+
+| Address | 0x73d63CDa1CE9e27DE283Bd5019b0dBefB0af87FD |
+| ------- | ------------------------------------------ |
+| Service | 1 ORAI                                     |

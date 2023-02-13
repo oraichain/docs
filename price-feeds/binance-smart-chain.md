@@ -14,7 +14,7 @@ Contract address: [0x48D21bb7DbC0b6214018766C8415DB508147CC38](https://testnet.b
 **getPriceBulk():** This allows us to get as much information as possible on the price of 2 asset pairs at once. Input requires 2 asset symbols output results in the ratio between them and the latest timestamp of the update.]
 
 ```
-vd : getPrice("BNB","ETH")
+eg : getPrice("BNB","ETH")
 ```
 
 1.  getPrice()
