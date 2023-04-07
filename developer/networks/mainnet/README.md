@@ -37,9 +37,9 @@ Storage: 200GB SSD
 **Recommended requirements**
 
 ```
-The number of CPUs: 2vCPUs
+The number of CPUs: 4vCPUs
 RAM: 4GB
-Storage: 200GB SSD
+Storage: 500GB SSD
 ```
 
 **Estimated cost for a node with minimum requirements using Digital Ocean: $25/month**
