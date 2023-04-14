@@ -38,10 +38,10 @@ git checkout <tag>
 The `<version-tag>` will need to be set to either a testnet or the latest mainnet version tag.
 
 {% hint style="warning" %}
-The current mainnet version tag will be `v0.41.1` - i.e:
+The current mainnet version tag will be `v0.41.2` - i.e:
 
 ```bash
-git checkout v0.41.1
+git checkout v0.41.2
 ```
 {% endhint %}
 
@@ -50,7 +50,7 @@ Next, you should be able to build the binary file using the below command:
 ```bash
 # in orai dir
 go get ./...
-make build VERSION=0.41.1
+make build VERSION=0.41.2
 ```
 
 To confirm that the installation has succeeded, you can run:
@@ -59,9 +59,9 @@ To confirm that the installation has succeeded, you can run:
 oraid version
 ```
 
-The current binary version for Linux users is v0.41.1, the checksum value may vary due to go.mod being updated after ```go get ./...```
+The current binary version for Linux users is v0.41.2, the checksum value may vary due to go.mod being updated after ```go get ./...```
 
-Libwasmvm version: ```oraid query wasm libwasmvm-version```, which should give: 1.1.2
+Libwasmvm version: ```oraid query wasm libwasmvm-version```, which should give: 1.2.0
 
 ## Connecting to the network as a full-node operator
 
