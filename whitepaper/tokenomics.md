@@ -2,9 +2,13 @@
 
 When we call **ORAI**, it means that it is native ORAI tokens created and contained in the Oraichain network. At the moment, there are three types of ORAI, including **ERC20 ORAI** on the Ethereum network, **BEP-20 ORAI** on Binance Smart Chain (BSC), and **Native ORAI** on the Oraichain Mainnet.
 
+**ERC20 ORAI contract address:** 0x4c11249814f11b9346808179cf06e71ac328c1b5
+
+**BEP20 ORAI contract address:** 0xa325ad6d9c92b55a3fc5ad7e412b1518f96441c0
+
 ### Token Distribution Overview
 
-After releasing **** all locked rewards (June 2021) and burn events, the circulating supply and new total supply are as follows:
+After releasing all locked rewards (June 2021) and burn events, the circulating supply and new total supply are as follows:
 
 * Circulating supply: **2,329,295 ORAI (\~11.77%)** (on April 22, 2022)
 * New total supply (max supply): **19,779,272 ORAI**
