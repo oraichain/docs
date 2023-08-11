@@ -1,5 +1,7 @@
 # Token Economics
 
+<mark style="background-color:red;">**FAQs:**</mark> [<mark style="background-color:red;">**https://oraichain.notion.site/ORAI-Tokenomics-Transformation-FAQs-7c2bc5c4dc4a4fc8ba61dc9eb8478160**</mark>](https://oraichain.notion.site/ORAI-Tokenomics-Transformation-FAQs-7c2bc5c4dc4a4fc8ba61dc9eb8478160)
+
 When we call **ORAI**, it means that it is native ORAI tokens created and contained in the Oraichain network. At the moment, there are three types of ORAI, including **ERC20 ORAI** on the Ethereum network, **BEP20 ORAI** on the Binance Smart Chain (BSC), and **Native ORAI** on the Oraichain Mainnet.
 
 **ERC20 ORAI contract address:** 0x4c11249814f11b9346808179cf06e71ac328c1b5
@@ -28,7 +30,6 @@ Summary of Circulating Supply (as of August 2023)
 * 2nd token burn **(258,449.4 ORAI burnt from Team)** on March 28, 2021: [https://etherscan.io/tx/0xa66c06593dc8559f565e4a480c32c698ccbb128c49404f8a07a203a5f37902e1](https://etherscan.io/tx/0xa66c06593dc8559f565e4a480c32c698ccbb128c49404f8a07a203a5f37902e1)&#x20;
 * 3rd token burn **(3,000,000 ORAI tokens from Team, Advisors, and Foundation)** on June 23, 2021: [https://etherscan.io/tx/0x953694d378f036ff0e136441e78875ae241d9f212b583007eb4814bab64cf7e3](https://etherscan.io/tx/0x953694d378f036ff0e136441e78875ae241d9f212b583007eb4814bab64cf7e3)&#x20;
 * **ORAI tokenomics for sustainable development:** [https://blog.orai.io/updating-orai-tokenomics-for-sustainable-development-48536becdf49](https://blog.orai.io/updating-orai-tokenomics-for-sustainable-development-48536becdf49)&#x20;
-* **FAQs**: [https://oraichain.notion.site/ORAI-Tokenomics-Transformation-FAQs-7c2bc5c4dc4a4fc8ba61dc9eb8478160?pvs=4](https://oraichain.notion.site/ORAI-Tokenomics-Transformation-FAQs-7c2bc5c4dc4a4fc8ba61dc9eb8478160?pvs=4)
 
 The table below demonstrates the specific percentage and amount for each allocation:
 
