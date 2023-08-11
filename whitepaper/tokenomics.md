@@ -2,7 +2,7 @@
 
 <mark style="background-color:red;">**FAQs (08/2023):**</mark> [<mark style="background-color:red;">**https://oraichain.notion.site/ORAI-Tokenomics-Transformation-FAQs-7c2bc5c4dc4a4fc8ba61dc9eb8478160**</mark>](https://oraichain.notion.site/ORAI-Tokenomics-Transformation-FAQs-7c2bc5c4dc4a4fc8ba61dc9eb8478160)
 
-When we call **ORAI**, it means that it is native ORAI tokens created and contained in the Oraichain network. At the moment, there are three types of ORAI, including **ERC20 ORAI** on the Ethereum network, **BEP20 ORAI** on the Binance Smart Chain (BSC), and **Native ORAI** on the Oraichain Mainnet.
+When we call **ORAI**, it means that it is native ORAI tokens created and contained in the Oraichain network. At the moment, there are three types of ORAI, including **ERC20 ORAI** on the Ethereum network, **BEP20 ORAI** on the BNB Chain, and **Native ORAI** on the Oraichain Mainnet.
 
 **ERC20 ORAI contract address:** 0x4c11249814f11b9346808179cf06e71ac328c1b5
 
