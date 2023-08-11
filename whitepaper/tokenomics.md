@@ -1,6 +1,6 @@
 # Token Economics
 
-<mark style="background-color:red;">**FAQs:**</mark> [<mark style="background-color:red;">**https://oraichain.notion.site/ORAI-Tokenomics-Transformation-FAQs-7c2bc5c4dc4a4fc8ba61dc9eb8478160**</mark>](https://oraichain.notion.site/ORAI-Tokenomics-Transformation-FAQs-7c2bc5c4dc4a4fc8ba61dc9eb8478160)
+<mark style="background-color:red;">**FAQs (08/2023):**</mark> [<mark style="background-color:red;">**https://oraichain.notion.site/ORAI-Tokenomics-Transformation-FAQs-7c2bc5c4dc4a4fc8ba61dc9eb8478160**</mark>](https://oraichain.notion.site/ORAI-Tokenomics-Transformation-FAQs-7c2bc5c4dc4a4fc8ba61dc9eb8478160)
 
 When we call **ORAI**, it means that it is native ORAI tokens created and contained in the Oraichain network. At the moment, there are three types of ORAI, including **ERC20 ORAI** on the Ethereum network, **BEP20 ORAI** on the Binance Smart Chain (BSC), and **Native ORAI** on the Oraichain Mainnet.
 
