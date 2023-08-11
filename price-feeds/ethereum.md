@@ -13,28 +13,7 @@ Fee: 1 ORAI
 * A price feed request on the Ethereum network requires ERC20 ORAI for a fee.
 * We support multi-currency pricing, each currency will map with the corresponding Id.
 
-| Symbol | Id |
-| ------ | -- |
-| ORAI   | 0  |
-| BTC    | 1  |
-| ETH    | 2  |
-| XRP    | 3  |
-| DOGE   | 4  |
-| USDT   | 5  |
-| LINK   | 6  |
-| UNI    | 7  |
-| USDC   | 8  |
-| BUSD   | 9  |
-| SOL    | 10 |
-| DOT    | 11 |
-| LUNA   | 12 |
-| XLM    | 13 |
-| ATOM   | 14 |
-| AAVE   | 15 |
-| EOS    | 16 |
-| AXS    | 17 |
-| ALGO   | 18 |
-| MKR    | 19 |
+<table><thead><tr><th width="129">Symbol</th><th>Id</th></tr></thead><tbody><tr><td>ORAI</td><td>0</td></tr><tr><td>BTC</td><td>1</td></tr><tr><td>ETH</td><td>2</td></tr><tr><td>XRP</td><td>3</td></tr><tr><td>DOGE</td><td>4</td></tr><tr><td>USDT</td><td>5</td></tr><tr><td>LINK</td><td>6</td></tr><tr><td>UNI</td><td>7</td></tr><tr><td>USDC</td><td>8</td></tr><tr><td>BUSD</td><td>9</td></tr><tr><td>SOL</td><td>10</td></tr><tr><td>DOT</td><td>11</td></tr><tr><td>LUNA</td><td>12</td></tr><tr><td>XLM</td><td>13</td></tr><tr><td>ATOM</td><td>14</td></tr><tr><td>AAVE</td><td>15</td></tr><tr><td>EOS</td><td>16</td></tr><tr><td>AXS</td><td>17</td></tr><tr><td>ALGO</td><td>18</td></tr><tr><td>MKR</td><td>19</td></tr></tbody></table>
 
 #### Example
 

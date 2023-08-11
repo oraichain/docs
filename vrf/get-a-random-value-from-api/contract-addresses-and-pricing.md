@@ -10,9 +10,7 @@ description: >-
 
 ### **BSC Mainnet**
 
-| Address | 0xc90095557d0B60d13E28BD0391050247088A0EE6 |
-| ------- | ------------------------------------------ |
-| Service | 0.2 ORAI                                   |
+<table><thead><tr><th width="393.33387430600715">Address</th><th>0xc90095557d0B60d13E28BD0391050247088A0EE6</th></tr></thead><tbody><tr><td>Service</td><td>0.2 ORAI</td></tr></tbody></table>
 
 ### BSC Testnet
 
@@ -23,9 +21,7 @@ description: >-
 
 ### **Avalanche**
 
-| Address  | 0x6b5866f4B9832bFF3d8aD81B1151a37393f6B7D5 |
-| -------- | ------------------------------------------ |
-| Service  | 0.015 AVAX                                 |
+<table><thead><tr><th width="150">Address </th><th>0x6b5866f4B9832bFF3d8aD81B1151a37393f6B7D5</th></tr></thead><tbody><tr><td>Service</td><td>0.015 AVAX</td></tr></tbody></table>
 
 ### **Avalanche Testnet**
 

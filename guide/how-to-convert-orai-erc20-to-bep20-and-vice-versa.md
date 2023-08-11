@@ -2,21 +2,21 @@
 
 ### How To Connect MetaMask To Binance Smart Chain?
 
-&#x20;Given that you’ve already had your **MetaMask wallet** logged into with your personal credentials, you’ll be able to see the interface of [**https://bridge.orai.io/**](https://bridge.orai.io) with a series of conversion options.
+Given that you’ve already had your **MetaMask wallet** logged into with your personal credentials, you’ll be able to see the interface of [**https://bridge.orai.io/**](https://bridge.orai.io) with a series of conversion options.
 
-![](../.gitbook/assets/image.png)
+![](<../.gitbook/assets/image (1).png>)
 
-&#x20;For the time being, ORAI tokens are available in two types - **ERC20** and **BEP20**. The **ORAI native tokens** are set to come in the coming days then ORAI tokens will coexist in every aforementioned shape and form within Oraichain’s ecosystem.
+For the time being, ORAI tokens are available in two types - **ERC20** and **BEP20**. The **ORAI native tokens** are set to come in the coming days then ORAI tokens will coexist in every aforementioned shape and form within Oraichain’s ecosystem.
 
 ![](<../.gitbook/assets/Oraichain Bridge\_25161-0.PNG>)
 
-&#x20;As the origin of BEP20 ORAI tokens traces back to the **Binance Smart Chain** network (also known as **BSC**) and MetaMask doesn’t come bundled with Binance Smart Chain by default at the moment, you need to configure your wallet a bit in advance.
+As the origin of BEP20 ORAI tokens traces back to the **Binance Smart Chain** network (also known as **BSC**) and MetaMask doesn’t come bundled with Binance Smart Chain by default at the moment, you need to configure your wallet a bit in advance.
 
 Follow some simple steps below to install the Binance Smart Chain network in your MetaMask wallet:
 
-&#x20;**Step 1**: Click on the MetaMask icon and select **Settings** from the dropdown menu.
+**Step 1**: Click on the MetaMask icon and select **Settings** from the dropdown menu.
 
-![](<../.gitbook/assets/image (1).png>)
+![](<../.gitbook/assets/image (1) (1).png>)
 
 (Otherwise, you can open the full-screen view of **Settings**: **Three-dot menu** > **Expand view**)
 
@@ -24,7 +24,7 @@ Follow some simple steps below to install the Binance Smart Chain network in you
 
 ![](<../.gitbook/assets/image (2).png>)
 
-&#x20;**Step 3**: Below are the parameters to fill in for each section:
+**Step 3**: Below are the parameters to fill in for each section:
 
 ```
 **Network Name**: Binance Smart Chain
@@ -38,7 +38,7 @@ Follow some simple steps below to install the Binance Smart Chain network in you
 **Block Explorer URL**: https://bscscan.com
 ```
 
-&#x20;Click **Save** and your wallet will get integrated into the Binance Smart Chain’s mainnet. You’re good to go now!
+Click **Save** and your wallet will get integrated into the Binance Smart Chain’s mainnet. You’re good to go now!
 
 ![](<../.gitbook/assets/image (3).png>)
 
@@ -84,4 +84,4 @@ Check out both the **disclaimers** present below it then tick them off.
 
 ![](<../.gitbook/assets/image (7).png>)
 
-&#x20;**Note**: After your submission, your swapping request will be reviewed manually due to security purposes. If successful, you’ll receive ORAI BEP20 or ERC20 tokens in the registered wallet address **within up to 7 business days**.
+**Note**: After your submission, your swapping request will be reviewed manually due to security purposes. If successful, you’ll receive ORAI BEP20 or ERC20 tokens in the registered wallet address **within up to 7 business days**.
