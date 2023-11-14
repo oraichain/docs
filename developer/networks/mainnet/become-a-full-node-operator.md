@@ -11,10 +11,12 @@ Please take a look [here](./#node-hardwarde-specification)
 ### 1. Download and run the setup file
 
 ```bash
-curl -OL https://raw.githubusercontent.com/oraichain/orai/v0.41.3-statesync-script/docker-compose.prod.yml && curl -OL https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/orai.env
+curl -o docker-compose.yml https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/docker-compose.0.41.4.yml && curl -o setup.sh https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/setup.0.41.4.sh && chmod +x setup.sh && curl -OL https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/orai.env
 ```
 
 ### 2. Edit your moniker in the orai.env file you have just downloaded
+
+In your `orai.env` file, it's a good idea to set the `LOG_LEVEL` parameter to `"info"` if you want to see all the container logs.
 
 ### 3. Build and enter the container
 
@@ -24,28 +26,22 @@ With docker, your node can run on any platforms. As a result, it is a must to in
 docker-compose pull && docker-compose up -d --force-recreate
 ```
 
+This command starts setting up a container for your Oraichain node. It runs several commands to get a statesync node ready. You can see these steps in the docker-compose file. For more details, the setup.sh file has many Bash scripts that handle different tasks automatically. Also, it makes a special folder called .oraid, which keeps all important settings and data for your node.
+
 ### 4. Statesync to synchronize your node
 
 Statesync is the quickest way to let your node catch up with the network by starting at a specified trusted height and fetch snapshot data from other peers.
 
-To use the statesync method, please run the following script:
-
-```sh
-wget https://raw.githubusercontent.com/oraichain/orai/v0.41.3-statesync-script/scripts/prod_statesync.sh -O prod_statesync.sh && chmod 755 prod_statesync.sh && ./prod_statesync.sh
-```
-
-After running the script, your node will be ready to run as a full node!
-
-Please wait until your node is fully synchronized by typing: `oraid status &> status.json && cat status.json | jq '{catching_up: .SyncInfo.catching_up}'`. If the **catching up** status is **false**, you can continue.
-
-#### 5. Start the node in background mode
-
-Please stop the running node and follow the below steps to start the node in background mode (this step should only be run after the your node has fully synchronized with the network after step 5)
+When you execute the aforementioned command, it initiates statesync in your container. This involves retrieving and applying a snapshot. Following this, your node will begin synchronizing new blocks, a process that typically takes around **30 minutes**. You can monitor the progress of this operation by viewing the container log using the command provided below:
 
 ```bash
-docker-compose restart orai && docker-compose exec -d orai bash -c 'oraivisor start --p2p.pex true'
+docker-compose logs -f orai
 ```
 
-If you do not specify the **--p2p.persistent\_peers** flags, you must add at least a persistent peer connection in the **.oraid/config/config.toml** file before running the below command, otherwise your node will not be able to connect to the Oraichain network.
+After running the script, your node will be ready to run as a full node! Please wait until your node is fully synchronized by typing (from your container):&#x20;
 
-The above commands run as the background process so when you turn off your Terminal, it is still running. You can always run them in the foreground process by removing the "-d" flag.
+```bash
+oraid status &> status.json && cat status.json | jq '{catching_up: .SyncInfo.catching_up}'
+```
+
+If the **catching up** status is **false**, your node finished syncing process.
