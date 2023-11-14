@@ -15,10 +15,12 @@ Please take a look [here](./#node-hardwarde-specification)
 #### 1. Download and run the setup file
 
 ```bash
-curl -OL https://raw.githubusercontent.com/oraichain/orai/v0.41.3-statesync-script/docker-compose.prod.yml && curl -OL https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/orai.env
+curl -o docker-compose.yml https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/docker-compose.0.41.4.yml && curl -o setup.sh https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/setup.0.41.4.sh && chmod +x setup.sh && curl -OL https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/orai.env
 ```
 
 #### 2. Edit wallet name and moniker you prefer to create a new wallet and validator in the orai.env file you have just downloaded
+
+In your `orai.env` file, it's a good idea to set the `LOG_LEVEL` parameter to `"info"` if you want to see all the container logs.
 
 #### 3. Build and enter the container
 
@@ -28,43 +30,74 @@ With docker, your validator can run on any platforms. As a result, it is a must 
 docker-compose pull && docker-compose up -d --force-recreate
 ```
 
+This command starts setting up a container for your Oraichain node. It runs several commands to get a statesync node ready. You can see these steps in the docker-compose file. For more details, the setup.sh file has many Bash scripts that handle different tasks automatically. Also, it makes a special folder called .oraid, which keeps all important settings and data for your node.
+
 #### 4. Statesync to synchronize your node
 
 Statesync is the quickest way to let your node catch up with the network by starting at a specified trusted height and fetch snapshot data from other peers.
 
-To use the statesync method, please run the following script:
+When you execute the aforementioned command, it initiates statesync in your container. This involves retrieving and applying a snapshot. Following this, your node will begin synchronizing new blocks, a process that typically takes around **30 minutes**. You can monitor the progress of this operation by viewing the container log using the command provided below:
 
-```sh
-wget https://raw.githubusercontent.com/oraichain/orai/v0.41.3-statesync-script/scripts/prod_statesync.sh -O prod_statesync.sh && chmod 755 prod_statesync.sh && ./prod_statesync.sh
+```bash
+docker-compose logs -f orai
 ```
 
 After running the script, your node will be ready to run as a full node!
 
-Please wait until your node is fully synchronized by typing: `oraid status &> status.json && cat status.json | jq '{catching_up: .SyncInfo.catching_up}'`. If the **catching up** status is **false**, you can continue.
-
-#### 5. Start the node in background mode
-
-Please stop the running node and follow the below steps to start the node in background mode (this step should only be run after the your node has fully synchronized with the network after step 5)
+Please wait until your node is fully synchronized by typing:&#x20;
 
 ```bash
-docker-compose restart orai && docker-compose exec -d orai bash -c 'oraivisor start --p2p.pex true'
+oraid status &> status.json && cat status.json | jq '{catching_up: .SyncInfo.catching_up}'
 ```
 
-If you do not specify the **--p2p.persistent\_peers** flags, you must add at least a persistent peer connection in the **.oraid/config/config.toml** file before running the below command, otherwise your node will not be able to connect to the Oraichain network.
+If the **catching up** status is **false**, you can continue.
 
-The above commands run as the background process so when you turn off your Terminal, it is still running. You can always run them in the foreground process by removing the "-d" flag.
+#### 5. Create validator transaction
 
-#### 6. Create validator transaction
+Ensure the preservation of two crucial files:
 
-You need to store two following files: .oraid/config/node\_key.json, .oraid/config/priv\_validator\_key.json. They contain your validator information for voting. Create backups for these files, otherwise you will lose your validator node if something wrong happens.
+* &#x20;`.oraid/config/node_key.json` and&#x20;
+* `.oraid/config/priv_validator_key.json`,&#x20;
 
-You can check your wallet information by typing: `oraid query auth account <your-validator-wallet-address>` inside of the container or through the explorer, where you import your wallet. To prevent spamming, your wallet is not activated by default. As a result, it needs to receive at least one MsgSend transaction from a different account. In other words, you should receive some ORAI tokens (minimum of 10^-6 ORAI) to continue. When your wallet has some tokens, please enter the container and type:
+which house essential validator information for voting. To safeguard against potential losses of your validator node, create backups for these files in case of unforeseen issues.
+
+Access your container, a necessary step, by executing the following command:
 
 ```bash
-wget -O /usr/bin/fn https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/fn.sh && chmod +x /usr/bin/fn && fn createValidator
+docker-compose exec orai bash
 ```
 
-#### 7. Check your node status with voting power
+Before proceeding, it is imperative to have a wallet containing ORAI tokens, generated using owallet ([https://chrome.google.com/webstore/detail/owallet/hhejbopdnpbjgomhpmegemnjogflenga](https://chrome.google.com/webstore/detail/owallet/hhejbopdnpbjgomhpmegemnjogflenga)).&#x20;
+
+Upon creation, obtain a mnemonic and add the wallet to your node using the command below (replace `<your wallet name>` with your preferred name). Follow the system instructions as prompted:
+
+```bash
+oraid keys add <your wallet name> --recover
+```
+
+Optionally, validate your key with the following command:
+
+```bash
+oraid keys list
+```
+
+To initiate the creation of your validator, execute the subsequent command (ensure you possess sufficient ORAI for transaction fees):
+
+```
+oraid tx staking create-validator \
+  --amount 2000orai \
+  --commission-max-change-rate "0.2" \
+  --commission-max-rate "0.2" \
+  --commission-rate "0.03" \
+  --min-self-delegation "1" \
+  --pubkey  $(oraid tendermint show-validator) \
+  --moniker $MONIKER \
+  --chain-id $CHAIN_ID \
+  --fees 1000orai \
+  --from <your wallet name>
+```
+
+#### 6. Check your node status with voting power
 
 Type the following command to check your voting power:
 
@@ -94,8 +127,7 @@ If they match, then your node is still running fine. If not, then you should rem
 
 **YOU MUST NOT RUN TWO VALIDATOR NODES WITH THE SAME NODE KEY AND VALIDATOR KEY AT THE SAME TIME. OTHERWISE, YOUR VALIDATOR WILL BE TOMBSTONED BECAUSE OF DOUBLE SIGNING, AND IT WILL NEVER BE ABLE TO JOIN THE VALIDATORSET EVER AGAIN.**
 
-**BACK UP TWO IMPORTANT FILES: .oraid/config/node_key.json & .oraid/config/priv_validator_key.json.**
-**TO PREVENT DOUBLE SIGNING, BACK UP THE .oraid/data/priv_validator_state.json FILE BEFORE MIGRATING TO A DIFFERENT VALIDATOR NODE**
+**BACK UP TWO IMPORTANT FILES: .oraid/config/node\_key.json & .oraid/config/priv\_validator\_key.json.** **TO PREVENT DOUBLE SIGNING, BACK UP THE .oraid/data/priv\_validator\_state.json FILE BEFORE MIGRATING TO A DIFFERENT VALIDATOR NODE**
 
 ### Setup your sentry nodes (optional)
 
