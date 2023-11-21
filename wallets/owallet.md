@@ -16,9 +16,27 @@ OWallet website: [https://owallet.dev](https://owallet.dev/)&#x20;
 
 ## Key Features:&#x20;
 
-\- Support Cosmos-based and EVM-based networks&#x20;
+### OWallet’s key features:
 
-\- Enable IBC transfer&#x20;
+**OWallet mobile features**
+
+* Support managing multiple accounts, easily switching between one to another
+* Create a new wallet with Mnemonic, import the existing wallet with a mnemonic, private key, or ledger
+* Transfer tokens within chains
+* Browse to other dApps: OraiDEX, OraiScan, Orchai, etc.
+* Manage a variety of assets associated with the user's wallet: Buy, transfer, view balances, and check real-time prices and volumes..
+* Manage your stakings on Mainnet (delegation) and claim rewards&#x20;
+* View transaction history, and get notifications with all of the balance changes.&#x20;
+* Incoming: Universal Swap
+
+**OWallet extension**
+
+* Support managing multiple accounts, easily switching between one to another
+* Create a new wallet with the mnemonic, import the existing wallet with a Mnemonic, private key, or ledger
+* Transfer tokens within chains
+* Manage a variety of assets: View balance & transfer
+* Manage networks: Add and remove
+* Incoming: Universal Swap
 
 ## Sign  in with Owallet&#x20;
 
