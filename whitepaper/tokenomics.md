@@ -35,7 +35,7 @@ The table below demonstrates the specific percentage and amount for each allocat
 
 **Planned token release schedule from August 2023(%):**
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 ### **How will each allocation be used?**&#x20;
 

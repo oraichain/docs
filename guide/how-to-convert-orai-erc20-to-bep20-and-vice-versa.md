@@ -4,7 +4,7 @@
 
 Given that you’ve already had your **MetaMask wallet** logged into with your personal credentials, you’ll be able to see the interface of [**https://bridge.orai.io/**](https://bridge.orai.io) with a series of conversion options.
 
-![](<../.gitbook/assets/image (1).png>)
+![](<../.gitbook/assets/image (1) (1).png>)
 
 For the time being, ORAI tokens are available in two types - **ERC20** and **BEP20**. The **ORAI native tokens** are set to come in the coming days then ORAI tokens will coexist in every aforementioned shape and form within Oraichain’s ecosystem.
 
@@ -16,13 +16,13 @@ Follow some simple steps below to install the Binance Smart Chain network in you
 
 **Step 1**: Click on the MetaMask icon and select **Settings** from the dropdown menu.
 
-![](<../.gitbook/assets/image (1) (1).png>)
+![](<../.gitbook/assets/image (1) (1) (1).png>)
 
 (Otherwise, you can open the full-screen view of **Settings**: **Three-dot menu** > **Expand view**)
 
 **Step 2**: Navigate to the **Networks** menu and tap on the **Add Network** option at the top-right corner.
 
-![](<../.gitbook/assets/image (2).png>)
+![](<../.gitbook/assets/image (2) (1).png>)
 
 **Step 3**: Below are the parameters to fill in for each section:
 
