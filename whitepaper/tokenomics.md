@@ -16,7 +16,7 @@ Summary of Circulating Supply (as of August 2023)
 * DAO Treasury: 1,700,000 ORAI
 * Foundation: 6,062,294 ORAI (3,229,850 ORAI delegated in FDC Program)
 
-**Total CS (8/2023): 13,300,889 ORAI -** [**Real-time circulating supply**](https://api.token.orai.io/v1/cs)
+**Total CS (8/2023): 15,078,971 ORAI -** [**Real-time circulating supply**](https://api.token.orai.io/v1/cs)
 
 **Total supply (8/2023): 16,779,272 ORAI -**[ **Real-time total supply**](https://api.token.orai.io/v1/total-supply)
 
