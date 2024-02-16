@@ -15,7 +15,7 @@ Please take a look [here](./#node-hardwarde-specification)
 #### 1. Download and run the setup file
 
 ```bash
-curl -o docker-compose.yml https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/docker-compose.0.41.4.yml && curl -o setup.sh https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/setup.0.41.4.sh && chmod +x setup.sh && curl -OL https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/orai.env
+curl -o docker-compose.yml https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/docker-compose.latest.yml && curl -o setup.sh https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/setup.latest.sh && chmod +x setup.sh && curl -OL https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/orai.env
 ```
 
 #### 2. Edit wallet name and moniker you prefer to create a new wallet and validator in the orai.env file you have just downloaded
