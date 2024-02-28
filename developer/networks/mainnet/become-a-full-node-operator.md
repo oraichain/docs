@@ -109,4 +109,13 @@ Check container log
 docker-compose logs orai -f --tail 0
 ```
 
+Check your node status
+
+```bash
+curl -s localhost:26657/status | grep "catching_up"
+```
+
+If the catching_up status is false, your node finished syncing process.
 Finally, you can delete snapshot file and backup your config folder.
+The snapshot file may be outdated; you can reach out to our community for it.
+Please join the [Oraichain validators group](https://t.me/joinchat/yH9nMLrokQRhZGY1) on Telegram to discuss ideas and problems!

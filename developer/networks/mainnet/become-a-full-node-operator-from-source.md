@@ -242,7 +242,7 @@ To see live logs of the service:
 journalctl -u orai -f
 ```
 
-Check your node status:
+Check your node status
 
 ```bash
 oraid status
@@ -251,3 +251,6 @@ curl -s localhost:26657/status | grep "catching_up"
 ```
 
 If the catching_up status is false, your node finished syncing process.
+Finally, you can delete snapshot file and backup your config folder.
+The snapshot file may be outdated; you can reach out to our community for it.
+Please join the [Oraichain validators group](https://t.me/joinchat/yH9nMLrokQRhZGY1) on Telegram to discuss ideas and problems!

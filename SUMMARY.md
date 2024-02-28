@@ -21,7 +21,7 @@
 * [Networks](developer/networks/README.md)
   * [Joining Mainnet](developer/networks/mainnet/README.md)
     * [Become a Validator](developer/networks/mainnet/become-a-validator.md)
-    * [Become a Sentry Node Operator](developer/networks/mainnet/become-a-full-node-operator.md)
+    * [Become a Sentry Node Operator by Docker](developer/networks/mainnet/become-a-full-node-operator.md)
     * [Build Linux binary from source and become a Sentry Node Operator](developer/networks/mainnet/become-a-full-node-operator-from-source.md)
   * [Joining Testnet](developer/networks/testnet/README.md)
 * [Oraichain Tutorials](developer/tutorials/README.md)
