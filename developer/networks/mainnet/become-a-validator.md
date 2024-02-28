@@ -69,16 +69,28 @@ oraid tx staking create-validator \
 ```
 
 The ***from*** flag is Name or address of private key with which to sign
+
 The ***amount*** flag is Amount of coins to bond. 1000000orai = 1 oraichain token
+
 The ***pubkey*** flag is The validator's Protobuf JSON encoded public key
+
 The ***moniker*** flag is The validator's name
+
 The ***chain-id*** flag is Oraichain (default value and can't change)
-the ***commission-rate*** is The initial commission rate percentage (in the example above, 3 percent)
-the ***commission-max-rate*** is The maximum commission rate percentage (in the example above, 10 percent)
-the ***commission-max-change-rate*** is The maximum commission change rate percentage (per day) (in the example above, 1 percent per day until reaching the max rate)
+
+The ***commission-rate*** is The initial commission rate percentage (in the example above, 3 
+percent)
+
+The ***commission-max-rate*** is The maximum commission rate percentage (in the example above, 10 percent)
+
+The ***commission-max-change-rate*** is The maximum commission change rate percentage (per day) (in the example above, 1 percent per day until reaching the max rate)
+
 The ***min-self-delegatio***n is The minimum self delegation required on the validator (in the example above, 1 orai)
+
 The ***gas-prices*** is Gas prices in decimal format to determine the transaction fee
+
 The ***website*** flag is The validator's (optional) website
+
 The ***detail*** flag is The validator's (optional) detail
 
 ## Track validator
@@ -92,7 +104,7 @@ oraid query staking validators | grep OraichainValidator
 To track your validator's signing history
 
 ```bash
-oraid query slashing signing-info ${osmosisd tendermint show-validator}
+oraid query slashing signing-info ${oraid tendermint show-validator}
 ```
 
 Please join the [Oraichain validators group](https://t.me/joinchat/yH9nMLrokQRhZGY1) on Telegram to discuss ideas and problems!
