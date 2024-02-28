@@ -79,7 +79,7 @@ Download and place the genesis file in the orai config folder:
 wget -O $HOME/.oraid/config/genesis.json https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/genesis.json
 ```
 
-### Finnally, your working directory should like below:
+### Finally, your working directory should be like below:
 ```
 /root/.oraid/
 ├── config
@@ -133,7 +133,7 @@ cosmovisor version
 oraid version
 ```
 
-### Finnally, your working directory should like below:
+### Finally, your working directory should be like below:
 ```
 /root/.oraid/
 ├── config
@@ -161,28 +161,28 @@ Download liblz4-tool to handle the compressed file, then Download & Decompress t
 ```bash
 cd $HOME/.oraid
 sudo apt-get install wget liblz4-tool aria2 -y
-wget -O Oraichain.tar.lz4 https://orai.s3.us-east-2.amazonaws.com/snapshots/oraichain_15970501.tar.lz4
-lz4 -c -d Oraichain.tar.lz4 | tar -x -C $HOME/.oraid
+wget -O oraichain_latest.tar.lz4 https://orai.s3.us-east-2.amazonaws.com/snapshots/oraichain_latest.tar.lz4
+lz4 -c -d oraichain_latest.tar.lz4 | tar -x -C $HOME/.oraid
 ```
 
 ### Optional (problem with binnary version v0.41.6)
 
-Open upgrade-info.json file and check the version
+In the data folder, if the file upgrade-info.json does not exist, you can ignore this section. Otherwise, open the upgrade-info.json file and check the version.
 
 ```bash
-cat /root/.oraid/data/upgrade-info.json
+cat $HOME/.oraid/data/upgrade-info.json
 ```
 
-If version is v0.41.5 then delete this file
+If version is not "v0.41.6" then delete this file
 
 ```bash
-rm /root/.oraid/data/upgrade-info.json
+rm $HOME/.oraid/data/upgrade-info.json
 ```
 
 ## Edit config
 
 ```bash
-vim /root/.oraid/config/config.toml
+vim $HOM/.oraid/config/config.toml
 ```
 
 Update seed address

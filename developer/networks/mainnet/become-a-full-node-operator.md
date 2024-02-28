@@ -2,11 +2,17 @@
 
 This tutorial helps full node operators quickly synchronize with the Oraichain mainnet by downloading a storage snapshot prepared by the team. The downloading speed is much faster than synchronizing from the first block, which allows fast set up to join the network in no time!
 
+I assume you have installed Docker on the server; if not, you may refer to the following [instructions](https://github.com/oraichain/docs/blob/master/developer/tutorials/install-docker.md) before getting started.
+
+You can choose one of the two methods below.
+
 ## Hardware specifications for an Oraichain node:
 
 Please take a look [here](./#node-hardwarde-specification)
 
-## Setup the node
+## Setup the node using statesync
+
+***!!! This method requires the RAM configuration to be more than 8GB !!!***
 
 ### 1. Download and run the setup file
 
@@ -45,3 +51,62 @@ oraid status &> status.json && cat status.json | jq '{catching_up: .SyncInfo.cat
 ```
 
 If the **catching up** status is **false**, your node finished syncing process.
+
+## Setup the node using snapshot
+
+### 1. Download and run the setup file
+
+```bash
+curl -o docker-compose.yml https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/docker-compose.init.yml && curl -o setup.sh https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/setup.init.sh && chmod +x setup.sh && curl -OL https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/orai.env
+```
+
+### 2. Edit your moniker in the orai.env file you have just downloaded
+
+Please review all the values in the orai.env file once. If you have experience running a validator, adjust the parameters according to your experience. Otherwise, you just need to change the ***MONIKER*** value.
+In your `orai.env` file, it's a good idea to set the `LOG_LEVEL` parameter to `"info"` if you want to see all the container logs.
+
+### 3. Init orai node
+
+```bash
+docker-compose up -d && docker-compose exec orai bash -c "sh setup.sh"
+```
+
+Finally, your working directory should be like below
+
+```
+├── .oraid
+│   ├── config
+│   │   ├── app.toml
+│   │   ├── client.toml
+│   │   ├── config.toml
+│   │   ├── genesis.json
+│   │   ├── node_key.json
+│   │   └── priv_validator_key.json
+│   └── data
+│       └── priv_validator_state.json
+├── docker-compose.yml
+├── orai.env
+└── setup.sh
+```
+3 directories, 10 files
+
+### 4. Download snapshot
+
+```bash
+wget -O oraichain_latest.tar.lz4 https://orai.s3.us-east-2.amazonaws.com/snapshots/oraichain_latest.tar.lz4
+lz4 -c -d oraichain_latest.tar.lz4 | tar -x -C ./.oraid/
+```
+
+### 5. Init orai node and wait for syncing to latest block
+
+```bash
+docker-compose exec orai bash -c "oraivisor start"
+```
+
+Check container log
+
+```bash
+docker-compose logs orai -f --tail 0
+```
+
+Finally, you can delete snapshot file and backup your config folder.
