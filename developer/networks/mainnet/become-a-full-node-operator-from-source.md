@@ -1,5 +1,5 @@
 ---
-description: Instruction to install the oraid binary in docker
+description: Instruction to install the oraid binary and run as service by systemd
 ---
 
 # Oraid Installation and setup
@@ -80,7 +80,7 @@ wget -O $HOME/.oraid/config/genesis.json https://raw.githubusercontent.com/oraic
 ```
 
 ### Finnally, your working directory should like below:
-
+```
 /root/.oraid/
 ├── config
 │   ├── app.toml
@@ -91,7 +91,7 @@ wget -O $HOME/.oraid/config/genesis.json https://raw.githubusercontent.com/oraic
 │   └── priv_validator_key.json
 └── data
     └── priv_validator_state.json
-
+```
 2 directories, 7 files
 
 ## Set Up Cosmovisor
@@ -134,7 +134,7 @@ oraid version
 ```
 
 ### Finnally, your working directory should like below:
-
+```
 /root/.oraid/
 ├── config
 │   ├── app.toml
@@ -151,7 +151,7 @@ oraid version
 │   └── upgrades
 └── data
     └── priv_validator_state.json
-
+```
 7 directories, 8 files
 
 ## Download Chain Data
