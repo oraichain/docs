@@ -29,6 +29,7 @@
   * [Manually upgrade your Oraichain node](developer/tutorials/manual-upgrade.md)
   * [Manually recover your node data](developer/tutorials/manual-recovery.md)
   * [Migrate one Oraichain node to another](developer/tutorials/node-migration.md)
+  * [Reduce the block time to 1 second](developer/tutorials/reduce-block-time-to-1s.md)
 * [AI Providers](developer/ai-provider/README.md)
   * [AI Provider Integration](developer/ai-provider/ai-provider-integration.md)
 * [AI Executors](developer/executors/README.md)
