@@ -4,6 +4,8 @@ In summary, the goal of reducing block time in the Oraichain network ecosystem i
 
 ## Edit config.toml
 
+The current value of ***timeout_commit*** is now 5s; let's change it to 500ms.
+
 ```bash
 [consensus]
 timeout_commit = "500ms"
