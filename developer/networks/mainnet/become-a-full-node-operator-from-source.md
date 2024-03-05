@@ -28,6 +28,8 @@ You need to install Gcc to build the binary. Type: `sudo apt update && sudo apt 
 
 Please define the `$ORAI_HOME` environment variable which will be used as the working directory, in this tutorial we will assume that your `$ORAI_HOME` is `root`. If you don't define it, all of the following installations will be using your `$HOME` folder as `$ORAI_HOME`, please replace `$ORAI_HOME` with `$HOME` in the corresponding commands (except export ORAI_HOME command).
 
+Make sure your user has enough permissions to write data to the `$ORAI_HOME` folder.
+
 ```bash
 # Export ORAI_HOME env variable
 export ORAI_HOME="/root"
