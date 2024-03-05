@@ -1,5 +1,5 @@
 ---
-description: Instructions to install the oraid binary and run as service by systemd
+description: Instructions to install the oraid binary and run as a service by systemd
 ---
 
 # Oraid Installation and setup
