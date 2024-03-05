@@ -11,7 +11,7 @@ The operating system you use for your node is entirely your personal preference.
 {% hint style="info" %}
 For the tutorial, it is assumed that you are using an Ubuntu LTS release.
 
-If you have chosen a different operating system, you will need to modify your commands to suit your operating system.
+If you chose a different operating system, you will need to modify your commands to suit your operating system.
 {% endhint %}
 
 ## Install Docker
@@ -37,20 +37,20 @@ git checkout <tag>
 The `<version-tag>` will need to be set to either a testnet or the latest mainnet version tag.
 
 {% hint style="warning" %}
-The current mainnet version tag will be `v0.41.0` - i.e:
+The current mainnet version tag is `v0.41.0` - i.e:
 
 ```bash
 git checkout v0.41.0
 ```
 {% endhint %}
 
-Next, you should verify the /lib/libwasmvm_muslc.a file located in the container to see if it matches the one that is published on the [Oraichain mainnet release](https://github.com/oraichain/orai/releases/download/v0.41.0/libwasmvm_muslc.a) using its checksum:
+Next, you should verify the /lib/libwasmvm_muslc.a file which is located in the container to see if it matches the one that is published on the [Oraichain mainnet release](https://github.com/oraichain/orai/releases/download/v0.41.0/libwasmvm_muslc.a), using its checksum:
 
 ```sha256sum /lib/libwasmvm_muslc.a  | cut -d ' ' -f 1```
 
 The current checksum of the file should be: ```6da1ce5882c02ff763f5bea6323cbb1636cd984878447794bd15c8ac696306c0```
 
-Next, you should be able to build the binary file using the below command:
+Next, you should be able to build the binary file using the following commands:
 
 ```bash
 # in orai dir
