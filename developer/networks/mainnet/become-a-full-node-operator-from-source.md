@@ -50,10 +50,10 @@ git checkout <tag>
 The `<version-tag>` will need to be set to either a testnet or the latest mainnet version tag.
 
 {% hint style="warning" %}
-The current mainnet version tag will be `v0.41.6` - i.e:
+The current mainnet version tag will be `v0.41.7` - i.e:
 
 ```bash
-git checkout v0.41.6
+git checkout v0.41.7
 ```
 {% endhint %}
 
@@ -200,7 +200,7 @@ vim $ORAI_HOME/.oraid/config/config.toml
 
 Update seed address
 ```bash
-seeds = "e18f82a6da3a9842fa55769955d694f62f7f48bd@seed1.orai.zone:26656,893f246ffdffae0a9ef127941379303531f50d5c@seed2.orai.zone:26656,4fa7895fc43f618b53cd314585b421ee47b75639@seed3.orai.zone:26656,defeea41a01b5afdb79ef2af155866e122797a9c@seed4.orai.zone:26656"```
+seeds = "e18f82a6da3a9842fa55769955d694f62f7f48bd@seed1.orai.zone:26656,893f246ffdffae0a9ef127941379303531f50d5c@seed2.orai.zone:26656,4fa7895fc43f618b53cd314585b421ee47b75639@seed3.orai.zone:26656,defeea41a01b5afdb79ef2af155866e122797a9c@seed4.orai.zone:26656"
 ```
 
 ## Set Up Orai Service
@@ -263,7 +263,11 @@ Check your node status
 ```bash
 oraid status
 # OR
+oraid status 2>&1 | jq .SyncInfo
+# OR
 curl -s localhost:26657/status | grep "catching_up"
+# OR
+oraid status 2>&1 | jq .SyncInfo.check_status
 ```
 
 If the catching_up status is false, your node finishes syncing process.
