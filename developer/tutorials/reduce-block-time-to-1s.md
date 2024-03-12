@@ -36,6 +36,12 @@ The current value of **_timeout_commit_** is now 5s; let's change it to 500ms.
 timeout_commit = "500ms"
 ```
 
+Note that you can actually edit the config.toml file while your node is running. It will only be applied once you restart your node.
+
+It means that you can add the `--halt-height` flag first, then start your node, then edit the config file. When the halt height comes, you simply start your node again to apply the change.
+
+Thanks to this, you can run a shell script that automatically start your node once the block height reaches 16200000.
+
 ### Start your node to apply the change
 
 #### Non-docker users
