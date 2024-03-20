@@ -64,7 +64,7 @@ oraid tx staking create-validator \
 --commission-max-change-rate="0.1" \
 --min-self-delegation="1000000" \
 --website="https://orai.io" \
---detail="I'm trust and safe validator" \
+--details="I'm trust and safe validator" \
 --gas-prices=0.001orai
 ```
 
@@ -91,7 +91,7 @@ The ***gas-prices*** is Gas prices in decimal format to determine the transactio
 
 The ***website*** flag is The validator's (optional) website
 
-The ***detail*** flag is The validator's (optional) detail
+The ***details*** flag is The validator's (optional) detail
 
 ## Track validator
 
