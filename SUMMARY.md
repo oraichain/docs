@@ -49,6 +49,8 @@
   * [Tutorial 01](cosmwasm-ide/tutorial-01.md)
   * [Tutorial 02](https://medium.com/oraichain/oraichain-studio-live-demo-transcript-7be020783f03)
 * [Faucet](developer/tools/tools.md)
+* [Indexers](developer/indexers/overview.md)
+  * [SubQuery](developer/indexers/subquery.md)
 
 ## Wallets
 
