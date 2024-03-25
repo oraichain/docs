@@ -23,7 +23,7 @@ You need to set the PATH environment variable to include the Go binary directory
 
 ```bash
 echo "export GOPATH=$HOME/go" >> ~/.profile
-echo "export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin" >> ~/.profile
+echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> ~/.profile
 source ~/.profile
 ```
 
