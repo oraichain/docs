@@ -10,49 +10,9 @@ You can choose one of the two methods below.
 
 Please take a look [here](./#node-hardwarde-specification)
 
-## Setup the node using statesync
+## Setup the node using snapshot (recomend using)
 
-***!!! This method requires the RAM configuration to be more than 8GB !!!***
-
-### 1. Download and run the setup file
-
-```bash
-curl -o docker-compose.yml https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/docker-compose.latest.yml && curl -o setup.sh https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/setup.latest.sh && chmod +x setup.sh && curl -OL https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/orai.env
-```
-
-### 2. Edit your moniker in the orai.env file you have just downloaded
-
-In your `orai.env` file, it's a good idea to set the `LOG_LEVEL` parameter to `"info"` if you want to see all the container logs.
-
-### 3. Build and enter the container
-
-With docker, your node can run on any platforms. As a result, it is a must to install and download Docker & docker-compose. Afterward, please type:
-
-```bash
-docker-compose pull && docker-compose up -d --force-recreate
-```
-
-This command starts setting up a container for your Oraichain node. It runs several commands to get a statesync node ready. You can see these steps in the docker-compose file. For more details, the setup.sh file has many Bash scripts that handle different tasks automatically. Also, it makes a special folder called .oraid, which keeps all important settings and data for your node.
-
-### 4. Statesync to synchronize your node
-
-Statesync is the quickest way to let your node catch up with the network by starting at a specified trusted height and fetch snapshot data from other peers.
-
-When you execute the aforementioned command, it initiates statesync in your container. This involves retrieving and applying a snapshot. Following this, your node will begin synchronizing new blocks, a process that typically takes around **30 minutes**. You can monitor the progress of this operation by viewing the container log using the command provided below:
-
-```bash
-docker-compose logs -f orai
-```
-
-After running the script, your node will be ready to run as a full node! Please wait until your node is fully synchronized by typing (from your container):&#x20;
-
-```bash
-oraid status &> status.json && cat status.json | jq '{catching_up: .SyncInfo.catching_up}'
-```
-
-If the **catching up** status is **false**, your node finished syncing process.
-
-## Setup the node using snapshot
+First, you need to create a directory and navigate into it. Eg: Eg: *** mkdir oraichain && cd oraichain ***
 
 ### 1. Download and run the setup file
 
@@ -64,6 +24,8 @@ curl -o docker-compose.yml https://raw.githubusercontent.com/oraichain/oraichain
 
 Please review all the values in the orai.env file once. If you have experience running a validator, adjust the parameters according to your experience. Otherwise, you just need to change the ***MONIKER*** value.
 In your `orai.env` file, it's a good idea to set the `LOG_LEVEL` parameter to `"info"` if you want to see all the container logs.
+
+Also, please review the port configuration in the docker-compose.yml file. You can remove any ports you do not want to expose to the internet.
 
 ### 3. Init orai node
 
@@ -94,13 +56,14 @@ Finally, your working directory should be like below
 
 ```bash
 wget -O oraichain_latest.tar.lz4 https://orai.s3.us-east-2.amazonaws.com/snapshots/oraichain_latest.tar.lz4
+rm -rf data
 lz4 -c -d oraichain_latest.tar.lz4 | tar -x -C ./.oraid/
 ```
 
 ### 5. Init orai node and wait for syncing to latest block
 
 ```bash
-docker-compose exec orai bash -c "oraivisor start"
+docker-compose exec -d orai bash -c "oraivisor start"
 ```
 
 Check container log
@@ -118,4 +81,51 @@ curl -s localhost:26657/status | grep "catching_up"
 If the catching_up status is false, your node finished syncing process.
 Finally, you can delete snapshot file and backup your config folder.
 The snapshot file may be outdated; you can reach out to our community for it.
+
+## Setup the node using statesync (rarely using)
+
+***!!! This method requires the RAM configuration to be more than 8GB !!!***
+
+First, you need to create a directory and navigate into it. Eg: *** mkdir oraichain && cd oraichain ***
+
+### 1. Download and run the setup file
+
+```bash
+curl -o docker-compose.yml https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/docker-compose.latest.yml && curl -o setup.sh https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/setup.latest.sh && chmod +x setup.sh && curl -OL https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/orai.env
+```
+
+### 2. Edit your moniker in the orai.env file you have just downloaded
+
+In your `orai.env` file, it's a good idea to set the `LOG_LEVEL` parameter to `"info"` if you want to see all the container logs.
+
+Also, please review the port configuration in the docker-compose.yml file. You can remove any ports you do not want to expose to the internet.
+
+### 3. Build and enter the container
+
+With docker, your node can run on any platforms. As a result, it is a must to install and download Docker & docker-compose. Afterward, please type:
+
+```bash
+docker-compose pull && docker-compose up -d --force-recreate
+```
+
+This command starts setting up a container for your Oraichain node. It runs several commands to get a statesync node ready. You can see these steps in the docker-compose file. For more details, the setup.sh file has many Bash scripts that handle different tasks automatically. Also, it makes a special folder called .oraid, which keeps all important settings and data for your node.
+
+### 4. Statesync to synchronize your node
+
+Statesync is the quickest way to let your node catch up with the network by starting at a specified trusted height and fetch snapshot data from other peers.
+
+When you execute the aforementioned command, it initiates statesync in your container. This involves retrieving and applying a snapshot. Following this, your node will begin synchronizing new blocks, a process that typically takes around **30 minutes ~ 1 hour**. You can monitor the progress of this operation by viewing the container log using the command provided below:
+
+```bash
+docker-compose logs -f orai --tail 0
+```
+
+After running the script, your node will be ready to run as a full node! Please wait until your node is fully synchronized by typing (from your container):&#x20;
+
+```bash
+oraid status &> status.json && cat status.json | jq '{catching_up: .SyncInfo.catching_up}'
+```
+
+If the **catching up** status is **false**, your node finished syncing process.
+
 Please join the [Oraichain validators group](https://t.me/joinchat/yH9nMLrokQRhZGY1) on Telegram to discuss ideas and problems!

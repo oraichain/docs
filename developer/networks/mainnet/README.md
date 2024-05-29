@@ -29,17 +29,17 @@ A dedicated node that can run Docker amd64.
 **Minimum requirements**
 
 ```
-The number of CPUs: 2vCPUs
-RAM: 4GB
-Storage: 100GB SSD
+The number of CPUs: 4vCPUs
+RAM: 8GB
+Storage: 500GB SSD
 ```
 
 **Recommended requirements**
 
 ```
-The number of CPUs: 4vCPUs
+The number of CPUs: 8vCPUs
 RAM: 16GB
-Storage: 200GB SSD
+Storage: 1TB SSD
 ```
 
 ### Chain Pruned Data Download URLs:
@@ -50,6 +50,14 @@ Storage: 200GB SSD
 https://orai.s3.us-east-2.amazonaws.com/snapshots/oraichain_latest.tar.lz4
 ```
 
-- 2nd option:
+- 2nd option (from Oraichain validators group):
+
+```bash
+https://snap.blockval.io/oraichain/oraichain_latest.tar.lz4
+---
+https://polkachu.com/tendermint_snapshots/orai
+https://snapshots.nysa.network/#Oraichain/
+
+```
 
 Please join the [Oraichain validators group](https://t.me/joinchat/yH9nMLrokQRhZGY1) on Telegram to request a snapshot data!

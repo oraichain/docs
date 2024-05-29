@@ -10,17 +10,17 @@ description: Instructions to install the oraid binary and run as a service by sy
 
 This tutorial assumes that your node is running Ubuntu LTS version (i.e: 18.04, 20.04 or 22.04). It does not work with Ubuntu 16.04 or older versions.
 
-### Go version
+### Go version (required)
 
 The Golang version should be from 1.18 and above
 If you have not installed it yet, you can refer to [this document](https://github.com/oraichain/docs/blob/master/developer/tutorials/install-go.md).
 
 Make sure that `$GOPATH` is in your `$PATH`. It's the crucial part of this tutorial.
-### Make
+### Make (required)
 
 If your node does not have Make, install using: `sudo apt update && sudo apt install make`
 
-### Gcc
+### Gcc (required)
 
 You need to install Gcc to build the binary. Type: `sudo apt update && sudo apt install gcc`
 
@@ -50,10 +50,10 @@ git checkout <tag>
 The `<version-tag>` will need to be set to either a testnet or the latest mainnet version tag.
 
 {% hint style="warning" %}
-The current mainnet version tag will be `v0.41.7-1s-block-time` - i.e:
+The current mainnet version tag will be `v0.42.0` - i.e:
 
 ```bash
-git checkout v0.41.7-1s-block-time
+git checkout v0.42.0
 ```
 {% endhint %}
 
@@ -72,7 +72,7 @@ To confirm that the installation is succeeded, you can run (please make sure tha
 oraid version
 ```
 
-The current binary version for Linux users is v0.41.7-1s-block-time
+The current binary version for Linux users is v0.42.0
 
 Libwasmvm version: ```oraid query wasm libwasmvm-version```, which should give: 1.5.2
 
@@ -81,7 +81,7 @@ Libwasmvm version: ```oraid query wasm libwasmvm-version```, which should give: 
 Use oraid to initialize your node (replace the NODE_NAME with a name of your choosing):
 
 ```bash
-oraid init NODE_NAME --home $ORAI_HOME/.oraid
+oraid init NODE_NAME --home $ORAI_HOME/.oraid --chain-id Oraichain
 ```
 
 Download and place the genesis file in the orai config folder:
@@ -92,7 +92,6 @@ wget -O $ORAI_HOME/.oraid/config/genesis.json https://raw.githubusercontent.com/
 
 ### Finally, your working directory should be like below:
 ```
-#tree $ORAI_HOME/.oraid/
 $ORAI_HOME/.oraid/
 ├── config
 │   ├── app.toml
@@ -178,20 +177,6 @@ wget -O oraichain_latest.tar.lz4 https://orai.s3.us-east-2.amazonaws.com/snapsho
 lz4 -c -d oraichain_latest.tar.lz4 | tar -x -C $ORAI_HOME/.oraid
 ```
 
-### Optional (problem with binnary version v0.41.6)
-
-In the data folder, if the file upgrade-info.json does not exist, you can ignore this section. Otherwise, open the upgrade-info.json file and check the version.
-
-```bash
-cat $ORAI_HOME/.oraid/data/upgrade-info.json
-```
-
-If version is not "v0.41.6" then delete this file
-
-```bash
-rm $ORAI_HOME/.oraid/data/upgrade-info.json
-```
-
 ## Edit config
 
 ```bash
@@ -200,7 +185,17 @@ vim $ORAI_HOME/.oraid/config/config.toml
 
 Update seed address
 ```bash
-seeds = "e18f82a6da3a9842fa55769955d694f62f7f48bd@seed1.orai.zone:26656,893f246ffdffae0a9ef127941379303531f50d5c@seed2.orai.zone:26656,4fa7895fc43f618b53cd314585b421ee47b75639@seed3.orai.zone:26656,defeea41a01b5afdb79ef2af155866e122797a9c@seed4.orai.zone:26656"
+seeds = "e18f82a6da3a9842fa55769955d694f62f7f48bd@seed1.orai.zone:26656,defeea41a01b5afdb79ef2af155866e122797a9c@seed4.orai.zone:26656"
+```
+
+Some seeds address from Oraichain validators group:
+```
+f223f1be06ef35a6dfe54995f05daeb1897d94d7@seed-node.mms.team:42656
+8542cd7e6bf9d260fef543bc49e59be5a3fa9074@seed.publicnode.com:26656
+fe0a0d46eb5436905bf8465f83d2da5a503bf4eb@mainnet-seed.konsortech.xyz:33165
+ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:23356
+5f5cfac5c38506fbb4275c19e87c4107ec48808d@seeds.nodex.one:11210
+49165f4ef94395897d435f144964bdd14413ea28@seed.orai.synergynodes.com:26656
 ```
 
 ## Set Up Orai Service
@@ -273,4 +268,5 @@ oraid status 2>&1 | jq .SyncInfo.check_status
 If the catching_up status is false, your node finishes syncing process.
 Finally, you can delete the snapshot file and backup your config folder.
 The snapshot file may be outdated; you can reach out to our community for it.
+
 Please join the [Oraichain validators group](https://t.me/joinchat/yH9nMLrokQRhZGY1) on Telegram to discuss ideas and problems!

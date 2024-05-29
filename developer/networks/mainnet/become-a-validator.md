@@ -39,7 +39,7 @@ Here is the empty command
 oraid tx staking create-validator \
 --from=[KEY_NAME] \
 --amount=[staking_amount_uorai] \
---pubkey=$(osmosisd tendermint show-validator) \
+--pubkey=$(oraid tendermint show-validator) \
 --moniker="[moniker_id_of_your_node]" \
 --chain-id="[chain-id]" \
 --commission-rate="[commission_rate]" \
