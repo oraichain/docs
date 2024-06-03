@@ -24,7 +24,7 @@
 
 ### Node hardwarde specification:
 
-A dedicated node that can run Docker amd64.
+Can be either amd64 or arm64.
 
 **Minimum requirements**
 
