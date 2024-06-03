@@ -6,23 +6,13 @@ You should back up all the node information before migrating to recover if somet
 
 ## 2. Create a new node
 
-To start migrating, you can create a new node to initialize all the configuration files needed. For more information relating to creating a new node, you can follow the full node operator creation tutorial [here](https://docs.orai.io/developers/networks/mainnet/become-a-full-node-operator). You can use the same moniker as the current node's
+To start migrating, you can create a new node to initialize all the configuration files needed. For more information relating to creating a new node, you can follow the full node operator creation tutorial [here](https://docs.orai.io/developers/networks/mainnet/become-a-full-node-operator-from-source). You can use the same moniker as the current node's
 
 ## 3. Start your new node with appropriate persistent connection to an existing node in the network
 
 Your newly created node should synchronize with the network before migrating to reduce the downtime
 
-## 4. Copy your current node information to the newly created node
-
-You can edit freely while keeping your new node running.
-
-## 5. Enter your current node and shut it down
-
-enter your node by:
-
-```bash
-docker-compose exec orai bash
-```
+## 4. Shut the old node down
 
 shut down your node by:
 
@@ -30,15 +20,13 @@ shut down your node by:
 pkill oraid
 ```
 
+## 5. Copy your current node information to the newly created node
+
+You can edit freely while keeping your new node running.
+
 ## 6. Restart your new node to apply changes and finish the migration process
 
-```bash
-docker-compose restart orai && docker-compose exec -d orai bash -c 'oraivisor start --p2p.pex false --p2p.persistent_peers "<node-id1>@<private-ip1>:26656,<node-id2>@<private-ip2>:26656"'
-```
-
 ## 7. Check the new node's voting power to confirm the migration
-
-enter the container and type:
 
 ```bash
 oraid status && oraid tendermint show-node-id
@@ -55,6 +43,5 @@ oraid keys add <wallet name> --recover
 ```
 
 Or you can just use the explorer for simplicity.
-
 
 **Happy validating!**

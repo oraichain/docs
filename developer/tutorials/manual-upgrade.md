@@ -27,7 +27,7 @@ You should check the [explorer's latest software upgrade proposal](https://scan.
 Please collect the URL and type:
 
 ```bash
-apk add curl && rm -rf /root/oraivisor/upgrades/<binary-version> && mkdir -p /root/oraivisor/upgrades/<binary-version>/bin && curl <binary-url> > /root/oraivisor/upgrades/<binary-version>/bin/oraid && chmod +x /root/oraivisor/upgrades/<binary-version>/bin/oraid
+apk add curl && rm -rf <cosmovisor-path>/upgrades/<binary-version> && mkdir -p <cosmovisor-path>r/upgrades/<binary-version>/bin && curl <binary-url> > <cosmovisor-path>/upgrades/<binary-version>/bin/oraid && chmod +x <cosmovisor-path>r/upgrades/<binary-version>/bin/oraid
 ```
 
 The above commands remove the old error upgrade directory & creates a new one before downloading the actual binary
@@ -35,7 +35,7 @@ The above commands remove the old error upgrade directory & creates a new one be
 ## 4. Link the current binary version to the upgraded one
 
 ```bash
-unlink /root/oraivisor/current && ln -s /root/oraivisor/upgrades/<binary-version> /root/oraivisor/current
+unlink <cosmovisor-path>r/current && ln -s <cosmovisor-path>r/upgrades/<binary-version> <cosmovisor-path>r/current
 ```
 
 ## 5. Check the binary version to finish the manual upgrade process
