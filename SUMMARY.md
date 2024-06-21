@@ -7,7 +7,7 @@
     * [AI Layer 1 for Data Economy & Oracle services](whitepaper/system-overview/ai-layer-1-for-data-economy-and-oracle-services.md)
     * [Layer 2 Rollups and Subnetworks](whitepaper/system-overview/layer-2-rollups-and-subnetworks.md)
     * [Verifiable and trustless AI Execution](whitepaper/system-overview/verifiable-and-trustless-ai-execution.md)
-    * [Decentralized Data and AI platform](whitepaper/system-overview/decentralized-data-and-ai-platform.md)
+    <!-- * [Decentralized Data and AI platform](whitepaper/system-overview/decentralized-data-and-ai-platform.md) -->
     * [IBC Integration](whitepaper/system-overview/ibc-integration.md)
   * [Use Cases](whitepaper/use-cases.md)
   * [Token Economics](whitepaper/tokenomics.md)
@@ -32,11 +32,11 @@
   * [Become an AI Executor](developer/executors/ai-executor.md)
   * [Become an AI Executor with Docker](developer/executors/ai-executor-docker.md)
   * [AI Executor Incentive Mechanism](developer/executors/incentive-mechanism.md)
-* [Guide](guide/README.md)
+<!-- * [Guide](guide/README.md)
   * [How To Convert ORAI ERC20 To BEP20 And Vice Versa?](guide/how-to-convert-orai-erc20-to-bep20-and-vice-versa.md)
   * [How To Swap ERC20 or BEP20 Token To Native Token?](guide/how-to-swap-erc20-or-bep20-token-to-native-token.md)
   * [Create An Oraichain Account](guide/create-an-oraichain-account.md)
-  * [Delegate Tokens To A Validator](guide/delegate-tokens-to-a-validator.md)
+  * [Delegate Tokens To A Validator](guide/delegate-tokens-to-a-validator.md) -->
 * [CosmWasm IDE](cosmwasm-ide/README.md)
   * [Tutorial 01](cosmwasm-ide/tutorial-01.md)
   * [Tutorial 02](https://medium.com/oraichain/oraichain-studio-live-demo-transcript-7be020783f03)
@@ -45,7 +45,7 @@
 ## Wallets
 
 * [OWallet](wallets/owallet.md)
-* [Oraichain Wallet (OBSOLETE)](wallets/oraichain-wallet.md)
+<!-- * [Oraichain Wallet (OBSOLETE)](wallets/oraichain-wallet.md) -->
 
 ## PRICE FEEDS
 
@@ -61,12 +61,12 @@
 ## VRF 2.0 <a href="#vrf" id="vrf"></a>
 
 * [Introduction to Oraichain VRF 2.0](vrf/introduction.md)
-* [Get a Random Value Directly](vrf/get-a-random-value-directly.md)
+<!-- * [Get a Random Value Directly](vrf/get-a-random-value-directly.md) -->
 * [Get a Random Value from API](vrf/get-a-random-value-from-api/README.md)
   * [Get VRF Value from different networks](vrf/get-a-random-value-from-api/get-vrf-value-from-different-networks.md)
   * [Contract Addresses and Pricing](vrf/get-a-random-value-from-api/contract-addresses-and-pricing.md)
-  * [Validate a Group Signature](vrf/get-a-random-value-from-api/validate-a-group-signature.md)
-* [Security Remarks](vrf/security-remarks.md)
+  <!-- * [Validate a Group Signature](vrf/get-a-random-value-from-api/validate-a-group-signature.md) -->
+<!-- * [Security Remarks](vrf/security-remarks.md) -->
 * [API Reference](vrf/api-reference.md)
 * [Security Remarks](vrf/security-remarks-1.md)
 * [Get support from Oraichain team](vrf/get-support-from-oraichain-team.md)
