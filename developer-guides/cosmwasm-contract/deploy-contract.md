@@ -12,7 +12,7 @@ This guide will show you how to deploy and interact with a contract using CLI.
 You need to upload the contract via the CLI to chain. To do this, perform the following
 
 ```bash
-TXFLAGS="--chain-id=oraichain --gas=auto"
+TXFLAGS="--chain-id=Oraichain --gas=auto"
 
 oraid tx wasm store artifacts/CONRTACT_NAME.wasm \
     --from <KEY> $TXFLAGS -y --broadcast-mode=block
