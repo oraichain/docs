@@ -45,5 +45,18 @@
   * [ORAIX Token](developer-guides/oraidex/oraix-token.md)
   * [Contracts](developer-guides/oraidex/contracts.md)
 
-## Governence
+## GOVERNENCE
 * [Privacy Policy](governence/privacy-policy.md)
+
+## COMMAND-LINE INTERFACE (CLI)
+<!-- TODO -->
+
+## NODES & VALIDATORS
+* [Networks](nodes-validators/networks/README.md)
+  * [Joining Mainnet](nodes-validators/networks/mainnet/README.md)
+    * [Build Linux binary from source and become a Sentry Node Operator](nodes-validators/networks/mainnet/become-a-full-node-operator-from-source.md)
+    * [Become a Validator](nodes-validators/networks/mainnet/become-a-validator.md)
+  * [Joining Testnet](nodes-validators/networks/testnet/README.md)
+* [Oraichain Tutorials](nodes-validators/tutorials/README.md)
+  * [Manually upgrade your Oraichain node](nodes-validators/tutorials/manual-upgrade.md)
+  * [Migrate one Oraichain node to another](nodes-validators/tutorials/node-migration.md)
