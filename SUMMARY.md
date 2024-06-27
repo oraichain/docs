@@ -30,6 +30,7 @@
 * [CosmWasm IDE](developer-guides/cosmwasm-ide/README.md)
   * [Tutorial 01](developer-guides/cosmwasm-ide/tutorial-01.md)
   * [Tutorial 02](https://medium.com/oraichain/oraichain-studio- live-demo-transcript-7be020783f03)
+* [Local testnet chain](developer-guides/local-chain-testnet/README.md)
 * [Wallet](developer-guides/wallets/README.md)
   * [OWallet](developer-guides/wallets/owallet.md)
 * [Price Feeds](developer-guides/price-feeds/README.md)
