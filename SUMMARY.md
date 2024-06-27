@@ -24,6 +24,7 @@
   * [AI Executor Incentive Mechanism](developer-guides/executors/incentive-mechanism.md)
 * [CosmWasm Contracts](developer-guides/cosmwasm-contract/README.md)
   * [Compile a Contract](developer-guides/cosmwasm-contract//compile-contract.md)
+  * [Deploy a Contract](developer-guides/cosmwasm-contract/deploy-contract.md)
 * [CosmWasm IDE](developer-guides/cosmwasm-ide/README.md)
   * [Tutorial 01](developer-guides/cosmwasm-ide/tutorial-01.md)
   * [Tutorial 02](https://medium.com/oraichain/oraichain-studio- live-demo-transcript-7be020783f03)
