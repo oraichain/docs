@@ -44,3 +44,6 @@
   * [Introduction to OraiDEX](developer-guides/oraidex/introduction-to-oraidex.md)
   * [ORAIX Token](developer-guides/oraidex/oraix-token.md)
   * [Contracts](developer-guides/oraidex/contracts.md)
+
+## Governence
+* [Privacy Policy](governence/privacy-policy.md)
