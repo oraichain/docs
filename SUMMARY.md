@@ -8,6 +8,7 @@
   * [Layer 2 Rollups and Subnetworks](oraichain/system-overview/layer-2-rollups-and-subnetworks.md)
   * [Verifiable and trustless AI Execution](oraichain/system-overview/verifiable-and-trustless-ai-execution.md)
   * [Protocol Messages](oraichain/system-overview/protocol-messages.md)
+  * [IBC Integration](oraichain/system-overview/ibc-integration.md)
 * [Use Cases](oraichain/use-cases.md)
 * [Token Economics](oraichain/tokenomics.md)
 
