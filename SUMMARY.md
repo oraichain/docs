@@ -1,7 +1,7 @@
 # Table of contents
 
 ## ORAICHAIN
-* [Introduction](oraichain/introduction.md)
+* [Introduction](README.md)
 * [Terminology](oraichain/terminology.md)
 * [System Overview](oraichain/system-overview/README.md)
   * [AI Layer 1 for Data Economy & Oracle services](oraichain/system-overview/ai-layer-1-for-data-economy-and-oracle-services.md)
