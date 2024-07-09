@@ -1,6 +1,7 @@
 # Table of contents
 
 ## ORAICHAIN
+
 * [Introduction](README.md)
 * [Terminology](oraichain/terminology.md)
 * [System Overview](oraichain/system-overview/README.md)
@@ -13,6 +14,7 @@
 * [Token Economics](oraichain/tokenomics.md)
 
 ## DEVELOPER GUIDES
+
 * [General](developer-guides/general/README.md)
   * [Blockchain details](developer-guides/general/blockchain-details.md)
 * [AI Providers](developer-guides/ai-provider/README.md)
@@ -23,13 +25,13 @@
   * [Become an AI Executor with Docker](developer-guides/executors/ai-executor-docker.md)
   * [AI Executor Incentive Mechanism](developer-guides/executors/incentive-mechanism.md)
 * [CosmWasm Contracts](developer-guides/cosmwasm-contract/README.md)
-  * [Compile a Contract](developer-guides/cosmwasm-contract//compile-contract.md)
+  * [Compile a Contract](developer-guides/cosmwasm-contract/compile-contract.md)
   * [Deploy a Contract](developer-guides/cosmwasm-contract/deploy-contract.md)
   * [Query a Contract](developer-guides/cosmwasm-contract/query-contract.md)
   * [Send tokens to a Contract](developer-guides/cosmwasm-contract/send-token-to-contract.md)
 * [CosmWasm IDE](developer-guides/cosmwasm-ide/README.md)
   * [Tutorial 01](developer-guides/cosmwasm-ide/tutorial-01.md)
-  * [Tutorial 02](https://medium.com/oraichain/oraichain-studio- live-demo-transcript-7be020783f03)
+  * [\[Tutorial 02\](https://medium.com/oraichain/oraichain-studio- live-demo-transcript-7be020783f03)](developer-guides/cosmwasm-ide/tutorial-02-https-medium.com-oraichain-oraichain-studio-live-demo-transcript-7be020783f03.md)
 * [Local testnet chain](developer-guides/local-chain-testnet/README.md)
 * [Wallet](developer-guides/wallets/README.md)
   * [OWallet](developer-guides/wallets/owallet.md)
@@ -47,18 +49,20 @@
   * [Security Remarks](developer-guides/vrf/security-remarks.md)
   * [API Reference](developer-guides/vrf/api-reference.md)
   * [Get support from Oraichain team](developer-guides/vrf/get-support-from-oraichain-team.md)
-* [OraiDex](developer-guides/oraidex/README.md)
+* [OraiDEX](developer-guides/oraidex/README.md)
   * [Introduction to OraiDEX](developer-guides/oraidex/introduction-to-oraidex.md)
   * [ORAIX Token](developer-guides/oraidex/oraix-token.md)
   * [Contracts](developer-guides/oraidex/contracts.md)
+  * [OBridge](developer-guides/oraidex/obridge.md)
+  * [OraiBTC](developer-guides/oraidex/oraibtc.md)
+  * [Decentralization](developer-guides/oraidex/decentralization.md)
 
 ## GOVERNENCE
+
 * [Privacy Policy](governence/privacy-policy.md)
 
-## COMMAND-LINE INTERFACE (CLI)
-<!-- TODO -->
-
 ## NODES & VALIDATORS
+
 * [Networks](nodes-validators/networks/README.md)
   * [Joining Mainnet](nodes-validators/networks/mainnet/README.md)
     * [Build Linux binary from source and become a Sentry Node Operator](nodes-validators/networks/mainnet/become-a-full-node-operator-from-source.md)
