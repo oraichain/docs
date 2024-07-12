@@ -68,6 +68,7 @@
     * [Build Linux binary from source and become a Sentry Node Operator](nodes-validators/networks/mainnet/become-a-full-node-operator-from-source.md)
     * [Become a Validator](nodes-validators/networks/mainnet/become-a-validator.md)
   * [Joining Testnet](nodes-validators/networks/testnet/README.md)
+    * [Become Testnet Fullnode From Source](nodes-validators/networks/testnet/become-full-node-testnet-from-source.md)
     * [Faucet](nodes-validators/networks/testnet/faucet.md)
 * [Oraichain Tutorials](nodes-validators/tutorials/README.md)
   * [Manually upgrade your Oraichain node](nodes-validators/tutorials/manual-upgrade.md)
