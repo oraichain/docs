@@ -90,11 +90,11 @@ Use oraid to initialize your node (replace the NODE_NAME with a name of your cho
 oraid init NODE_NAME --home $ORAI_HOME/.oraid --chain-id Oraichain-fork
 ```
 
-TODO: // need to export genesis.json file of testnet
-<!-- Download and place the genesis file in the orai config folder:
+<!-- TODO: // need to export genesis.json file of testnet -->
+Download and place the genesis file in the orai config folder:
 ```bash
-wget -O $ORAI_HOME/.oraid/config/genesis.json https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/genesis.json
-``` -->
+wget -O $ORAI_HOME/.oraid/config/genesis.json <link_genesis_file>
+```
 
 ### Finally, your working directory should be like below:
 ```
@@ -130,8 +130,8 @@ vim $ORAI_HOME/.oraid/config/config.toml
 
 Update seed and persistent_peers address
 ```bash
-seeds = ""
-persistent_peers = ""
+seeds = "3aa2643144cc59e2d60a4b0c328223b0773e5d9e@134.209.164.196:26656, fc7d01a6ffbbc097e60fcf7b5bb6970d693161c0@134.209.164.196:26666"
+persistent_peers = "3aa2643144cc59e2d60a4b0c328223b0773e5d9e@134.209.164.196:26656, fc7d01a6ffbbc097e60fcf7b5bb6970d693161c0@134.209.164.196:26666"
 ```
 
 Start your node
