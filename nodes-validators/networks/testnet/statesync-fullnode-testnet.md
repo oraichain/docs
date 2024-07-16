@@ -54,9 +54,9 @@ sed -i -E 's|tcp://127.0.0.1:26657|tcp://0.0.0.0:26657|g' $CONFIG_TOML_PATH
 sed -i -e "s%^enable *=.*%enable = true%; " $CONFIG_TOML_PATH
 sed -i -e "s%^allow_duplicate_ip *=.*%allow_duplicate_ip = true%; " $CONFIG_TOML_PATH
 sed -i -e "s%^addr_book_strict *=.*%addr_book_strict = false%; " $CONFIG_TOML_PATH
-sed -i -e "s%^persistent_peers *=.*%persistent_peers = \"$PERSISTENT_PEER_1, $PERSISTENT_PEER_2\"%; " $CONFIG_TOML_PATH
+sed -i -e "s%^persistent_peers *=.*%persistent_peers = \"$PERSISTENT_PEER_1,$PERSISTENT_PEER_2\"%; " $CONFIG_TOML_PATH
 sed -i -e "s%^max_num_outbound_peers *=.*%max_num_outbound_peers = 0%; " $CONFIG_TOML_PATH
-sed -i -e "s%^rpc_servers *=.*%rpc_servers = \"$SNAP_RPC\"%; " $CONFIG_TOML_PATH
+sed -i -e "s%^rpc_servers *=.*%rpc_servers = \"$SNAP_RPC,$SNAP_RPC\"%; " $CONFIG_TOML_PATH
 sed -i -e "s%^trust_height *=.*%trust_height = \"$TRUST_HEIGHT\"%; " $CONFIG_TOML_PATH
 sed -i -e "s%^trust_hash *=.*%trust_hash = \"$TRUST_HASH\"%; " $CONFIG_TOML_PATH
 ```
@@ -70,7 +70,7 @@ chmod 700 state_sync.sh
 * Start your node
 ```bash
 oraid tendermint unsafe-reset-all --home $ORAI_HOME/.oraid
-oraid start --x-crisis-skip-assert-invariants --home $ORAI_HOME/.oraid
+oraid start --home $ORAI_HOME/.oraid
 ```
 {% hint style="warning" %}
 Start node process may take many minutes!
