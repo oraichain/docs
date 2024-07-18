@@ -93,7 +93,9 @@ oraid init NODE_NAME --home $ORAI_HOME/.oraid --chain-id Oraichain-fork
 <!-- TODO: // need to export genesis.json file of testnet -->
 Download and place the genesis file in the orai config folder:
 ```bash
-wget -O $ORAI_HOME/.oraid/config/genesis.json <link_genesis_file>
+sudo apt-get install wget liblz4-tool aria2 -y
+wget -O $ORAI_HOME/.oraid/config/genesis.tar.lz4 https://orai.s3.us-east-2.amazonaws.com/testnet/genesis.tar.lz4
+lz4 -c -d $ORAI_HOME/.oraid/config/genesis.tar.lz4 | tar -x -c $ORAI_HOME/.oraid/config/
 ```
 
 ### Finally, your working directory should be like below:
