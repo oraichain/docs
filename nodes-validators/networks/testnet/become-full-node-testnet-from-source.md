@@ -95,7 +95,8 @@ Download and place the genesis file in the orai config folder:
 ```bash
 sudo apt-get install wget liblz4-tool aria2 -y
 wget -O $ORAI_HOME/.oraid/config/genesis.tar.lz4 https://orai.s3.us-east-2.amazonaws.com/testnet/genesis.tar.lz4
-lz4 -c -d $ORAI_HOME/.oraid/config/genesis.tar.lz4 | tar -x -c $ORAI_HOME/.oraid/config/
+lz4 -c -d $ORAI_HOME/.oraid/config/genesis.tar.lz4 | tar -x -C $ORAI_HOME/.oraid/config/
+rm -rf $ORAI_HOME/.oraid/config/genesis.tar.lz4 
 ```
 
 ### Finally, your working directory should be like below:

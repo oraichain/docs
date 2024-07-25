@@ -16,7 +16,8 @@ Download and place the genesis file in the orai config folder:
 ```bash
 sudo apt-get install wget liblz4-tool aria2 -y
 wget -O $ORAI_HOME/.oraid/config/genesis.tar.lz4 https://orai.s3.us-east-2.amazonaws.com/testnet/genesis.tar.lz4
-lz4 -c -d $ORAI_HOME/.oraid/config/genesis.tar.lz4 | tar -x -c $ORAI_HOME/.oraid/config/
+lz4 -c -d $ORAI_HOME/.oraid/config/genesis.tar.lz4 | tar -x -C $ORAI_HOME/.oraid/config/
+rm -rf $ORAI_HOME/.oraid/config/genesis.tar.lz4 
 ```
 
 ### Finally, your working directory should be like below:
@@ -42,13 +43,17 @@ $ORAI_HOME/.oraid/
 APP_TOML_PATH=$ORAI_HOME/.oraid/config/app.toml
 CONFIG_TOML_PATH=$ORAI_HOME/.oraid/config/config.toml
 
-SNAP_RPC="https://testnet-v2.rpc.orai.io/"
+SYNC_RPC="https://testnet-v2.rpc.orai.io"
 PERSISTENT_PEER_1="3aa2643144cc59e2d60a4b0c328223b0773e5d9e@134.209.164.196:26656"
 PERSISTENT_PEER_2="fc7d01a6ffbbc097e60fcf7b5bb6970d693161c0@134.209.164.196:26666"
 
-LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height)
+LATEST_HEIGHT=$(curl -s $SYNC_RPC/block | jq '.result.block.header.height | tonumber')
 TRUST_HEIGHT=$((LATEST_HEIGHT - 5000))
-TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash)
+TRUST_HASH=$(curl -s $SYNC_RPC/block?height=$BLOCK_HEIGHT | jq .result.block_id.hash)
+
+echo "height: $LATEST_HEIGHT"
+echo "trust height: $TRUST_HEIGHT"
+echo "hash: $TRUST_HASH"
 
 sed -i -e "s%^snapshot-interval *=.*%snapshot-interval = 1200%; " $APP_TOML_PATH
 
@@ -58,9 +63,9 @@ sed -i -e "s%^allow_duplicate_ip *=.*%allow_duplicate_ip = true%; " $CONFIG_TOML
 sed -i -e "s%^addr_book_strict *=.*%addr_book_strict = false%; " $CONFIG_TOML_PATH
 sed -i -e "s%^persistent_peers *=.*%persistent_peers = \"$PERSISTENT_PEER_1,$PERSISTENT_PEER_2\"%; " $CONFIG_TOML_PATH
 sed -i -e "s%^max_num_outbound_peers *=.*%max_num_outbound_peers = 0%; " $CONFIG_TOML_PATH
-sed -i -e "s%^rpc_servers *=.*%rpc_servers = \"$SNAP_RPC,$SNAP_RPC\"%; " $CONFIG_TOML_PATH
+sed -i -e "s%^rpc_servers *=.*%rpc_servers = \"$SYNC_RPC,$SYNC_RPC\"%; " $CONFIG_TOML_PATH
 sed -i -e "s%^trust_height *=.*%trust_height = \"$TRUST_HEIGHT\"%; " $CONFIG_TOML_PATH
-sed -i -e "s%^trust_hash *=.*%trust_hash = \"$TRUST_HASH\"%; " $CONFIG_TOML_PATH
+sed -i -e "s%^trust_hash *=.*%trust_hash = $TRUST_HASH%; " $CONFIG_TOML_PATH
 ```
 
 * Grant privilege to execute script:
