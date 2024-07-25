@@ -12,7 +12,7 @@ This tutorial assumes that your node is running Ubuntu LTS version (i.e: 18.04, 
 
 ### Go version (required)
 
-The Golang version should be from 1.18 and above
+The Golang version should be from 1.21 and above
 If you have not installed it yet, you can refer to [this document](https://github.com/oraichain/docs/blob/master/developer/tutorials/install-go.md).
 
 Make sure that `$GOPATH` is in your `$PATH`. It's the crucial part of this tutorial.
@@ -56,10 +56,10 @@ git checkout <tag>
 The `<version-tag>` will need to be set to either a testnet or the latest mainnet version tag.
 
 {% hint style="warning" %}
-The current mainnet version tag will be `v0.42.0` - i.e:
+The current mainnet version tag will be `v0.42.1` - i.e:
 
 ```bash
-git checkout v0.42.0
+git checkout v0.42.1
 ```
 {% endhint %}
 
