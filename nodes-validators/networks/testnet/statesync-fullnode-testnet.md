@@ -49,7 +49,7 @@ PERSISTENT_PEER_2="fc7d01a6ffbbc097e60fcf7b5bb6970d693161c0@134.209.164.196:2666
 
 LATEST_HEIGHT=$(curl -s $SYNC_RPC/block | jq '.result.block.header.height | tonumber')
 TRUST_HEIGHT=$((LATEST_HEIGHT - 5000))
-TRUST_HASH=$(curl -s $SYNC_RPC/block?height=$BLOCK_HEIGHT | jq .result.block_id.hash)
+TRUST_HASH=$(curl -s $SYNC_RPC/block?height=$TRUST_HEIGHT | jq .result.block_id.hash)
 
 echo "height: $LATEST_HEIGHT"
 echo "trust height: $TRUST_HEIGHT"
