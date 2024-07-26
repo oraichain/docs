@@ -78,7 +78,7 @@ To confirm that the installation is succeeded, you can run (please make sure tha
 oraid version
 ```
 
-The current binary version for Linux users is v0.42.0
+The current binary version for Linux users is v0.42.1
 
 Libwasmvm version: ```oraid query wasm libwasmvm-version```, which should give: 1.5.2
 
