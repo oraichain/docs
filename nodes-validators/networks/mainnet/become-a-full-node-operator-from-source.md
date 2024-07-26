@@ -50,10 +50,10 @@ git checkout <tag>
 The `<version-tag>` will need to be set to either a testnet or the latest mainnet version tag.
 
 {% hint style="warning" %}
-The current mainnet version tag will be `v0.42.0` - i.e:
+The current mainnet version tag will be `v0.42.1` - i.e:
 
 ```bash
-git checkout v0.42.0
+git checkout v0.42.1
 ```
 {% endhint %}
 
@@ -72,7 +72,7 @@ To confirm that the installation is succeeded, you can run (please make sure tha
 oraid version
 ```
 
-The current binary version for Linux users is v0.42.0
+The current binary version for Linux users is v0.42.1
 
 Libwasmvm version: ```oraid query wasm libwasmvm-version```, which should give: 1.5.2
 
@@ -171,9 +171,15 @@ $ORAI_HOME/.oraid/
 Download liblz4-tool to handle the compressed file, then Download & Decompress the snapshot:
 
 ```bash
+# install lib
 cd $ORAI_HOME/.oraid
 sudo apt-get install wget liblz4-tool aria2 -y
-wget -O oraichain_latest.tar.lz4 https://orai.s3.us-east-2.amazonaws.com/snapshots/oraichain_latest.tar.lz4
+```
+
+We provide a snapshot file every hour, available at https://snapshot.orai.io/. Please change [SNAPSHOT_URL] to the link provided.
+
+```bash
+wget -O oraichain_latest.tar.lz4 [SNAPSHOT_URL]
 lz4 -c -d oraichain_latest.tar.lz4 | tar -x -C $ORAI_HOME/.oraid
 ```
 
