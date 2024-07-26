@@ -43,7 +43,7 @@ $ORAI_HOME/.oraid/
 APP_TOML_PATH=$ORAI_HOME/.oraid/config/app.toml
 CONFIG_TOML_PATH=$ORAI_HOME/.oraid/config/config.toml
 
-SYNC_RPC="https://testnet-v2.rpc.orai.io"
+SYNC_RPC="https://testnet-v2.rpc.orai.io:443"
 PERSISTENT_PEER_1="3aa2643144cc59e2d60a4b0c328223b0773e5d9e@134.209.164.196:26656"
 PERSISTENT_PEER_2="fc7d01a6ffbbc097e60fcf7b5bb6970d693161c0@134.209.164.196:26666"
 
@@ -70,7 +70,7 @@ sed -i -e "s%^trust_hash *=.*%trust_hash = $TRUST_HASH%; " $CONFIG_TOML_PATH
 
 * Grant privilege to execute script:
 ```bash
-chmod 700 state_sync.sh
+chmod 700 state-sync.sh
 ./state-sync.sh
 ```
 
