@@ -6,9 +6,9 @@ description: >-
 
 # Get VRF Value from different networks
 
-![How VRF values are generated from different netw](<../../.gitbook/assets/Screen Shot 2022-04-12 at 14.40.14.png>)
+![How VRF values are generated from different netw](<../../../.gitbook/assets/Screen Shot 2022-04-12 at 14.40.14.png>)
 
-![How VRF values are generated from a different network](<../../.gitbook/assets/image (13).png>)
+![How VRF values are generated from a different network](<../../../.gitbook/assets/image (13).png>)
 
 VRF execution flow from Binance Smart Chain (BSC), Avalanche (AVAX) and Fantom (FTM):
 

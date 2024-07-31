@@ -52,7 +52,7 @@ Google Web Store: [Extension](https://chrome.google.com/webstore/detail/owallet/
 
 To sign in, you have 3 options with Owallet as below.
 
-![](../.gitbook/assets/image.png)
+![](../../.gitbook/assets/image.png)
 
 A default wallet will be created on Oraichain if you choose to create a new wallet. Make sure to note the Mnemonic phrases down and keep it safe in case you need to import your wallet elsewhere.&#x20;
 

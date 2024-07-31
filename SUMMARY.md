@@ -40,7 +40,7 @@
   * [BNB Chain](developer-guides/price-feeds/binance-smart-chain.md)
   * [Ethereum](developer-guides/price-feeds/ethereum.md)
   * [Oraichain](developer-guides/price-feeds/oraichain.md)
-* [Vrf 2.0](developer-guides/vrf/README.md)
+* [VRF 2.0](developer-guides/vrf/README.md)
   * [Introduction to Oraichain VRF 2.0](developer-guides/vrf/introduction.md)
   * [Get a Random Value from API](developer-guides/vrf/get-a-random-value-from-api/README.md)
     * [Get VRF Value from different networks](developer-guides/vrf/get-a-random-value-from-api/get-vrf-value-from-different-networks.md)
@@ -57,9 +57,9 @@
   * [OraiBTC](developer-guides/oraidex/oraibtc.md)
   * [Decentralization](developer-guides/oraidex/decentralization.md)
 
-## GOVERNENCE
+## GOVERNANCE
 
-* [Privacy Policy](governence/privacy-policy.md)
+* [Privacy Policy](governance/privacy-policy.md)
 
 ## NODES & VALIDATORS
 
@@ -70,7 +70,6 @@
   * [Joining Testnet](nodes-validators/networks/testnet/README.md)
     * [Become Testnet Fullnode From Source](nodes-validators/networks/testnet/become-full-node-testnet-from-source.md)
     * [StateSync Testnet](nodes-validators/networks/testnet/statesync-fullnode-testnet.md)
-    <!-- * [Faucet](nodes-validators/networks/testnet/faucet.md) -->
 * [Oraichain Tutorials](nodes-validators/tutorials/README.md)
   * [Manually upgrade your Oraichain node](nodes-validators/tutorials/manual-upgrade.md)
   * [Migrate one Oraichain node to another](nodes-validators/tutorials/node-migration.md)

@@ -10,13 +10,13 @@ You can follow our tutorial to run a node on the Oraichain mainnet.
 
 Your wallet must have some ORAI tokens to delegate and pay transaction fees.
 
-Create a new wallet, change ***KEY_NAME*** as you like
+Create a new wallet, change _**KEY\_NAME**_ as you like
 
 ```bash
 oraid keys add KEY_NAME
 ```
 
-***Save your passphrase, address, mnemonic***
+_**Save your passphrase, address, mnemonic**_
 
 List all your keys
 
@@ -32,8 +32,7 @@ oraid tendermint show-validator
 
 ## Create validator command
 
-***After you got wallet address, you must send some oraichain token to this wallet to active it.***
-Here is the empty command
+_**After you got wallet address, you must send some oraichain token to this wallet to active it.**_ Here is the empty command
 
 ```bash
 oraid tx staking create-validator \
@@ -68,30 +67,29 @@ oraid tx staking create-validator \
 --gas-prices=0.001orai
 ```
 
-The ***from*** flag is Name or address of private key with which to sign
+The _**from**_ flag is Name or address of private key with which to sign
 
-The ***amount*** flag is Amount of coins to bond. 1000000orai = 1 oraichain token
+The _**amount**_ flag is Amount of coins to bond. 1000000orai = 1 oraichain token
 
-The ***pubkey*** flag is The validator's Protobuf JSON encoded public key
+The _**pubkey**_ flag is The validator's Protobuf JSON encoded public key
 
-The ***moniker*** flag is The validator's name
+The _**moniker**_ flag is The validator's name
 
-The ***chain-id*** flag is Oraichain (default value and can't change)
+The _**chain-id**_ flag is Oraichain (default value and can't change)
 
-The ***commission-rate*** is The initial commission rate percentage (in the example above, 3 
-percent)
+The _**commission-rate**_ is The initial commission rate percentage (in the example above, 3 percent)
 
-The ***commission-max-rate*** is The maximum commission rate percentage (in the example above, 10 percent)
+The _**commission-max-rate**_ is The maximum commission rate percentage (in the example above, 10 percent)
 
-The ***commission-max-change-rate*** is The maximum commission change rate percentage (per day) (in the example above, 1 percent per day until reaching the max rate)
+The _**commission-max-change-rate**_ is The maximum commission change rate percentage (per day) (in the example above, 1 percent per day until reaching the max rate)
 
-The ***min-self-delegatio***n is The minimum self delegation required on the validator (in the example above, 1 orai)
+The _**min-self-delegatio**_n is The minimum self delegation required on the validator (in the example above, 1 orai)
 
-The ***gas-prices*** is Gas prices in decimal format to determine the transaction fee
+The _**gas-prices**_ is Gas prices in decimal format to determine the transaction fee
 
-The ***website*** flag is The validator's (optional) website
+The _**website**_ flag is The validator's (optional) website
 
-The ***details*** flag is The validator's (optional) detail
+The _**details**_ flag is The validator's (optional) detail
 
 ## Track validator
 
