@@ -209,12 +209,17 @@ With rapid growth of TVL of TON (from $71M to $994M in first half of 2024), We (
 4. TON’s lite client or Toncenter fails to return responses due to network or connection errors.
 5. Cannot query proof due to pruned data.
 
-- **Solutions**:
-  1. Manage RPC nodes using pm2 and notifies via Discord when having problems.
-  2. Manage the relayer via pm2 to have auto restart if there’s a leak, monitor RAM usage.
-  3. Use Authz to grant the relayer to spend fees from the granter wallet. Monitor the granter’s wallet balance.
-  4. The relayer notifies connection errors via Discord.
-  5. Manually investigate the case via transaction hash and sequence number.
+<details>
+
+<summary><b>Solutions:</b></summary>
+
+1. Manage RPC nodes using pm2 and notifies via Discord when having problems.
+2. Manage the relayer via pm2 to have auto restart if there’s a leak, monitor RAM usage.
+3. Use Authz to grant the relayer to spend fees from the granter wallet. Monitor the granter’s wallet balance.
+4. The relayer notifies connection errors via Discord.
+5. Manually investigate the case via transaction hash and sequence number.
+
+</details>
 
 ### Cosmos → TON
 
@@ -224,12 +229,17 @@ With rapid growth of TVL of TON (from $71M to $994M in first half of 2024), We (
 4. The Jetton Bridge contract runs out of tokens to unlock to the receiver.
 5. Cosmos Tx timestamp versus current timestamp gap is larger than the trusting period.
 
-- **Solutions**:
-  1. When packet is timeouted, the Ton contract will emit ack packet for the Cosmos Contract to refund users.
-  2. If no acknowledgement passed timeout → The relayer will update the packet’s status based on timeout proof → handle manually.
-  3. Ton Adapter queries the Cosmos contract state with proof to verify if the packet is successful or not.
-  4. Use a bot to listen to the contract’s balances.
-  5. Ignore the tx.
+<details>
+
+<summary><b>Solutions:</b></summary>
+
+1. When packet is timeouted, the Ton contract will emit ack packet for the Cosmos Contract to refund users.
+2. If no acknowledgement passed timeout → The relayer will update the packet’s status based on timeout proof → handle manually.
+3. Ton Adapter queries the Cosmos contract state with proof to verify if the packet is successful or not.
+4. Use a bot to listen to the contract’s balances.
+5. Ignore the tx.
+
+</details>
 
 ### TON → Cosmos
 
