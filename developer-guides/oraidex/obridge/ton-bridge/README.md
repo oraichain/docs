@@ -211,7 +211,7 @@ With rapid growth of TVL of TON (from $71M to $994M in first half of 2024), We (
 
 <details>
 
-<summary><b>Solutions:</b></summary>
+<summary><b>Solutions</b></summary>
 
 1. Manage RPC nodes using pm2 and notifies via Discord when having problems.
 2. Manage the relayer via pm2 to have auto restart if there’s a leak, monitor RAM usage.
@@ -231,7 +231,7 @@ With rapid growth of TVL of TON (from $71M to $994M in first half of 2024), We (
 
 <details>
 
-<summary><b>Solutions:</b></summary>
+<summary><b>Solutions</b></summary>
 
 1. When packet is timeouted, the Ton contract will emit ack packet for the Cosmos Contract to refund users.
 2. If no acknowledgement passed timeout → The relayer will update the packet’s status based on timeout proof → handle manually.
@@ -248,12 +248,18 @@ With rapid growth of TVL of TON (from $71M to $994M in first half of 2024), We (
 - Could not validate and update new validator set.
 - The bridge contract runs out of tokens to unlock to the receiver.
 - The block’s validator signatures are not greater than 2/3 of the total voting power.
-- **Solutions**:
-  1. When packet is time-outed, the Cosmos contract will emit ack packet for the Ton Contract to refund users.
-  2. If no acknowledgement passed timeout → The relayer will update the packet’s status based on timeout proof → handle manually.
-  3. Manually update new validator set based on previous round, then update the current round to make it work. @Trung Nguyen Van
-  4. Use a bot to listen to the contract’s balances.
-  5. Ignore the tx.
+
+<details>
+
+<summary><b>Solutions</b></summary>
+
+1. When packet is time-outed, the Cosmos contract will emit ack packet for the Ton Contract to refund users.
+2. If no acknowledgement passed timeout → The relayer will update the packet’s status based on timeout proof → handle manually.
+3. Manually update new validator set based on previous round, then update the current round to make it work. @Trung Nguyen Van
+4. Use a bot to listen to the contract’s balances.
+5. Ignore the tx.
+
+</details>
 
 # References
 
