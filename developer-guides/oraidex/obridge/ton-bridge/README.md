@@ -1,6 +1,6 @@
 # TON Bridge
 
-![Untitled](../../../../.gitbook/assets/obridge.png)
+![](../../../../.gitbook/assets/obridge.png)
 
 <aside>
 🎯 This document describes the goals and expectations of TON Bridge to the Cosmos Ecosystem. It also outlines the MVP definition of the project as well as providing several top-level designs of the system.
@@ -167,22 +167,23 @@ With rapid growth of TVL of TON (from $71M to $994M in first half of 2024), We (
 
 ## 1. System level
 
-![Untitled](../../../../.gitbook/assets/ton-bridge-1.png)
+![](../../../../.gitbook/assets/ton-bridge-1.png)
 
 ## 2. Components level
 
 <aside>
-🎯 Follow graphics guideline by TON - https://docs.ton.org/contribute/docs/schemes-guidelines
+
+🎯 [Follow graphics guideline by TON](https://docs.ton.org/contribute/docs/schemes-guidelines)
 
 </aside>
 
-![Untitled](../../../../.gitbook/assets/ton-bridge-2.png)
+![](../../../../.gitbook/assets/ton-bridge-2.png)
 
 ## 3. Implementation Level
 
 **From TON → Cosmos**
 
-![TON → Cosmos ](../../../../.gitbook/assets/ton-bridge-3.png)
+![TON → Cosmos](../../../../.gitbook/assets/ton-bridge-3.png)
 
 TON → Cosmos
 
@@ -192,13 +193,12 @@ TON → Cosmos
 
 Cosmos → TON
 
-### WIP - Sequence diagrams for verifying TON light client
-
-[[WIP] Ton Bridge detailed design](https://www.notion.so/WIP-Ton-Bridge-detailed-design-28cd545e95744431a4e8c2f2bcf140d5?pvs=21)
+[Sequence diagrams for verifying TON light client](./ton-light-clients-verification.md)
 
 # Progress
 
 <aside>
+
 💡 All phases will shed light on all works we have and have not done!
 
 </aside>

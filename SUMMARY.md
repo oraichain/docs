@@ -49,12 +49,11 @@
   * [API Reference](developer-guides/vrf/api-reference.md)
   * [Get support from Oraichain team](developer-guides/vrf/get-support-from-oraichain-team.md)
 * [OraiDEX](developer-guides/oraidex/README.md)
-  * [Introduction to OraiDEX](developer-guides/oraidex/introduction-to-oraidex.md)
   * [ORAIX Token](developer-guides/oraidex/oraix-token.md)
-  * [Contracts](developer-guides/oraidex/contracts.md)
   * [OBridge](developer-guides/oraidex/obridge/README.md)
     * [OraiBTC](developer-guides/oraidex/obridge/oraibtc.md)
     * [TON Bridge](developer-guides/oraidex/obridge/ton-bridge/README.md)
+      * [TON Blockchain 101](developer-guides/oraidex/obridge/ton-bridge/ton-blockchain-101.md)
   * [Decentralization](developer-guides/oraidex/decentralization.md)
 
 ## GOVERNANCE

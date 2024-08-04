@@ -13,27 +13,27 @@ Diagrams:
 
 - Initialization step. We need to whitelist and trust the initial validator set as well as the initial keyblock.
 
-![Untitled](../../../../.gitbook/assets/ton-light-client-initialization.png)
+![](../../../../.gitbook/assets/ton-light-client-initialization.png)
 
 - Verify a masterchain keyblock: This step is required since after each keyblock, the validator set will be updated, so we need to make sure we need to validate every keyblock.
 
-![Untitled](../../../../.gitbook/assets/ton-light-client-verify-keyblock.png)
+![](../../../../.gitbook/assets/ton-light-client-verify-keyblock.png)
 
 - Verify a normal masterchain block: This step is for verifying a transaction. There are two cases:
   - If a transaction is in the masterchain block → we will use validator signatures to verify the masterchain block. After that we only need to prove if the transaction is in that masterchain block by parsing BlockExtra → we are done.
   - If a transaction is in a shard block → we will need to verify the masterchain block that includes the shard block first.
-  ![Untitled](../../../../.gitbook/assets/ton-light-client-verify-masterchain-block.png)
+  ![](../../../../.gitbook/assets/ton-light-client-verify-masterchain-block.png)
 - Verify shard blocks
 
-![Untitled](../../../../.gitbook/assets/ton-light-client-verify-shard-blocks.png)
+![](../../../../.gitbook/assets/ton-light-client-verify-shard-blocks.png)
 
 - Verify transactions in a masterchain block
 
-![Untitled](../../../../.gitbook/assets/ton-light-client-verify-txs-masterchain.png)
+![](../../../../.gitbook/assets/ton-light-client-verify-txs-masterchain.png)
 
 - Verify transactions in a shard block (Most complex)
 
-![Untitled](../../../../.gitbook/assets/ton-light-client-verify-txs-shards.png)
+![](../../../../.gitbook/assets/ton-light-client-verify-txs-shards.png)
 
 **Define schema for both flow ton→cosmos and vice versa:**
 

@@ -72,7 +72,7 @@ Ton allows many blockchains with diff set of rules (2^32 blockchains) |
 
 </aside>
 
-![Untitled](../../../../.gitbook/assets/ton-blockchain-101.png)
+![](../../../../.gitbook/assets/ton-blockchain-101.png)
 
 ### Cells[****](https://docs.ton.org/develop/data-formats/cell-boc#cell)
 
@@ -84,7 +84,7 @@ Cells are entities in Ton for data storage.
 - Form DAG
 - 5 types of cells
 
-![Untitled](../../../../.gitbook/assets/ton-blockchain-101-1.png)
+![](../../../../.gitbook/assets/ton-blockchain-101-1.png)
 
 ### Bag of Cells (BoC)[****](https://docs.ton.org/develop/data-formats/cell-boc#bag-of-cells)
 
@@ -93,7 +93,7 @@ A format to
 - Serializing cells into bytes arrays
 - Contracts send `BoC` to others
 
-![Untitled](../../../../.gitbook/assets/ton-blockchain-101-2.png)
+![](../../../../.gitbook/assets/ton-blockchain-101-2.png)
 
 ### TL-B (Type Language - Binary)
 
