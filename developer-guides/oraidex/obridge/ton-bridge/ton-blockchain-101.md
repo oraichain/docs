@@ -1,5 +1,3 @@
-# TON Blockchain 101
-
 <aside>
 🎯 This document attempts to summarize key concepts of TON blockchain. 
 Articulated during process of making TON Bridge by Oraichain Labs developers
