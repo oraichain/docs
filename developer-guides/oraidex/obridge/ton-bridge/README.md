@@ -61,44 +61,48 @@ Light client concept which is used to verify blocks, validators from both Oraich
     ```
 - Each masterchain block is verified by a set of validators (PoS)
 - Each masterchain keyblock contains the next set of validators within the 2-hour window after a consensus round has finished.
-- **Question: How to process an arbitrary TON transaction for bridging?**
 
-  1. Trusted setup - initial trusted validator set when initializing the contracts
+<details>
+   <summary><b> Question: How to process an arbitrary TON transaction for bridging? </b></summary>
 
-     → Have a trusted validator set for validating current consensus round’s masterchain blocks.
+1. Trusted setup - initial trusted validator set when initializing the contracts
 
-  2. When the next validator set appear in a keyblock
+   → Have a trusted validator set for validating current consensus round’s masterchain blocks.
 
-     1. Validate the keyblock using the current validator set
-     2. Update the new validator set by parsing the keyblock
+2. When the next validator set appear in a keyblock
 
-     → Have an updated validator set for validating both current and next consensus round’s masterchain blocks.
+   1. Validate the keyblock using the current validator set
+   2. Update the new validator set by parsing the keyblock
 
-  3. Validate the target masterchain block using the current active validator set.
+   → Have an updated validator set for validating both current and next consensus round’s masterchain blocks.
 
-     → Have a set of validated masterchain blocks stored on-chain.
+3. Validate the target masterchain block using the current active validator set.
 
-  4. Validate shard blocks included in the validated masterchain block above using merkle proofs:
+   → Have a set of validated masterchain blocks stored on-chain.
 
-     1. The merkle proof’s hash of the shard block referenced in the masterchain must equal to the masterchain’s block hash, which is verified above using the validator signatures.
-     2. The remaining shard blocks are recursively verified by proving that its merkle proof’s hash is the block hash of the previously verified shard block.
+4. Validate shard blocks included in the validated masterchain block above using merkle proofs:
 
-     → Have a set of validated shard blocks stored on-chain
+   1. The merkle proof’s hash of the shard block referenced in the masterchain must equal to the masterchain’s block hash, which is verified above using the validator signatures.
+   2. The remaining shard blocks are recursively verified by proving that its merkle proof’s hash is the block hash of the previously verified shard block.
 
-  5. Validate the transaction:
+   → Have a set of validated shard blocks stored on-chain
 
-     1. Prove that the transaction merkle proof’s hash of the transaction equals to the verified shard block above.
-     2. Parse the transaction data and calculate its tx hash. The hash must match the hash stored in the transaction merkle proof.
-     3. The transaction must come from the trusted Bridge Adapter contract on TON.
+5. Validate the transaction:
 
-     → Have the target transaction validated.
+   1. Prove that the transaction merkle proof’s hash of the transaction equals to the verified shard block above.
+   2. Parse the transaction data and calculate its tx hash. The hash must match the hash stored in the transaction merkle proof.
+   3. The transaction must come from the trusted Bridge Adapter contract on TON.
 
-  6. Process the transaction:
+   → Have the target transaction validated.
 
-     1. Parse the transaction body and collect data
-     2. Validate the data and continue processing.
+6. Process the transaction:
 
-     → Have the target transaction validated, processed, and stored on-chain to prevent replay attack.
+   1. Parse the transaction body and collect data
+   2. Validate the data and continue processing.
+
+   → Have the target transaction validated, processed, and stored on-chain to prevent replay attack.
+
+</details>
 
 ### Cosmos → TON
 
@@ -109,33 +113,37 @@ Light client concept which is used to verify blocks, validators from both Oraich
 - We can use such data to:
   - Verify if a packet data is existed at a specific block based on app hash and proof of packet’s existence. ([ICS23](https://github.com/cosmos/ibc/tree/main/spec/core/ics-023-vector-commitments))\*\*
   - Verify if a block is valid by validating it against the validator signatures.
-- **Question: How to process an arbitrary CosmWasm transaction for bridging?**
 
-  1. Trusted setup - initial trusted validator set on the CosmWasm based network when initializing the contracts.
+<details>
+   <summary><b>Question: How to process an arbitrary CosmWasm transaction for bridging?</b></summary>
 
-     → Have a trusted validator set for validating current block.
+1. Trusted setup - initial trusted validator set on the CosmWasm based network when initializing the contracts.
 
-  2. Validate the block that includes the target transaction:
+   → Have a trusted validator set for validating current block.
 
-     1. Use the current validator set, validate against the signatures in the block data.
-     2. After validation, store the new validator set.
+2. Validate the block that includes the target transaction:
 
-     → Have the validated block stored on-chain.
+   1. Use the current validator set, validate against the signatures in the block data.
+   2. After validation, store the new validator set.
 
-  3. Validate the transaction:
+   → Have the validated block stored on-chain.
 
-     1. Hash the raw transaction & compares with target transaction hash (should match)
-     2. Get the transaction’s merkle proof.
-     3. Calculate the merkle proof’s root hash & compare with the block’s data hash (should match)
+3. Validate the transaction:
 
-     → Have the target transaction validated.
+   1. Hash the raw transaction & compares with target transaction hash (should match)
+   2. Get the transaction’s merkle proof.
+   3. Calculate the merkle proof’s root hash & compare with the block’s data hash (should match)
 
-  4. Process the transaction:
+   → Have the target transaction validated.
 
-     1. Parse the transaction body and collect data
-     2. Validate the data and continue processing.
+4. Process the transaction:
 
-     → Have the target transaction validated, processed, and stored on-chain to prevent relay attack.
+   1. Parse the transaction body and collect data
+   2. Validate the data and continue processing.
+
+   → Have the target transaction validated, processed, and stored on-chain to prevent relay attack.
+
+</details>
 
 ## Why we’re making this
 
@@ -185,23 +193,11 @@ With rapid growth of TVL of TON (from $71M to $994M in first half of 2024), We (
 
 ![TON → Cosmos](../../../../.gitbook/assets/ton-bridge-3.png)
 
-TON → Cosmos
-
 **From Cosmos → TON**
 
 ![Cosmos → TON](../../../../.gitbook/assets/ton-bridge-4.png)
 
-Cosmos → TON
-
 [Sequence diagrams for verifying TON light client](./ton-light-clients-verification.md)
-
-# Progress
-
-<aside>
-
-💡 All phases will shed light on all works we have and have not done!
-
-</aside>
 
 # Common failures & recovery methods
 
