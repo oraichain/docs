@@ -276,8 +276,8 @@ With rapid growth of TVL of TON (from $71M to $994M in first half of 2024), We (
 
 - `Cosmos` term mentioned above mean Cosmos-based blockchains or Cosmos ecosystem
 - IBC specifications
-  - ICS23 Proof merkle format for IBC - [Link](https://github.com/cosmos/ibc/tree/main/spec/core/ics-023-vector-commitments)
-  - ICS02 Client Semantics - [Link](https://github.com/cosmos/ibc/blob/main/spec/core/ics-002-client-semantics)
+  - [ICS23 Proof merkle format for IBC](https://github.com/cosmos/ibc/tree/main/spec/core/ics-023-vector-commitments)
+  - [ICS02 Client Semantics](https://github.com/cosmos/ibc/blob/main/spec/core/ics-002-client-semantics)
 
 # Disclaimer
 
