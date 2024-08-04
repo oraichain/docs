@@ -53,8 +53,9 @@
   * [Introduction to OraiDEX](developer-guides/oraidex/introduction-to-oraidex.md)
   * [ORAIX Token](developer-guides/oraidex/oraix-token.md)
   * [Contracts](developer-guides/oraidex/contracts.md)
-  * [OBridge](developer-guides/oraidex/obridge.md)
-  * [OraiBTC](developer-guides/oraidex/oraibtc.md)
+  * [OBridge](developer-guides/oraidex/obridge/README.md)
+    * [Bitcoin Bridge](developer-guides/oraidex/obridge/bitcoin-bridge.md)
+    * [TON Bridge](developer-guides/oraidex/obridge/tonbridge.md)
   * [Decentralization](developer-guides/oraidex/decentralization.md)
 
 ## GOVERNANCE
