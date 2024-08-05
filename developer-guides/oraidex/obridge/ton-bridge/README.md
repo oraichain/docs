@@ -279,6 +279,10 @@ With rapid growth of TVL of TON (from $71M to $994M in first half of 2024), We (
   - [ICS23 Proof merkle format for IBC](https://github.com/cosmos/ibc/tree/main/spec/core/ics-023-vector-commitments)
   - [ICS02 Client Semantics](https://github.com/cosmos/ibc/blob/main/spec/core/ics-002-client-semantics)
 
+# Credits
+
+🛠 Built by Oraichain Labs — if you like our tools, please consider delegating to [OWallet validators ⚛️](https://owallet.dev/validators)
+
 # Disclaimer
 
 > ⚠ **This software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.**
