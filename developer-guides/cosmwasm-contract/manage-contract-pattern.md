@@ -75,13 +75,13 @@ tonbridge-sdk/
 
 You may ask, what's the benefits of following this coding pattern?. Say no more!
 
-1. **Increase portability**
+### **Increase portability**
 
 - You can publish the `contracts-build` and `contracts-sdk` packages onto NPM and use them in various dApps.
 - The `contracts-build` are for end-to-end dapp testing simulation, while the `contracts-sdk` are for easy contracts interaction.
 - Whenever there are contract schema or code changes, dApps only need to pump the dependency versions and modify their code accordingly to the new types & .wasm.
 
-2. **Reduce Development time**
+### **Reduce Development time**
 
 - By using a `Nx` mono repo, the devs don't need to publish any packages before making sure everything is correct.
 - For example, after testing, they see that the contract schemas need to be updated to meet the user requirements. With a mono repo, they only need to update the contract code, re-generate the schemas and rebuild the mono repo if needed.
