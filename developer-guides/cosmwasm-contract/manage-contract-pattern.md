@@ -95,7 +95,7 @@ Assuming your contracts are located at the same level as your root project direc
   oraichain-labs/
   ├── tonbridge-sdk/
   ├── tonbridge-cw-contracts/
-  |   ├── contracts/
+  │   ├── contracts/
 ```
 
 then you can run the following commands to build & generate types:
