@@ -27,8 +27,8 @@ tonbridge-sdk/
 
 - **contracts-build**:
 
-  - Contains .wasm files that are related to the service you're trying to develop. They are also useful when you want to write simulate tests in Node.js resembling the actual production code.
-  - For example, Our [Ton Bridge SDK's contracts build](https://github.com/oraichain/tonbridge-sdk/tree/main/packages/contracts-build/data) contains 3 .wasm files: a bridge, a light client, and a cw20 token. These are up-to-date smart contract builds that are used for [simulation](./cosmwasm-simulate.md) and deployment to the Oraichain network. Meanwhile, the src/index.ts has two main functions: read the .wasm files and deploy those onto the Oraichain network.
+  - Contains .wasm files that are related to the service you're trying to develop. They are also useful when you want to write simulate tests in `Node.js` resembling the actual production code.
+  - For example, Our [Ton Bridge SDK's contracts build](https://github.com/oraichain/tonbridge-sdk/tree/main/packages/contracts-build/data) contains 3 `.wasm` files: a bridge, a light client, and a cw20 token. These are up-to-date smart contract builds that are used for [simulation](./cosmwasm-simulate.md) and deployment to the Oraichain network. Meanwhile, the `src/index.ts` has two main functions: read the `.wasm` files and deploy those onto the Oraichain network.
 
   ```
   contracts-build/
@@ -42,7 +42,7 @@ tonbridge-sdk/
 
 - **contracts-sdk**:
 
-  - Contains TypeScript code generated from the contract schemas. You can also generate types for multiple contracts and put them in the contracts-sdk. The types usually come from the contracts used in contracts-build for consistency. However, there are some common already been published on NPM that you can reuse. For example, the CW20 types are in the `@oraichain/oraidex-contracts-sdk`.
+  - Contains TypeScript code generated from the contract schemas. You can also generate types for multiple contracts and put them in the `contracts-sdk`. The types usually come from the contracts used in `contracts-build` for consistency. However, there are some common already been published on NPM that you can reuse. For example, the CW20 types are in the `@oraichain/oraidex-contracts-sdk`.
   - For example, [Ton Bridge SDK's contracts sdk](https://github.com/oraichain/tonbridge-sdk/tree/main/packages/contracts-sdk) contains types of the TON CW contracts.
 
   ```
@@ -63,7 +63,7 @@ tonbridge-sdk/
   - The name speaks for itself. This package is for writing example codes to interact with the contracts you are developing.
   - Since intergrating the contract logic into an dApp can be confusing, having examples of how to use the contract end-to-end can be useful for other developers and for your future-self.
   - You can write anything in this package, and since it is just a demo package, you don't need to publish it onto NPM.
-  - You can have a tests/ directory for contract simulation testing in this package.
+  - You can have a `tests/` directory for contract simulation testing in this package.
 
   ```
   contracts-demo/
