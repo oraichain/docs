@@ -56,7 +56,7 @@ tonbridge-sdk/
   |   ├── types.ts
   ```
 
-  - These files are generate by using [CosmWasm tools](./compile-contract.md#install-cosmwasm-tools). You will learn to build contracts and generate types in the [below section](#how-to-setup-the-pattern).
+  - These files are generated using [CosmWasm tools](./compile-contract.md#install-cosmwasm-tools). You will learn to build contracts and generate types in the [below section](#how-to-setup-the-pattern).
 
 - **contracts-demo**:
 
@@ -114,4 +114,3 @@ You can also build multiple contracts at different directories at once. The same
 ```bash
 cwtools build ../tonbridge-cw-contracts/contracts/* ../oraiswap/contracts/* -o packages/contracts-build/data
 ```
-
