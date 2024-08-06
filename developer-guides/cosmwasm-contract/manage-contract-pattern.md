@@ -15,7 +15,7 @@ tonbridge-sdk/
 ├── packages/
 │   ├── contracts-build/
 │   └── contracts-sdk/
-|   └── contracts-demo/
+│   └── contracts-demo/
 ├── .gitignore
 ├── README.md
 ├── lerna.json
@@ -35,9 +35,9 @@ tonbridge-sdk/
   ├── data/
   │   ├── cw-tonbridge-bridge.wasm
   │   └── cw-tonbridge-validator.wasm
-  |   └── oraiswap-token.wasm
+  │   └── oraiswap-token.wasm
   ├── src/
-  |   ├── index.ts
+  │   ├── index.ts
   ```
 
 - **contracts-sdk**:
@@ -48,12 +48,12 @@ tonbridge-sdk/
   ```
   contracts-sdk/
   ├── src/
-  |   ├── index.ts
-  |   ├── TonbridgeBridge.client.ts
-  |   ├── TonbridgeBridge.types.ts
-  |   ├── TonbridgeValidator.client.ts
-  |   ├── TonbrideValidator.types.ts
-  |   ├── types.ts
+  │   ├── index.ts
+  │   ├── TonbridgeBridge.client.ts
+  │   ├── TonbridgeBridge.types.ts
+  │   ├── TonbridgeValidator.client.ts
+  │   ├── TonbrideValidator.types.ts
+  │   ├── types.ts
   ```
 
   - These files are generated using [CosmWasm tools](./compile-contract.md#install-cosmwasm-tools). You will learn to build contracts and generate types in the [below section](#how-to-setup-the-pattern).
@@ -68,7 +68,7 @@ tonbridge-sdk/
   ```
   contracts-demo/
   ├── tests/
-  |   ├── abcd.test.ts
+  │   ├── abcd.test.ts
   ```
 
 ## Benefits
