@@ -2,7 +2,11 @@
 
 ## Prerequisites
 
-To follow this pattern, you need to install our [CosmWasm tools](./compile-contract.md#install-cosmwasm-tools) first.
+To follow this pattern, you need to install:
+
+- [CosmWasm tools](./compile-contract.md#install-cosmwasm-tools)
+- NPM - for managing a TypeScript mono repo
+- Rust - for building CosmWasm smart contracts
 
 ## The pattern
 

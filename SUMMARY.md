@@ -28,7 +28,7 @@
   * [Deploy a Contract](developer-guides/cosmwasm-contract/deploy-contract.md)
   * [Query a Contract](developer-guides/cosmwasm-contract/query-contract.md)
   * [Send tokens to a Contract](developer-guides/cosmwasm-contract/send-token-to-contract.md)
-  * [Manage Contract using design patterns](developer-guides/cosmwasm-contract/manage-contract-pattern.md)
+  * [Manage Contracts using design patterns](developer-guides/cosmwasm-contract/manage-contract-pattern.md)
   * [End-to-end CosmWasm testing with CW-simulate](developer-guides/cosmwasm-contract/cosmwasm-simulate.md)
 * [CosmWasm IDE](developer-guides/cosmwasm-ide/README.md)
   * [Tutorial 01](developer-guides/cosmwasm-ide/tutorial-01.md)
