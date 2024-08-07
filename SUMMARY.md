@@ -57,6 +57,8 @@
     * [TON Bridge](developer-guides/oraidex/obridge/ton-bridge/README.md)
       * [TON Blockchain 101](developer-guides/oraidex/obridge/ton-bridge/ton-blockchain-101.md)
   * [Decentralization](developer-guides/oraidex/decentralization.md)
+* [Indexers](developer/indexers/overview.md)
+  * [SubQuery](developer/indexers/subquery.md)
 
 ## GOVERNANCE
 
