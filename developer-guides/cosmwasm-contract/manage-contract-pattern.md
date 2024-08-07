@@ -73,7 +73,7 @@ tonbridge-sdk/
   │   ├── abcd.test.ts
   ```
 
-Below is the demo of using TypeScript code gen (@oraichain/tonbridge-contracts-sdk) to interact with TON Light Client contract:
+Below is the demo of using TypeScript code gen `@oraichain/tonbridge-contracts-sdk` to interact with TON Light Client contract:
 
 ```ts
 // url: https://github.com/oraichain/tonbridge-sdk/blob/5b481cdd96fcb9fbed99194ab42e10b51bb2aa9a/packages/contracts-demo/src/demo.ts
