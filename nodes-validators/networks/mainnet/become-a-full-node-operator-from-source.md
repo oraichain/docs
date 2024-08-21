@@ -13,7 +13,7 @@ This tutorial assumes that your node is running Ubuntu LTS version (i.e: 18.04, 
 ### Go version (required)
 
 The Golang version should be from 1.18 and above
-If you have not installed it yet, you can refer to [this document]((https://github.com/iammortimer/docs/blob/master/nodes-validators/tutorials/install-go.md)).
+If you have not installed it yet, you can refer to [this document]((https://github.com/oraichain/docs/blob/master/nodes-validators/tutorials/install-go.md)).
 
 Make sure that `$GOPATH` is in your `$PATH`. It's the crucial part of this tutorial.
 ### Make (required)
