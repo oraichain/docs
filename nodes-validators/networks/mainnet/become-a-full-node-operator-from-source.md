@@ -13,7 +13,7 @@ This tutorial assumes that your node is running Ubuntu LTS version (i.e: 18.04, 
 ### Go version (required)
 
 The Golang version should be from 1.18 and above
-If you have not installed it yet, you can refer to [this document](https://github.com/oraichain/docs/blob/master/developer/tutorials/install-go.md).
+If you have not installed it yet, you can refer to [this document]((https://github.com/oraichain/docs/blob/master/nodes-validators/tutorials/install-go.md)).
 
 Make sure that `$GOPATH` is in your `$PATH`. It's the crucial part of this tutorial.
 ### Make (required)
@@ -50,10 +50,10 @@ git checkout <tag>
 The `<version-tag>` will need to be set to either a testnet or the latest mainnet version tag.
 
 {% hint style="warning" %}
-The current mainnet version tag will be `v0.42.1` - i.e:
+The current mainnet version tag will be `v0.42.2` - i.e:
 
 ```bash
-git checkout v0.42.1
+git checkout v0.42.2
 ```
 {% endhint %}
 
@@ -72,7 +72,7 @@ To confirm that the installation is succeeded, you can run (please make sure tha
 oraid version
 ```
 
-The current binary version for Linux users is v0.42.1
+The current binary version for Linux users is v0.42.2
 
 Libwasmvm version: ```oraid query wasm libwasmvm-version```, which should give: 1.5.2
 
