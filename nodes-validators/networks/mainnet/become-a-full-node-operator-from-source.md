@@ -50,18 +50,17 @@ git checkout <tag>
 The `<version-tag>` will need to be set to either a testnet or the latest mainnet version tag.
 
 {% hint style="warning" %}
-The current mainnet version tag will be `v0.42.3` - i.e:
+The current mainnet version tag will be `v0.42.4` - i.e:
 
 ```bash
-git checkout v0.42.3
+git checkout v0.42.4
 ```
 {% endhint %}
 
 Next, you should be able to build the binary file using the below command:
 
 ```bash
-# go to main folder ($ORAI_HOME/orai/orai)
-cd orai
+# go to main folder ($ORAI_HOME/orai)
 go mod tidy
 make install
 ```
@@ -72,7 +71,7 @@ To confirm that the installation is succeeded, you can run (please make sure tha
 oraid version
 ```
 
-The current binary version for Linux users is v0.42.3
+The current binary version for Linux users is v0.42.4
 
 Libwasmvm version: ```oraid query wasm libwasmvm-version```, which should give: 1.5.2
 
