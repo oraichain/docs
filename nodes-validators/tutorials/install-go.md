@@ -35,4 +35,4 @@ To ensure that Go is installed correctly, use the go version command which shoul
 go version
 ```
 
-If everything was set up correctly, you should see go version go1.21.10 linux/amd64 (or similar, depending on your architecture) in the terminal output.
+If everything was set up correctly, you should see go version go1.22.6 linux/amd64 (or similar, depending on your architecture) in the terminal output.
