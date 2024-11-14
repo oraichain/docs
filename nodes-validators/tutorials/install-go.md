@@ -2,10 +2,10 @@
 
 ### 1. Download Go
 
-First, you need to download the Go 1.21 tarball. Open a terminal and use the following command to download it. Please replace the download URL with the correct one if the version or the link has changed. You can choice another version url from go.dev
+First, you need to download the Go 1.22.6 tarball. Open a terminal and use the following command to download it. Please replace the download URL with the correct one if the version or the link has changed. You can choice another version url from go.dev
 
 ```bash
-wget https://go.dev/dl/go1.21.10.linux-amd64.tar.gz
+wget https://go.dev/dl/go1.22.6.linux-amd64.tar.gz
 ```
 
 ### 2. Extract the Tarball
@@ -13,8 +13,8 @@ wget https://go.dev/dl/go1.21.10.linux-amd64.tar.gz
 Extract the downloaded tarball to /usr/local to install Go. This location is recommended as it is the default and will make version management easier. Use the following command:
 
 ```bash
-sudo tar -C /usr/local -xzf go1.21.10.linux-amd64.tar.gz
-rm go1.21.10.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.22.6.linux-amd64.tar.gz
+rm go1.22.6.linux-amd64.tar.gz
 ```
 
 ### 3. Set Go Environment Variables
