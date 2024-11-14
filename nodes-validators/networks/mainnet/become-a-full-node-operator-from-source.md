@@ -12,7 +12,7 @@ This tutorial assumes that your node is running Ubuntu LTS version (i.e: 18.04, 
 
 ### Go version (required)
 
-The Golang version should be from 1.18 and above
+The Golang version should be from 1.22.6 and above
 If you have not installed it yet, you can refer to [this document](https://github.com/oraichain/docs/blob/master/nodes-validators/tutorials/install-go.md).
 
 Make sure that `$GOPATH` is in your `$PATH`. It's the crucial part of this tutorial.
@@ -38,10 +38,10 @@ export ORAI_HOME="/root"
 ```bash
 # clone the Oraichain network repository
 cd $ORAI_HOME
-git clone https://github.com/oraichain/orai.git
+git clone https://github.com/oraichain/wasmd
 
 # enter the repo
-cd orai
+cd wasmd
 
 # checkout the latest tag
 git checkout <tag>
@@ -50,19 +50,17 @@ git checkout <tag>
 The `<version-tag>` will need to be set to either a testnet or the latest mainnet version tag.
 
 {% hint style="warning" %}
-The current mainnet version tag will be `v0.42.4` - i.e:
+The current mainnet version tag will be `v0.50.1` - i.e:
 
 ```bash
-git checkout v0.42.4
+git checkout v0.50.1
 ```
 {% endhint %}
 
 Next, you should be able to build the binary file using the below command:
 
 ```bash
-# go to main folder ($ORAI_HOME/orai)
-go mod tidy
-make install
+make build
 ```
 After running the above commands, your `oraid` binary can be found in `$GOPATH/bin`.
 To confirm that the installation is succeeded, you can run (please make sure that `$GOPATH/bin` is in your `$PATH`):
@@ -71,9 +69,9 @@ To confirm that the installation is succeeded, you can run (please make sure tha
 oraid version
 ```
 
-The current binary version for Linux users is v0.42.4
+The current binary version for Linux users is v0.50.1
 
-Libwasmvm version: ```oraid query wasm libwasmvm-version```, which should give: 1.5.2
+Libwasmvm version: ```oraid query wasm libwasmvm-version```, which should give: 2.1.3
 
 ## Initialize Orai Node
 
