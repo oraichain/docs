@@ -8,16 +8,14 @@ You can see step of install and setup `oraid` [here](../testnet/become-full-node
 Use oraid to initialize your node (replace the NODE_NAME with a name of your choosing):
 
 ```bash
-oraid init NODE_NAME --home $ORAI_HOME/.oraid --chain-id Oraichain-fork
+oraid init NODE_NAME --home $ORAI_HOME/.oraid --chain-id Oraichain-testnet
 ```
 
 <!-- TODO: // need to export genesis.json file of testnet -->
 Download and place the genesis file in the orai config folder:
 ```bash
-sudo apt-get install wget liblz4-tool aria2 -y
-wget -O $ORAI_HOME/.oraid/config/genesis.tar.lz4 https://orai.s3.us-east-2.amazonaws.com/testnet/genesis.tar.lz4
-lz4 -c -d $ORAI_HOME/.oraid/config/genesis.tar.lz4 | tar -x -C $ORAI_HOME/.oraid/config/
-rm -rf $ORAI_HOME/.oraid/config/genesis.tar.lz4 
+sudo apt-get install wget -y
+wget -O $ORAI_HOME/.oraid/config/genesis.json https://orai.s3.us-east-2.amazonaws.com/testnet/genesis.20240117.json
 ```
 
 ### Finally, your working directory should be like below:
@@ -44,8 +42,8 @@ APP_TOML_PATH=$ORAI_HOME/.oraid/config/app.toml
 CONFIG_TOML_PATH=$ORAI_HOME/.oraid/config/config.toml
 
 SYNC_RPC="https://testnet-v2.rpc.orai.io:443"
-PERSISTENT_PEER_1="3aa2643144cc59e2d60a4b0c328223b0773e5d9e@134.209.164.196:26656"
-PERSISTENT_PEER_2="fc7d01a6ffbbc097e60fcf7b5bb6970d693161c0@134.209.164.196:26666"
+PERSISTENT_PEER_1="e80c9d494188635284bb529308330cac10c326e9@143.198.28.190:26656"
+PERSISTENT_PEER_2="e80c9d494188635284bb529308330cac10c326e9@143.198.28.190:26656"
 
 LATEST_HEIGHT=$(curl -s $SYNC_RPC/block | jq '.result.block.header.height | tonumber')
 TRUST_HEIGHT=$((LATEST_HEIGHT - 5000))
@@ -79,6 +77,3 @@ chmod 700 state-sync.sh
 oraid tendermint unsafe-reset-all --home $ORAI_HOME/.oraid
 oraid start --home $ORAI_HOME/.oraid
 ```
-{% hint style="warning" %}
-Start node process may take many minutes!
-{% endhint %}

@@ -12,7 +12,7 @@ This tutorial assumes that your node is running Ubuntu LTS version (i.e: 18.04, 
 
 ### Go version (required)
 
-The Golang version should be from 1.21 and above
+The Golang version should be from 1.22.7 and above
 If you have not installed it yet, you can refer to [this document](https://github.com/oraichain/docs/blob/master/developer/tutorials/install-go.md).
 
 Make sure that `$GOPATH` is in your `$PATH`. It's the crucial part of this tutorial.
@@ -44,10 +44,10 @@ export ORAI_HOME="/root"
 ```bash
 # clone the Oraichain network repository
 cd $ORAI_HOME
-git clone https://github.com/oraichain/orai.git
+git clone https://github.com/oraichain/wasmd.git
 
 # enter the repo
-cd orai
+cd wasmd
 
 # checkout the latest tag
 git checkout <tag>
@@ -56,19 +56,18 @@ git checkout <tag>
 The `<version-tag>` will need to be set to either a testnet or the latest mainnet version tag.
 
 {% hint style="warning" %}
-The current mainnet version tag will be `v0.42.1` - i.e:
+The current mainnet version tag will be `v0.50.4` - i.e:
 
 ```bash
-git checkout v0.42.1
+git checkout v0.50.4
 ```
 {% endhint %}
 
 Next, you should be able to build the binary file using the below command:
 
 ```bash
-# go to main folder ($ORAI_HOME/orai/orai)
-cd orai
-go mod tidy
+# go to main folder ($ORAI_HOME/wasmd)
+cd wasmd
 make install
 ```
 After running the above commands, your `oraid` binary can be found in `$GOPATH/bin`.
@@ -78,25 +77,23 @@ To confirm that the installation is succeeded, you can run (please make sure tha
 oraid version
 ```
 
-The current binary version for Linux users is v0.42.1
+The current binary version for Linux users is v0.50.4
 
-Libwasmvm version: ```oraid query wasm libwasmvm-version```, which should give: 1.5.2
+Libwasmvm version: ```oraid query wasm libwasmvm-version```, which should give: 2.1.3
 
 # Initialize Orai Testnet Node
 
 Use oraid to initialize your node (replace the NODE_NAME with a name of your choosing):
 
 ```bash
-oraid init NODE_NAME --home $ORAI_HOME/.oraid --chain-id Oraichain-fork
+oraid init NODE_NAME --home $ORAI_HOME/.oraid --chain-id Oraichain-testnet
 ```
 
 <!-- TODO: // need to export genesis.json file of testnet -->
 Download and place the genesis file in the orai config folder:
 ```bash
-sudo apt-get install wget liblz4-tool aria2 -y
-wget -O $ORAI_HOME/.oraid/config/genesis.tar.lz4 https://orai.s3.us-east-2.amazonaws.com/testnet/genesis.tar.lz4
-lz4 -c -d $ORAI_HOME/.oraid/config/genesis.tar.lz4 | tar -x -C $ORAI_HOME/.oraid/config/
-rm -rf $ORAI_HOME/.oraid/config/genesis.tar.lz4 
+sudo apt-get install wget -y
+wget -O $ORAI_HOME/.oraid/config/genesis.json https://orai.s3.us-east-2.amazonaws.com/testnet/genesis.20240117.json
 ```
 
 ### Finally, your working directory should be like below:
@@ -133,14 +130,11 @@ vim $ORAI_HOME/.oraid/config/config.toml
 
 Update seed and persistent_peers address
 ```bash
-seeds = "3aa2643144cc59e2d60a4b0c328223b0773e5d9e@134.209.164.196:26656, fc7d01a6ffbbc097e60fcf7b5bb6970d693161c0@134.209.164.196:26666"
-persistent_peers = "3aa2643144cc59e2d60a4b0c328223b0773e5d9e@134.209.164.196:26656, fc7d01a6ffbbc097e60fcf7b5bb6970d693161c0@134.209.164.196:26666"
+seeds = "e80c9d494188635284bb529308330cac10c326e9@143.198.28.190:26656, e80c9d494188635284bb529308330cac10c326e9@143.198.28.190:26656"
+persistent_peers = "e80c9d494188635284bb529308330cac10c326e9@143.198.28.190:26656, e80c9d494188635284bb529308330cac10c326e9@143.198.28.190:26656"
 ```
 
 Start your node
 ```bash
-oraid start --x-crisis-skip-assert-invariants --home $ORAI_HOME/.oraid
+oraid start --home $ORAI_HOME/.oraid
 ```
-{% hint style="warning" %}
-Start node process may take many minutes, even hour!
-{% endhint %}
