@@ -16,6 +16,7 @@ The Golang version should be from 1.22.6 and above
 If you have not installed it yet, you can refer to [this document](https://github.com/oraichain/docs/blob/master/nodes-validators/tutorials/install-go.md).
 
 Make sure that `$GOPATH` is in your `$PATH`. It's the crucial part of this tutorial.
+
 ### Make (required)
 
 If your node does not have Make, install using: `sudo apt update && sudo apt install make`
@@ -50,11 +51,12 @@ git checkout <tag>
 The `<version-tag>` will need to be set to either a testnet or the latest mainnet version tag.
 
 {% hint style="warning" %}
-The current mainnet version tag will be `v0.50.1` - i.e:
+The current mainnet version tag will be `v0.50.4` - i.e:
 
 ```bash
-git checkout v0.50.1
+git checkout v0.50.4
 ```
+
 {% endhint %}
 
 Next, you should be able to build the binary file using the below command:
@@ -70,9 +72,9 @@ To confirm that the installation is succeeded, you can run (please make sure tha
 oraid version
 ```
 
-The current binary version for Linux users is v0.50.1
+The current binary version for Linux users is v0.50.4
 
-Libwasmvm version: ```oraid query wasm libwasmvm-version```, which should give: 2.1.3
+Libwasmvm version: `oraid query wasm libwasmvm-version`, which should give: 2.1.3
 
 ## Initialize Orai Node
 
@@ -89,6 +91,7 @@ wget -O $ORAI_HOME/.oraid/config/genesis.json https://raw.githubusercontent.com/
 ```
 
 ### Finally, your working directory should be like below:
+
 ```
 $ORAI_HOME/.oraid/
 ├── config
@@ -101,12 +104,13 @@ $ORAI_HOME/.oraid/
 └── data
     └── priv_validator_state.json
 ```
+
 2 directories, 7 files
 
 ## Set Up Cosmovisor
 
 (You may also refer to the Cosmovisor [installation instructions](https://github.com/cosmos/cosmos-sdk/tree/main/tools/cosmovisor#installation).)
-Set up cosmovisor to ensure any future upgrades happen flawlessly. To install Cosmovisor: 
+Set up cosmovisor to ensure any future upgrades happen flawlessly. To install Cosmovisor:
 
 ```bash
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@latest
@@ -144,6 +148,7 @@ oraid version
 ```
 
 ### Finally, your working directory should be like below:
+
 ```
 $ORAI_HOME/.oraid/
 ├── config
@@ -162,6 +167,7 @@ $ORAI_HOME/.oraid/
 └── data
     └── priv_validator_state.json
 ```
+
 7 directories, 8 files
 
 ## Download Chain Data
@@ -188,11 +194,13 @@ vim $ORAI_HOME/.oraid/config/config.toml
 ```
 
 Update seed address
+
 ```bash
 seeds = "e18f82a6da3a9842fa55769955d694f62f7f48bd@seed1.orai.zone:26656,defeea41a01b5afdb79ef2af155866e122797a9c@seed4.orai.zone:26656"
 ```
 
 Some seeds address from Oraichain validators group:
+
 ```
 f223f1be06ef35a6dfe54995f05daeb1897d94d7@seed-node.mms.team:42656
 8542cd7e6bf9d260fef543bc49e59be5a3fa9074@seed.publicnode.com:26656
