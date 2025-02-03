@@ -59,7 +59,6 @@
     * [Become Testnet Fullnode From Source](nodes-validators/networks/testnet/become-full-node-testnet-from-source.md)
     * [StateSync Testnet](nodes-validators/networks/testnet/statesync-fullnode-testnet.md)
 * [Oraichain Tutorials](nodes-validators/tutorials/README.md)
-  * [Manually upgrade your Oraichain node](nodes-validators/tutorials/manual-upgrade.md)
   * [Migrate one Oraichain node to another](nodes-validators/tutorials/node-migration.md)
   * [Cosmovisor](nodes-validators/tutorials/cosmovisor.md)
   * [Update validator image](nodes-validators/tutorials/update-validator-image.md)
