@@ -62,7 +62,7 @@ Next, you should be able to build the binary file using the below command:
 ```bash
 # go to main folder ($ORAI_HOME/orai)
 go mod tidy
-make install
+make build
 ```
 After running the above commands, your `oraid` binary can be found in `$GOPATH/bin`.
 To confirm that the installation is succeeded, you can run (please make sure that `$GOPATH/bin` is in your `$PATH`):

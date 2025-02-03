@@ -64,7 +64,7 @@ In this tutorial, I assume that you have built your own validator node using our
 When a software upgrade proposal passes, we need to prepare the binary file for the upgrade period. Below is the lifecycle of a software update:
 
 1. **Foundation Team Publishes a Release Version**  
-   Example: [v0.42.4 release](https://github.com/oraichain/orai/releases/tag/v0.42.4).
+   Example: [v0.50.4 release](https://github.com/oraichain/orai/releases/tag/v0.50.4).
 
 2. **Foundation Team Submits a Software Upgrade Proposal**  
    Example: [Proposal #244](https://scan.orai.io/proposals/244).  
@@ -74,7 +74,7 @@ When a software upgrade proposal passes, we need to prepare the binary file for 
    First, create the upgrade binary folder:
 
    ```bash
-   mkdir -p $HOME/.oraid/cosmovisor/upgrades/v0.42.4/bin
+   mkdir -p $HOME/.oraid/cosmovisor/upgrades/v0.50.4/bin
    ```
 
    You need to prepare the binary file by building it from the source code. Checkout the release tag mentioned in the proposal, run the `make build` command, and the binary file will be located in `$HOME/go/bin`. Copy this binary to the upgrade folder created earlier:
@@ -82,19 +82,17 @@ When a software upgrade proposal passes, we need to prepare the binary file for 
    ```bash
    cd orai
    git pull
-   git checkout v0.42.4
+   git checkout v0.50.4
    make install
-   cp $(which oraid) $HOME/.oraid/cosmovisor/upgrades/v0.42.4/bin
+   cp $(which oraid) $HOME/.oraid/cosmovisor/upgrades/v0.50.4/bin
    ```
 
-   Verify the version of the binary; it should be `v0.42.4` for both of the commands below:
+   Verify the version of the binary; it should be `v0.50.4` for both of the commands below:
 
    ```bash
    oraid version
-   $HOME/.oraid/cosmovisor/upgrades/v0.42.4/bin/oraid version
+   $HOME/.oraid/cosmovisor/upgrades/v0.50.4/bin/oraid version
    ```
 
-   Now you can rest easy.
-
-4. **Upgrade at the Specified Block Height**  
-   When the network reaches block height `34717352`, Cosmovisor will automatically switch to the new binary folder (`upgrades/v0.42.4/bin`) as mentioned in the proposal and restart the main process. Once 2/3 of validators approve the new block (`34717353`), the upgrade will be successful.
+   Now you can rest ev0.50.4. **Upgrade at the Specified Block Height**  
+   When the network reaches block height `34717352`, Cosmovisor will automatically switch to the new binary folder (`upgrades/v0.50.4/bin`) as mentioned in the proposal and restart the main process. Once 2/3 of validators approve the new block (`34717353`), the upgrade will be successful.
