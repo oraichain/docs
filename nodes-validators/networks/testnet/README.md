@@ -2,7 +2,7 @@
 
 ## Basic Oraichain testnet metadata & properties:
 
-**Chain ID:** Oraichain-fork
+**Chain ID:** Oraichain-testnet
 
 **Coin minimal denom:** orai
 
@@ -14,10 +14,10 @@
 
 **Remote Procedural Call (RPC):** https://testnet-v2.rpc.orai.io/
 
-**Google Remote Procedural Call (gRPC):** http://134.209.164.196:9080
+**Google Remote Procedural Call (gRPC):** http://143.198.28.190:9090
 
-**Cosmos SDK version:** v0.45.16
+**Cosmos SDK version:** v0.50.9
 
-**Tendermint version:** v0.37.0-rc2
+**CometBft version:** v0.38.15
 
-**Cosmwasm-std version:** v0.33.0. Documentation: https://oraiwasm.web.app
+**Cosmwasm-std version:** v0.50.4. Documentation: https://oraiwasm.web.app

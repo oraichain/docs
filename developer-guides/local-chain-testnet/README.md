@@ -33,7 +33,7 @@ go get ./...
 ```
 - Build the binary
 ```bash
-make install
+make build
 ```
 - Check result
 ```bash
