@@ -62,3 +62,4 @@
   * [Migrate one Oraichain node to another](nodes-validators/tutorials/node-migration.md)
   * [Cosmovisor](nodes-validators/tutorials/cosmovisor.md)
   * [Update validator image](nodes-validators/tutorials/update-validator-image.md)
+  * [Tenderduty](nodes-validators/tutorials/tenderduty.md)
