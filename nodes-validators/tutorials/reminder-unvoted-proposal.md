@@ -1,7 +1,3 @@
-Here's the corrected and improved version of your tutorial:
-
----
-
 # **Tracking Unvoted Proposals for Oraichain Network Validators Using `cosmos-proposals-checker`**
 
 ## **Introduction**
@@ -140,10 +136,10 @@ journalctl -u cosmos-proposals-checker -f
 ---
 
 ## **Conclusion**
-By following this guide, you have successfully:
+By following this guide, you have successfully: 
 
-✅ Downloaded and installed `cosmos-proposals-checker`
-✅ Set up the configuration file for **Oraichain**
-✅ Created a **systemd service** to automate execution
+✅ Downloaded and installed `cosmos-proposals-checker` 
+✅ Set up the configuration file for **Oraichain** 
+✅ Created a **systemd service** to automate execution 
 
 Now, your validator will **never miss governance votes again!** 🚀
