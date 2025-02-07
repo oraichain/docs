@@ -63,3 +63,4 @@
   * [Cosmovisor](nodes-validators/tutorials/cosmovisor.md)
   * [Update validator image](nodes-validators/tutorials/update-validator-image.md)
   * [Tenderduty](nodes-validators/tutorials/tenderduty.md)
+  * [Tracking Unvoted Proposals](nodes-validators/tutorials/reminder-unvoted-proposal.md)
