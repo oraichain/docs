@@ -6,7 +6,7 @@
 
 ## **The need for provably-fair randomness in the crypto world**
 
-Random number generators (RNG) are utilized across a multitude of fields including academia, investment back-testing, and gaming. In the crypto space, the need for randomness is also apparent, as astute users and investors demand a bias-free distribution of opportunity. This is where **VRF** **(Verifiable Random Function)** comes into play. It serves as an oracle for smart contracts by which applications can generate unpredictable values with on-chain proof ensuring none of the involved parties tampered with the outcomes.
+Random number generators (RNG) are utilized across a multitude of fields including academia, investment back-testing, and gaming. In the crypto space, the need for randomness is also apparent, as astute users and investors demand a bias-free distribution of opportunity. This is where **VRF** **(Verifiable Random Function)** comes into play. It serves as a blockchain oracle for smart contracts by which applications can generate unpredictable values with on-chain proof ensuring none of the involved parties tampered with the outcomes.
 
 As a result, **VRF** plays an important role in the transparency and fairness of decentralized applications as well as normal applications. Utilizations include such as:
 

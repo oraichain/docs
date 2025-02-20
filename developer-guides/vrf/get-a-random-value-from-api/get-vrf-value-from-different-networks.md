@@ -39,7 +39,7 @@ To generate a VRF value from your blockchain of choice, your contract needs to i
 
 ## Examples for best practices
 
-### ORAI token based VRF Oracle (BNB Chain)
+### ORAI token based VRF blockchain oracle (BNB Chain)
 
 ```
 // SPDX-License-Identifier: MIT
@@ -94,7 +94,7 @@ contract VRFConsumerExample {
 
 ```
 
-### Native token based VRF Oracle (Avalanche, Fantom, etc.)
+### Native token based VRF blockchain oracle (Avalanche, Fantom, etc.)
 
 ```
 // SPDX-License-Identifier: MIT
@@ -147,17 +147,17 @@ contract VRFConsumerExampleNativeFee {
 * After the contract is deployed, you need to transfer an [amount of fee](contract-addresses-and-pricing.md) into it in order to request VRF value(s).
 * You will find yourself using 2 important functions namely _randomnessRequest_ and _fulfillRandomness_
 * Run _randomnessRequest_ function to request a random value. Each request is equivalent to a byte32 requestId retrieved from the oracle.
-* _fulfillRandomness_ is a callback function, which serves as a VRF value receiver. **It is imperative that your smart contract has a **_**fulfillRandomness**_** function with the input that resembles the examples above**. Otherwise, the VRF value generating process shall be reverted.
-* `require(msg.sender == oracle, "Caller must is oracle")`: your _fulfillRandomness_ function neecds to make sure your VRF caller is affiliated to Oraichain.
-* [⚠️](https://emojipedia.org/warning/)Note: You may need to use the function _clearERC20_ or _clearNativeCoin_ to keep your asset from getting stuck &#x20;
-* There are currently two payment methods for Oraichain VRF service, the first of which requires Orai token for Binance Smart Chain; the latter requires native token for Avalanche and Fantom Opera. You must therefore use your wallet accordingly.
+* _fulfillRandomness_ is a callback function, which serves as a VRF value receiver. **It is imperative that your smart contract has a&#x20;**_**fulfillRandomness**_**&#x20;function with the input that resembles the examples above**. Otherwise, the VRF value-generating process shall be reverted.
+* `require(msg.sender == oracle, "Caller must is oracle")`: your _fulfillRandomness_ function neecds to make sure your VRF caller is affiliated with Oraichain.
+* [⚠️](https://emojipedia.org/warning/)Note: You may need to use the function _clearERC20_ or &#x8;_&#x63;learNativeCoin_ to keep your asset from getting stuck &#x20;
+* There are currently two payment methods for Oraichain VRF service, the first of which requires an Orai token for Binance Smart Chain; the latter requires a native token for Avalanche and Fantom Opera. You must therefore use your wallet accordingly.
 * Next, copy either of the example codes above (respective to your network of choice) into Remix IDE to compile and deploy your smart contract.&#x20;
 * After the contract is deployed, you need to transfer an [amount of fee](contract-addresses-and-pricing.md) into it in order to request VRF value(s).
 * You will find yourself using 2 important functions namely _randomnessRequest_ and _fulfillRandomness_
 * Run _randomnessRequest_ function to request a random value. Each request is equivalent to a byte32 requestId retrieved from the oracle.
-* _fulfillRandomness_ is a callback function, which serves as a VRF value receiver. **It is imperative that your smart contract has a **_**fulfillRandomness**_** function with the input that resembles the examples above**. Otherwise, the VRF value generating process shall be reverted.
+* _fulfillRandomness_ is a callback function, which serves as a VRF value receiver. **It is imperative that your smart contract has a&#x20;**_**fulfillRandomness**_**&#x20;function with the input that resembles the examples above**. Otherwise, the VRF value-generating process shall be reverted.
 * `require(msg.sender == oracle, "Caller must is oracle")`: your _fulfillRandomness_ function neecds to make sure your VRF caller is affiliated to Oraichain.
-* [⚠️](https://emojipedia.org/warning/)Note: You may need to use the function _clearERC20_ or _clearNativeCoin_ to keep your asset from getting stuck &#x20;
+* [⚠️](https://emojipedia.org/warning/)Note: You may need to use the function _clearERC20_ or &#x8;_&#x63;learNativeCoin_ to keep your asset from getting stuck &#x20;
 
 ### Specific example
 
