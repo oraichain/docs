@@ -4,39 +4,11 @@ AI will be the next big thing and upgrade of smart contracts in DApps. How to ma
 
 Oraichain also supports regular centralized applications in using AI APIs on the decentralized Oraichain marketplace. Users can find better AI providers with better price in this marketplace.
 
-<!-- ### Oraichain Data Hub — The Fundamental Hub To Empower Data Economy <a href="#326c" id="326c"></a>
-
-Oraichain AI Ecosystem welcomes a new fundamental hub on its vision to accelerate the deployment of blockchain technology to Artificial Intelligence academia and industry. This hub focuses on empowering the data economy with an essential Royalty Protocol developed by Oraichain. The Data Hub will provide all necessary tools to work with and to monetize data while preserving the royalties of creators throughout the future usage and resale of data!
-
-_Access_ [_datahub.orai.io_](https://datahub.orai.io) _to experience the innovation!_ -->
-
 ### aiRight: NFT audit and copyright management
 
-In order to support a transparent and truly trustless NFT ecosystem, Oraichain has developed aiRight, a complete copyright management and farming platform for NFTs that harnesses the power of the world’s first AI Oracle to determine authenticity and point of origin for multimedia works minted on-chain.
+To support a transparent and truly trustless NFT ecosystem, Oraichain has developed aiRight, a complete copyright management and farming platform for NFTs that harnesses the power of the world’s first AI blockchain oracle to determine authenticity and point of origin for multimedia works minted on-chain.
 
-Link: [https://airight.io](https://airight.io)&#x20;
-
-<!-- ### New AI Marketplace
-
-The marketplace is providing access to AI products and APIs aiming to become the one-stop-shop for Artificial Intelligence services.
-
-Link (under maintenance): [https://market.orai.io](https://market.orai.io)
-
-100+ API: [https://blog.orai.io/the-road-to-100-ai-apis-and-test-cases-on-the-oraichain-ai-marketplace-54e763dea7f4](https://blog.orai.io/the-road-to-100-ai-apis-and-test-cases-on-the-oraichain-ai-marketplace-54e763dea7f4) -->
-
-
-
-<!-- ### Yield farming using AI services on Oraichain (yAI)
-
-Beta version: [https://yai.finance](https://yai.finance)
-
-The yield farming based on Oraichain (namely yAI) has got inspiration from yearn.finance (YFI) that helps reduce the complexity of yield trading and provides trading strategies from crowdsourcing DAO voting. Instead of using crowdsourcing knowledge, Oraichain provides AI-based strategies as inputs to smart contracts.
-
-There are three features in this use case:
-
-* AI-based vaults: strategy is optimized based on the metric of ROI, Risk score, and Price prediction. Strategies are provided by AI providers on Oraichain.
-* Metric of ROI, risk score, and price prediction of all pools and vaults getting from Oraichain.
-* Tracking your investment on all pools and vaults getting from Oraichain. -->
+Link: [https://airight.io](https://airight.io)
 
 ### Flexible smart contracts using face authentication
 

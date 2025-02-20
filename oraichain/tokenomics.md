@@ -49,7 +49,7 @@ As the Oraichain Foundation commits to providing deeper transparency for all cur
 
 ### Token Utilities&#x20;
 
-Native ORAI tokens are required to secure and power the decentralized Oracle network of validators. The native ORAI token is used in different scenarios below:
+Native ORAI tokens are required to secure and power the decentralized blockchain oracle network of validators. The native ORAI token is used in different scenarios below:
 
 * **Transaction fee:** the ORAI token is required in order to run an AI request sent to the Oraichain network and run any transaction.
 * **Staking for validators:** all validators are required to stake ORAI in order to be selected to create a block or fulfill data requests.
@@ -72,12 +72,12 @@ Afterward, these validators interact with test cases and AI APIs to create a Msg
 
 There are two ways to mint ORAI tokens on the Oraichain Mainnet 2.0:&#x20;
 
-* The first way is that the ORAI token is rewarded for each newly created block. In the Oraichain network, validators are responsible for creating new blocks, and a random validator is chosen to do that. In order to become a validator, one needs enough ORAI tokens that are staked or delegated. Note that new ORAI tokens are only mined when a block contains one or more transactions with transaction fees. Such fees will be converted into tokens in the form of rewards for the validators.
+* The first way is that the ORAI token is rewarded for each newly created block. In the Oraichain network, validators are responsible for creating new blocks, and a random validator is chosen to do that. To become a validator, one needs enough ORAI tokens that are staked or delegated. Note that new ORAI tokens are only mined when a block contains one or more transactions with transaction fees. Such fees will be converted into tokens in the form of rewards for the validators.
 * The second way is briefly described above, in which the request-executing validators can earn some extra ORAI tokens by executing test cases and data sources. Similar to the first way, 70% of the total transaction fee is extracted as a reward for the first three parties mentioned earlier. The remaining 30% is saved to reward validators for the newly committed block. Nevertheless, this second way only occurs when there is at least a report broadcast to the Oraichain network at the end of a block.
 
 ### Inflation, Staking, and Slashing
 
-In order to keep the value of the ORAI token, holders can stake their token to the Oraichain network. The rewarding token is divided based on the number of tokens that a holder is staking to a validator.
+To keep the value of the ORAI token, holders can stake their token to the Oraichain network. The rewarding token is divided based on the number of tokens that a holder is staking to a validator.
 
 [**Slashing**](https://blog.orai.io/updating-orai-tokenomics-for-sustainable-development-48536becdf49) is a mechanism to penalize misbehaviors of validators in aspects of AI API quality, response time, and availability.
 
