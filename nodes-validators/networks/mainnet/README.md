@@ -10,9 +10,9 @@ Welcome to **Oraichain Mainnet**! Below, you'll find essential details, recommen
 | **Coin Minimal Denom** | `orai` |
 | **Coin Decimal** | `6` |
 | **BIP44 Coin Type** | `118` |
-| **Cosmos SDK Version** | `v0.50.5` |
-| **CometBFT Version** | `v0.38.12` |
-| **CosmWasm-std Version** | `v2.2.0-rc.2` |
+| **Cosmos SDK Version** | `v0.50.12` |
+| **CometBFT Version** | `v0.38.17` |
+| **CosmWasm-std Version** | `v2.1.3` |
 
 ### 🔗 Essential Endpoints  
 
