@@ -43,7 +43,7 @@ RAM: 64GB
 Storage: 1TB SSD  
 ```
 
-### 🔥 100% uptime validator  
+### 🚀 100% uptime validator  
 
 ```
 CPU: 16 vCPUs  
@@ -71,7 +71,3 @@ https://publicnode.com/snapshots
 ```
 
 📢 **Need help?** Join the [Oraichain Validators Group](https://t.me/joinchat/yH9nMLrokQRhZGY1) on Telegram to request snapshot data!  
-
----
-
-This version improves readability, makes key information more visually appealing, and adds a touch of excitement! Let me know if you'd like further refinements. 🚀
