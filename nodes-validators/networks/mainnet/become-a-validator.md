@@ -1,108 +1,108 @@
 # Become a Validator
 
-## Requirement
+## Requirements
 
-#### 1. A synced Node
+### 1. A Synced Node
+You need to have a fully synced node running on the Oraichain mainnet. Follow our [tutorial](#) to set up a node.
 
-You can follow our tutorial to run a node on the Oraichain mainnet.
-
-#### 2. A wallet
-
+### 2. A Wallet
 Your wallet must have some ORAI tokens to delegate and pay transaction fees.
 
-Create a new wallet, change _**KEY\_NAME**_ as you like
-
+#### Create a New Wallet
+Replace `KEY_NAME` with your preferred wallet name:
 ```bash
 oraid keys add KEY_NAME
 ```
+**Important:** Save your passphrase, address, and mnemonic securely.
 
-_**Save your passphrase, address, mnemonic**_
-
-List all your keys
-
+#### List All Keys
 ```bash
 oraid keys list
 ```
 
-Get validator public key
-
+#### Get Validator Public Key
 ```bash
 oraid tendermint show-validator
 ```
 
-## Create validator command
+---
 
-_**After you got wallet address, you must send some oraichain token to this wallet to active it.**_ Here is the empty command
+## Create `validator.json` File
+As of version **v0.50**, creating a `validator.json` file is required.
 
+### Sample `validator.json`
+```json
+{
+    "pubkey": {"@type":"/cosmos.crypto.ed25519.PubKey","key":"XXXXXXXX"},
+    "amount": "1000000orai",
+    "moniker": "myvalidator",
+    "identity": "optional identity signature (ex. UPort or Keybase)",
+    "website": "validator's (optional) website",
+    "security": "validator's (optional) security contact email",
+    "details": "validator's (optional) details",
+    "commission-rate": "0.1",
+    "commission-max-rate": "0.2",
+    "commission-max-change-rate": "0.01",
+    "min-self-delegation": "1"
+}
+```
+Edit the file with your actual validator details:
+
+- **`pubkey`**: The validator's Protobuf JSON encoded public key (retrieved from the previous command).
+- **`amount`**: Amount of coins to bond (e.g., `1000000orai = 1 ORAI` token).
+- **`moniker`**: Your validator's name.
+- **`commission-rate`**: Initial commission rate (e.g., `0.1` for 10%).
+- **`commission-max-rate`**: Maximum commission rate (e.g., `0.2` for 20%).
+- **`commission-max-change-rate`**: Maximum daily commission rate change (e.g., `0.01` for 1% per day).
+- **`min-self-delegation`**: Minimum self-delegation (e.g., `1` ORAI).
+- **`website`**: (Optional) Your validator's website.
+- **`details`**: (Optional) Additional validator information.
+
+---
+
+## Create Validator Command
+Before creating your validator, **fund your wallet with some ORAI tokens** to activate it.
+
+#### Command Format
 ```bash
-oraid tx staking create-validator \
---from=[KEY_NAME] \
---amount=[staking_amount_uorai] \
---pubkey=$(oraid tendermint show-validator) \
---moniker="[moniker_id_of_your_node]" \
---chain-id="[chain-id]" \
---commission-rate="[commission_rate]" \
---commission-max-rate="[maximum_commission_rate]" \
---commission-max-change-rate="[maximum_rate_of_change_of_commission]" \
---min-self-delegation="[min_self_delegation_amount]" \
+oraid tx staking create-validator path/to/validator.json \
+--from [KEY_NAME] \
+--chain-id="Oraichain" \
 --gas="auto" \
---gas-prices="[gas_price]" \
+--gas-prices="[gas_price]"
 ```
 
-Example
-
+#### Example
 ```bash
-oraid tx staking create-validator \
+oraid tx staking create-validator /root/validator.json \
 --from=light1 \
---amount=1000000orai \
---pubkey=$(oraid tendermint show-validator) \
---moniker="OraichainValidator" \
 --chain-id="Oraichain" \
---commission-rate="0.03" \
---commission-max-rate="0.1" \
---commission-max-change-rate="0.1" \
---min-self-delegation="1000000" \
---website="https://orai.io" \
---details="I'm trust and safe validator" \
+--gas="auto" \
 --gas-prices=0.001orai
 ```
 
-The _**from**_ flag is Name or address of private key with which to sign
+### Explanation of Flags
+- **`--from`**: The name or address of the private key used to sign.
+- **`--chain-id`**: The chain ID (fixed as `Oraichain`).
+- **`--gas-prices`**: Gas prices in decimal format to determine the transaction fee.
 
-The _**amount**_ flag is Amount of coins to bond. 1000000orai = 1 oraichain token
+---
 
-The _**pubkey**_ flag is The validator's Protobuf JSON encoded public key
+## Track Your Validator
 
-The _**moniker**_ flag is The validator's name
-
-The _**chain-id**_ flag is Oraichain (default value and can't change)
-
-The _**commission-rate**_ is The initial commission rate percentage (in the example above, 3 percent)
-
-The _**commission-max-rate**_ is The maximum commission rate percentage (in the example above, 10 percent)
-
-The _**commission-max-change-rate**_ is The maximum commission change rate percentage (per day) (in the example above, 1 percent per day until reaching the max rate)
-
-The _**min-self-delegatio**_n is The minimum self delegation required on the validator (in the example above, 1 orai)
-
-The _**gas-prices**_ is Gas prices in decimal format to determine the transaction fee
-
-The _**website**_ flag is The validator's (optional) website
-
-The _**details**_ flag is The validator's (optional) detail
-
-## Track validator
-
-To see the current validator active set: (change OraichainValidator to your moniker name)
-
+### Check Active Validator Set
+Replace `OraichainValidator` with your moniker name:
 ```bash
 oraid query staking validators | grep OraichainValidator
 ```
 
-To track your validator's signing history
-
+### Track Signing History
 ```bash
-oraid query slashing signing-info ${oraid tendermint show-validator}
+oraid query slashing signing-info $(oraid tendermint show-validator)
 ```
 
-Please join the [Oraichain validators group](https://t.me/joinchat/yH9nMLrokQRhZGY1) on Telegram to discuss ideas and problems!
+---
+
+## Join the Validator Community
+Join the [Oraichain validators group](https://t.me/joinchat/yH9nMLrokQRhZGY1) on Telegram to discuss ideas and troubleshoot issues!
+
