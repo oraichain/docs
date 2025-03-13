@@ -76,7 +76,7 @@ Example: [v0.50.8 Release](https://github.com/oraichain/wasmd/releases/tag/v0.50
 #### **2. Foundation Team Submits a Software Upgrade Proposal**
 Example: [Proposal #310](https://scanium.io/Oraichain/gov/310)
 
-- The most important detail is the **block height** at which the upgrade takes effect. In Proposal #244, the upgrade happens at block **`53006170`**.
+- The most important detail is the **block height** at which the upgrade takes effect. In Proposal #310, the upgrade happens at block **`53006170`**.
 - You can track this block height and estimate when the upgrade will occur.
 
 #### **3. Validator's Steps: Prepare the Upgrade Binary**
