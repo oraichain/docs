@@ -1,47 +1,94 @@
-# Tutorial to migrate a node to another node
+# **Seamless Node Migration: A Step-by-Step Guide**
 
-## 1. Back up your current node information
+Migrating your node to a new machine doesn't have to be complicated. Follow this structured guide to ensure a smooth transition with minimal downtime.
 
-You should back up all the node information before migrating to recover if something goes wrong. The two files you want to copy is: **.oraid/config/priv_validator_key.json and .oraid/config/node_key.json**
+>[!CAUTION]
+>⚠️ Do not put priv_validator_key.json on two running nodes simultaneously. Your validator will be jailed forever !!!
 
-## 2. Create a new node
-
-To start migrating, you can create a new node to initialize all the configuration files needed. For more information relating to creating a new node, you can follow the full node operator creation tutorial [here](https://docs.orai.io/developers/networks/mainnet/become-a-full-node-operator-from-source). You can use the same moniker as the current node's
-
-## 3. Start your new node with appropriate persistent connection to an existing node in the network
-
-Your newly created node should synchronize with the network before migrating to reduce the downtime
-
-## 4. Shut the old node down
-
-shut down your node by:
+---
+## **1. Back Up Your Current Node Information**
+Before starting, **backup** your node's essential files to prevent any data loss:
 
 ```bash
-pkill oraid
+cp -r ~/.oraid/config/priv_validator_key.json ~/.oraid/config/node_key.json ~/backup/
 ```
 
-## 5. Copy your current node information to the newly created node
+These files are crucial for maintaining your validator identity.
 
-You can edit freely while keeping your new node running.
+---
+## **2. Set Up a New Node**
 
-## 6. Restart your new node to apply changes and finish the migration process
+Initialize a new node to prepare for the migration. Follow the full node setup guide [here](https://docs.orai.io/developers/networks/mainnet/become-a-full-node-operator-from-source). You can reuse the same moniker as your existing node.
 
-## 7. Check the new node's voting power to confirm the migration
+---
+## **3. Sync the New Node with the Network**
+
+Ensure your new node synchronizes with the network before migration to minimize downtime. Start your new node with a persistent connection to an existing network node.
+
+```bash
+oraid start --p2p.persistent_peers="<existing-node-id>@<ip>:<port>"
+```
+
+Let it fully sync before proceeding.
+
+---
+## **4. Shut Down the Old Node**
+Once the new node is synced, gracefully stop the old node:
+
+```bash
+systemctl stop orai
+```
+
+This step prevents conflicts between the two nodes.
+
+---
+## **5. Transfer Node Data to the New Machine**
+
+Copy the backed-up files to the new node:
+
+```bash
+scp ~/backup/priv_validator_key.json ~/backup/node_key.json <new-node-ip>:~/.oraid/config/
+```
+
+Ensure the new node retains the same identity by using the copied keys.
+
+---
+## **6. Restart the New Node**
+
+Apply the changes by restarting the new node:
+
+```bash
+oraid start
+```
+
+Monitor logs to verify it is running correctly.
+
+---
+## **7. Verify Voting Power and Node ID**
+
+Run the following command to check if your node has successfully migrated:
 
 ```bash
 oraid status && oraid tendermint show-node-id
 ```
 
-if the voting power matches the node you have just migrated from, and the node id matches the current node, then congratuations, you have finished the migration process. If not, don't worry. Please check if you have copied everything right and restart again. A common mistake is to not stop the current node before restarting the new node. Another common mistake is to copy the files to the new node before syncing, as it may cause your new node unable to sync. It is because other nodes will reject connections coming from the same node id that they have been persistently connecting to.
+- If the **voting power** and **node ID** match your previous node, congratulations! 🎉 Your migration is complete.
+- If not, double-check the copied files and restart the node.
+- Common mistakes include not stopping the old node first or copying files before the new node has finished syncing.
 
-Your current node will not be affected during the process. If you want, you can always stop the new node and then start the current node again without any interruptions.
+---
+## **8. Import Your Wallet (Optional)**
 
-You can import your wallet to the new node after the migration process has finished. Type:
+If you need to restore your wallet on the new node, use:
 
 ```bash
-oraid keys add <wallet name> --recover
+oraid keys add <wallet-name> --recover
 ```
 
-Or you can just use the explorer for simplicity.
+Alternatively, use the **explorer** to manage your wallet effortlessly.
 
-**Happy validating!**
+---
+### **Final Thoughts**
+Your old node remains unaffected throughout the process. If needed, you can always revert by restarting the old node.
+
+🚀 **Happy validating!**
