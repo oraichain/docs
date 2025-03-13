@@ -71,47 +71,47 @@ This tutorial assumes you have set up a validator node using [this guide](https:
 ### **Upgrade Process Overview**
 
 #### **1. Foundation Team Publishes a New Release**
-Example: [v0.50.4 Release](https://github.com/oraichain/orai/releases/tag/v0.50.4)
+Example: [v0.50.8 Release](https://github.com/oraichain/wasmd/releases/tag/v0.50.8)
 
 #### **2. Foundation Team Submits a Software Upgrade Proposal**
-Example: [Proposal #244](https://scan.orai.io/proposals/244)
+Example: [Proposal #310](https://scanium.io/Oraichain/gov/310)
 
-- The most important detail is the **block height** at which the upgrade takes effect. In Proposal #244, the upgrade happens at block **`34717352`**.
+- The most important detail is the **block height** at which the upgrade takes effect. In Proposal #244, the upgrade happens at block **`53006170`**.
 - You can track this block height and estimate when the upgrade will occur.
 
 #### **3. Validator's Steps: Prepare the Upgrade Binary**
 
 1. Create the upgrade binary folder:
    ```bash
-   mkdir -p $HOME/.oraid/cosmovisor/upgrades/v0.50.4/bin
+   mkdir -p $HOME/.oraid/cosmovisor/upgrades/v0.50.8/bin
    ```
 2. Build the new binary:
    ```bash
    cd orai
    git pull
-   git checkout v0.50.4
-   make install
+   git checkout v0.50.8
+   make build
    ```
 3. Copy the binary to the upgrade folder:
    ```bash
-   cp $(which oraid) $HOME/.oraid/cosmovisor/upgrades/v0.50.4/bin
+   cp $(which oraid) $HOME/.oraid/cosmovisor/upgrades/v0.50.8/bin
    ```
 4. Verify the new binary version:
    ```bash
    oraid version
-   $HOME/.oraid/cosmovisor/upgrades/v0.50.4/bin/oraid version
+   $HOME/.oraid/cosmovisor/upgrades/v0.50.8/bin/oraid version
    ```
 
-If both commands return `v0.50.4`, the setup is correct, and you are now ready for the upgrade.
+If both commands return `v0.50.8`, the setup is correct, and you are now ready for the upgrade.
 
 #### **4. Automatic Upgrade at the Specified Block Height**
 
-Once the network reaches block **`34717352`**, `cosmovisor` will automatically:
+Once the network reaches block **`53006170`**, `cosmovisor` will automatically:
 - Stop the current binary
-- Switch to the new binary (`upgrades/v0.50.4/bin`)
+- Switch to the new binary (`upgrades/v0.50.8/bin`)
 - Restart the node
 
-When **2/3 of validators approve the next block (`34717353`)**, the upgrade is considered **successful**.
+When **2/3 of validators approve the next block (`53006170`)**, the upgrade is considered **successful**.
 
 ---
 ### **Final Thoughts**
