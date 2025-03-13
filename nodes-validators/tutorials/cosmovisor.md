@@ -1,26 +1,32 @@
-# Cosmovisor
+# **Cosmovisor: Automating Cosmos Node Upgrades**
 
-`cosmovisor` is a small process manager for Cosmos SDK application binaries that monitors the governance module for incoming chain upgrade proposals. If it sees a proposal that gets approved, `cosmovisor` can automatically download the new binary, stop the current binary, switch from the old binary to the new one, and finally restart the node with the new binary.
+`cosmovisor` is a lightweight process manager for Cosmos SDK application binaries that automates the upgrade process. It monitors the governance module for on-chain upgrade proposals and seamlessly handles binary upgrades by:
 
-We recommend validators to use `cosmovisor` to run their nodes. This will make low-downtime upgrades smoother, as validators don’t have to manually upgrade binaries during the upgrade. Instead, they can pre-install new binaries, and `cosmovisor` will automatically update them based on the onchain software upgrade proposals.
+- Downloading and preparing the new binary
+- Stopping the current binary
+- Switching to the upgraded binary
+- Restarting the node with the new binary
 
-## Configuration
+### **Why Use Cosmovisor?**
+For validators, `cosmovisor` significantly reduces downtime during chain upgrades. Instead of manually handling upgrades, validators can pre-install new binaries, allowing `cosmovisor` to execute upgrades automatically when a proposal passes.
 
-More information about Cosmovisor settings can be found in the [Cosmovisor documentation](https://docs.cosmos.network/main/build/tooling/cosmovisor).
+---
+## **Configuration**
 
-## Installation
+More details about `cosmovisor` settings can be found in the [official documentation](https://docs.cosmos.network/main/build/tooling/cosmovisor).
 
-#### Using go install
+---
+## **Installation**
 
-To install the latest version of `cosmovisor`, run the following command:
+### **1. Using Go Install**
+Install the latest version of `cosmovisor` with:
 
 ```bash
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@latest
 ```
 
-#### Manual Build
-
-You can also install from source by pulling the cosmos-sdk repository and switching to the correct version and building as follows:
+### **2. Manual Build**
+Alternatively, build from source:
 
 ```bash
 git clone https://github.com/cosmos/cosmos-sdk.git
@@ -29,20 +35,20 @@ git checkout cosmovisor/vx.x.x
 make cosmovisor
 ```
 
-This will build Cosmovisor in `/cosmovisor`
- directory. Afterwards you may want to put it into your machine's PATH like as follows:
+This builds `cosmovisor` in the `/cosmovisor` directory. To add it to your system’s PATH:
 
 ```bash
 cp cosmovisor/cosmovisor ~/go/bin/cosmovisor
 ```
 
-To check your Cosmovisor version, run
+Verify the installation:
 
 ```bash
 cosmovisor version
 ```
 
-## Directory structure
+---
+## **Directory Structure**
 
 ```
 .
@@ -57,42 +63,59 @@ cosmovisor version
         └── upgrade-info.json
 ```
 
-## Manual Software Update using Cosmovisor
+---
+## **Manual Software Upgrade Using Cosmovisor**
 
-In this tutorial, I assume that you have built your own validator node using our guide in [this link](https://docs.orai.io/nodes-and-validators/networks/mainnet/become-a-full-node-operator-from-source).
+This tutorial assumes you have set up a validator node using [this guide](https://docs.orai.io/nodes-and-validators/networks/mainnet/become-a-full-node-operator-from-source).
 
-When a software upgrade proposal passes, we need to prepare the binary file for the upgrade period. Below is the lifecycle of a software update:
+### **Upgrade Process Overview**
 
-1. **Foundation Team Publishes a Release Version**  
-   Example: [v0.50.4 release](https://github.com/oraichain/orai/releases/tag/v0.50.4).
+#### **1. Foundation Team Publishes a New Release**
+Example: [v0.50.4 Release](https://github.com/oraichain/orai/releases/tag/v0.50.4)
 
-2. **Foundation Team Submits a Software Upgrade Proposal**  
-   Example: [Proposal #244](https://scan.orai.io/proposals/244).  
-   In this example, you can see all the proposal details. The most important piece of information is the block height at which the upgrade will begin. In this case, Proposal #244 specifies the upgrade will occur at block height `34717352`. When you search for this block height, it will typically be in the future, and the estimated time until the upgrade is provided.
+#### **2. Foundation Team Submits a Software Upgrade Proposal**
+Example: [Proposal #244](https://scan.orai.io/proposals/244)
 
-3. **Validator Owner's Step: Prepare the Upgrade Binary**  
-   First, create the upgrade binary folder:
+- The most important detail is the **block height** at which the upgrade takes effect. In Proposal #244, the upgrade happens at block **`34717352`**.
+- You can track this block height and estimate when the upgrade will occur.
 
+#### **3. Validator's Steps: Prepare the Upgrade Binary**
+
+1. Create the upgrade binary folder:
    ```bash
    mkdir -p $HOME/.oraid/cosmovisor/upgrades/v0.50.4/bin
    ```
-
-   You need to prepare the binary file by building it from the source code. Checkout the release tag mentioned in the proposal, run the `make build` command, and the binary file will be located in `$HOME/go/bin`. Copy this binary to the upgrade folder created earlier:
-
+2. Build the new binary:
    ```bash
    cd orai
    git pull
    git checkout v0.50.4
    make install
+   ```
+3. Copy the binary to the upgrade folder:
+   ```bash
    cp $(which oraid) $HOME/.oraid/cosmovisor/upgrades/v0.50.4/bin
    ```
-
-   Verify the version of the binary; it should be `v0.50.4` for both of the commands below:
-
+4. Verify the new binary version:
    ```bash
    oraid version
    $HOME/.oraid/cosmovisor/upgrades/v0.50.4/bin/oraid version
    ```
 
-   Now you can rest ev0.50.4. **Upgrade at the Specified Block Height**  
-   When the network reaches block height `34717352`, Cosmovisor will automatically switch to the new binary folder (`upgrades/v0.50.4/bin`) as mentioned in the proposal and restart the main process. Once 2/3 of validators approve the new block (`34717353`), the upgrade will be successful.
+If both commands return `v0.50.4`, the setup is correct, and you are now ready for the upgrade.
+
+#### **4. Automatic Upgrade at the Specified Block Height**
+
+Once the network reaches block **`34717352`**, `cosmovisor` will automatically:
+- Stop the current binary
+- Switch to the new binary (`upgrades/v0.50.4/bin`)
+- Restart the node
+
+When **2/3 of validators approve the next block (`34717353`)**, the upgrade is considered **successful**.
+
+---
+### **Final Thoughts**
+With `cosmovisor`, software upgrades are seamless and reduce validator downtime. Make sure to follow this guide for every upgrade and ensure your node is prepared in advance.
+
+🚀 **Happy Validating!**
+
