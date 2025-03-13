@@ -72,6 +72,8 @@ https://snapshot.orai.io
 https://snapshot.owallet.io/
 https://polkachu.com/tendermint_snapshots/orai
 https://publicnode.com/snapshots
+https://itrocket.net/services/mainnet/oraichain/#snapshot
+https://server-3.stavr.tech/Mainnet/Orai/
 ```
 
 📢 **Need help?** Join the [Oraichain Validators Group](https://t.me/joinchat/yH9nMLrokQRhZGY1) on Telegram to request snapshot data!
