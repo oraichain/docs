@@ -22,10 +22,10 @@ To enable the described functionalities, Oraichain introduces so-called _statefu
 
 ### Deploy with Ethereum JSON-RPC <a href="#deploy-with-ethereum-json-rpc" id="deploy-with-ethereum-json-rpc"></a>
 
-Oraichain is fully compatible with the [Ethereum JSON-RPC](https://docs.evmos.org/develop/api/ethereum-json-rpc) APIs, allowing you to deploy and interact with smart contracts on Oraichain and connect with existing Ethereum-compatible web3 tooling. This gives you direct access to reading Ethereum-formatted transactions or sending them to the network.
+Oraichain is fully compatible with the Ethereum JSON-RPC APIs, allowing you to deploy and interact with smart contracts on Oraichain and connect with existing Ethereum-compatible web3 tooling. This gives you direct access to reading Ethereum-formatted transactions or sending them to the network.
 
-You can connect to the Oraichain [Testnet](https://docs.evmos.org/develop/testnet) to deploy and test your smart contracts before moving to Mainnet.
+You can connect to the Oraichain [Testnet](../guides/oraichain-evm-rpc.md) to deploy and test your smart contracts before moving to Mainnet.
 
 **Block Explorers**[**​**](https://docs.evmos.org/develop/smart-contracts#block-explorers)**​**
 
-You can use [block explorers](https://docs.evmos.org/develop/block-explorers) to view and debug interactions with your smart contracts deployed on Oraichain. Block explorers index blocks and their transactions so that you can search for real-time and historical information about the blockchain, including data related to blocks, transactions, addresses, and more.
+You can use [block explorers](../guides/tools.md) to view and debug interactions with your smart contracts deployed on Oraichain. Block explorers index blocks and their transactions so that you can search for real-time and historical information about the blockchain, including data related to blocks, transactions, addresses, and more.
