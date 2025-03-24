@@ -44,6 +44,7 @@
   * [Decentralization](developer-guides/oraidex/decentralization.md)
 * [Indexers](developer/indexers/overview.md)
   * [SubQuery](developer/indexers/subquery.md)
+* [OraichainEVM](developer-guides/oraichainevm.md)
 
 ## GOVERNANCE
 
