@@ -48,6 +48,10 @@
   * [Getting started](developer-guides/oraichainevm/getting-started.md)
   * [Smart Contracts](developer-guides/oraichainevm/smart-contracts/README.md)
     * [Oraichain EVM Precompiled Contracts](developer-guides/oraichainevm/smart-contracts/oraichain-evm-precompiled-contracts.md)
+    * [Address](developer-guides/oraichainevm/smart-contracts/address.md)
+    * [Bank](developer-guides/oraichainevm/smart-contracts/bank.md)
+    * [Wasm](developer-guides/oraichainevm/smart-contracts/wasm.md)
+    * [Authz](developer-guides/oraichainevm/smart-contracts/authz.md)
 
 ## GOVERNANCE
 
