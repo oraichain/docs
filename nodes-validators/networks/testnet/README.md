@@ -14,10 +14,8 @@
 
 **Remote Procedural Call (RPC):** https://testnet-v2.rpc.orai.io/
 
-**Google Remote Procedural Call (gRPC):** http://143.198.28.190:9090
+**Cosmos SDK version:** v0.50.13
 
-**Cosmos SDK version:** v0.50.9
+**Faucet**: https://testnet-faucet.orai.io/
 
-**CometBft version:** v0.38.15
-
-**Cosmwasm-std version:** v0.50.4. Documentation: https://oraiwasm.web.app
+[Detailed tutorial to start a testnet fullnode](./become-full-node-testnet-from-source.md)
