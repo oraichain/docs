@@ -52,6 +52,13 @@
     * [Bank](developer-guides/oraichainevm/smart-contracts/bank.md)
     * [Wasm](developer-guides/oraichainevm/smart-contracts/wasm.md)
     * [Authz](developer-guides/oraichainevm/smart-contracts/authz.md)
+  * [Guides](developer-guides/oraichainevm/guides/README.md)
+    * [Metamask](developer-guides/oraichainevm/guides/metamask.md)
+    * [Remix](developer-guides/oraichainevm/guides/remix.md)
+    * [Foundry](developer-guides/oraichainevm/guides/foundry.md)
+    * [Hardhat](developer-guides/oraichainevm/guides/hardhat.md)
+    * [Tools](developer-guides/oraichainevm/guides/tools.md)
+    * [Oraichain EVM RPC](developer-guides/oraichainevm/guides/oraichain-evm-rpc.md)
 
 ## GOVERNANCE
 
