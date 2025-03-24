@@ -44,7 +44,10 @@
   * [Decentralization](developer-guides/oraidex/decentralization.md)
 * [Indexers](developer/indexers/overview.md)
   * [SubQuery](developer/indexers/subquery.md)
-* [OraichainEVM](developer-guides/oraichainevm.md)
+* [OraichainEVM](developer-guides/oraichainevm/README.md)
+  * [Getting started](developer-guides/oraichainevm/getting-started.md)
+  * [Smart Contracts](developer-guides/oraichainevm/smart-contracts/README.md)
+    * [Oraichain EVM Precompiled Contracts](developer-guides/oraichainevm/smart-contracts/oraichain-evm-precompiled-contracts.md)
 
 ## GOVERNANCE
 

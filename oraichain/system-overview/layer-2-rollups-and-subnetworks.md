@@ -6,7 +6,7 @@ The purpose of running subnetworks & Layer 2 rollups adaptations on Oraichain is
 
 Rollups are Layer 2 solutions dominating Ethereum scaling and have been gaining a great popularity in many networks like Syscoin, Cosmos, and many specific projects like Immutable X, zkSync, StarkWare, Loopring, etc.
 
-There are two types of rollups: optimistic rollups(optimism project) and zk-rollups (zksyncs project). Oraichain has customized these both types in its modules when implementing subnetworks for AI Oracles and OraiDEX.&#x20;
+There are two types of rollups: optimistic rollups(optimism project) and zk-rollups (zksyncs project). Oraichain has customized these both types in its modules when implementing subnetworks for AI blockchain oracles and OraiDEX.
 
 ### Subnetworks
 

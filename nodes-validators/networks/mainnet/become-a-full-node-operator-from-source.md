@@ -2,7 +2,7 @@
 description: Instructions to install the oraid binary and run as a service by systemd
 ---
 
-# Oraid Installation and setup
+# Build Linux binary from source and become a Sentry Node Operator
 
 ## Preresquites
 
@@ -12,8 +12,7 @@ This tutorial assumes that your node is running Ubuntu LTS version (i.e: 18.04, 
 
 ### Go version (required)
 
-The Golang version should be from 1.22.6 and above
-If you have not installed it yet, you can refer to [this document](https://github.com/oraichain/docs/blob/master/nodes-validators/tutorials/install-go.md).
+The Golang version should be from 1.22.6 and above If you have not installed it yet, you can refer to [this document](../../tutorials/install-go.md).
 
 Make sure that `$GOPATH` is in your `$PATH`. It's the crucial part of this tutorial.
 
@@ -27,7 +26,7 @@ You need to install Gcc to build the binary. Type: `sudo apt update && sudo apt 
 
 ## Build the binary from source
 
-Please define the `$ORAI_HOME` environment variable which will be used as the working directory, in this tutorial we will assume that your `$ORAI_HOME` is `root`. If you don't define it, all of the following installations will be using your `$HOME` folder as `$ORAI_HOME`, please replace `$ORAI_HOME` with `$HOME` in the corresponding commands (except export ORAI_HOME command).
+Please define the `$ORAI_HOME` environment variable which will be used as the working directory, in this tutorial we will assume that your `$ORAI_HOME` is `root`. If you don't define it, all of the following installations will be using your `$HOME` folder as `$ORAI_HOME`, please replace `$ORAI_HOME` with `$HOME` in the corresponding commands (except export ORAI\_HOME command).
 
 Make sure your user has enough permissions to write data to the `$ORAI_HOME` folder.
 
@@ -56,7 +55,6 @@ The current mainnet version tag will be `v0.50.4` - i.e:
 ```bash
 git checkout v0.50.4
 ```
-
 {% endhint %}
 
 Next, you should be able to build the binary file using the below command:
@@ -65,8 +63,7 @@ Next, you should be able to build the binary file using the below command:
 make build
 ```
 
-After running the above commands, your `oraid` binary can be found in `$GOPATH/bin`.
-To confirm that the installation is succeeded, you can run (please make sure that `$GOPATH/bin` is in your `$PATH`):
+After running the above commands, your `oraid` binary can be found in `$GOPATH/bin`. To confirm that the installation is succeeded, you can run (please make sure that `$GOPATH/bin` is in your `$PATH`):
 
 ```bash
 oraid version
@@ -78,7 +75,7 @@ Libwasmvm version: `oraid query wasm libwasmvm-version`, which should give: 2.1.
 
 ## Initialize Orai Node
 
-Use oraid to initialize your node (replace the NODE_NAME with a name of your choosing):
+Use oraid to initialize your node (replace the NODE\_NAME with a name of your choosing):
 
 ```bash
 oraid init NODE_NAME --home $ORAI_HOME/.oraid --chain-id Oraichain
@@ -109,8 +106,7 @@ $ORAI_HOME/.oraid/
 
 ## Set Up Cosmovisor
 
-(You may also refer to the Cosmovisor [installation instructions](https://github.com/cosmos/cosmos-sdk/tree/main/tools/cosmovisor#installation).)
-Set up cosmovisor to ensure any future upgrades happen flawlessly. To install Cosmovisor:
+(You may also refer to the Cosmovisor [installation instructions](https://github.com/cosmos/cosmos-sdk/tree/main/tools/cosmovisor#installation).) Set up cosmovisor to ensure any future upgrades happen flawlessly. To install Cosmovisor:
 
 ```bash
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@latest
@@ -180,7 +176,7 @@ cd $ORAI_HOME/.oraid
 sudo apt-get install wget liblz4-tool aria2 -y
 ```
 
-We provide a snapshot file every hour, available at https://snapshot.orai.io/. Please change [SNAPSHOT_URL] to the link provided.
+We provide a snapshot file every hour, available at https://snapshot.orai.io/. Please change \[SNAPSHOT\_URL] to the link provided.
 
 ```bash
 wget -O oraichain_latest.tar.lz4 [SNAPSHOT_URL]
@@ -277,8 +273,6 @@ curl -s localhost:26657/status | grep "catching_up"
 oraid status 2>&1 | jq .SyncInfo.check_status
 ```
 
-If the catching_up status is false, your node finishes syncing process.
-Finally, you can delete the snapshot file and backup your config folder.
-The snapshot file may be outdated; you can reach out to our community for it.
+If the catching\_up status is false, your node finishes syncing process. Finally, you can delete the snapshot file and backup your config folder. The snapshot file may be outdated; you can reach out to our community for it.
 
 Please join the [Oraichain validators group](https://t.me/joinchat/yH9nMLrokQRhZGY1) on Telegram to discuss ideas and problems!
