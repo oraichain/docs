@@ -58,6 +58,7 @@
   * [Joining Testnet](nodes-validators/networks/testnet/README.md)
     * [Become Testnet Fullnode From Source](nodes-validators/networks/testnet/become-full-node-testnet-from-source.md)
     * [StateSync Testnet](nodes-validators/networks/testnet/statesync-fullnode-testnet.md)
+    * [Faucet Testnet](nodes-validators/networks/testnet/faucet.md)
 * [Oraichain Tutorials](nodes-validators/tutorials/README.md)
   * [Migrate one Oraichain node to another](nodes-validators/tutorials/node-migration.md)
   * [Cosmovisor](nodes-validators/tutorials/cosmovisor.md)
