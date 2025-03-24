@@ -1,3 +1,3 @@
 # Faucet
 
-Oraichain Testnet Faucet: [https://faucet.orai.io/](https://faucet.orai.io/)
+Oraichain Testnet Faucet: [https://testnet-faucet.orai.io/](https://testnet-faucet.orai.io/)
