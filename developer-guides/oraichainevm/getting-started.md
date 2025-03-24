@@ -4,7 +4,8 @@ Looking to build a dApp on Oraichain? Following this documentation and our acade
 
 
 
-1. Setup [Wallet](broken-reference)
+1. Setup [Wallet](guides/metamask.md)
 2. Connect to Oraichain
-3. Building and deploying [EVM Smart Contracts](broken-reference)
-4. Available developer [Tools](broken-reference)
+3. Building and deploying [EVM Smart Contracts](smart-contracts/)
+4. Available developer [Tools](guides/tools.md)
+
