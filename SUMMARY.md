@@ -26,6 +26,8 @@
 * [Local testnet chain](developer-guides/local-chain-testnet/README.md)
 * [Wallet](developer-guides/wallets/README.md)
   * [OWallet](developer-guides/wallets/owallet.md)
+* [Price Feed](developer-guides/price-feed/README.md)
+  * [CW Oracle Hub](developer-guides/price-feed/cw-oracle-hub.md)
 * [VRF 2.0](developer-guides/vrf/README.md)
   * [Introduction to Oraichain VRF 2.0](developer-guides/vrf/introduction.md)
   * [Get a Random Value from API](developer-guides/vrf/get-a-random-value-from-api/README.md)
