@@ -11,64 +11,64 @@ oraid tx wasm execute CONTRACT '{"some_endpoint":{}}' --amount 1000000orai
 ```
 
 {% hint style="info" %}
-If the "some\_endpoint" execute errors on the contract, the funds will remain in the users account.
+If the "some_endpoint" execute errors on the contract, the funds will remain in the users account.
 {% endhint %}
 
 ## Typescript
 
 ```typescript
-import type {Coin} from "@cosmjs/stargate"
-import { SigningStargateClient, StargateClient, type StdFee } from '@cosmjs/stargate';
+import { coin, makeCosmoshubPath } from "@cosmjs/amino";
+import { GasPrice } from "@cosmjs/stargate";
+import { DirectSecp256k1HdWallet } from "@cosmjs/proto-signing";
+import { SigningCosmWasmClient } from "@cosmjs/cosmwasm-stargate";
+import "dotenv/config";
+import { MsgExec } from "cosmjs-types/cosmos/authz/v1beta1/tx";
+import { MsgSend } from "cosmjs-types/cosmos/bank/v1beta1/tx";
 
-import type { OfflineAminoSigner } from '@cosmjs/amino';
-import type { OfflineDirectSigner } from '@cosmjs/proto-signing';
+const main = async () => {
+  const mnemonic = "YOUR_MNEMONIC_HERE";
+  const chainInfo = {
+    chainId: "Oraichain",
+    rpcEndpoint: "https://rpc.orai.io",
+    prefix: "orai",
+    gasPrice: GasPrice.fromString("0.002orai"),
+    feeToken: "orai",
+  };
+  const hdPath = makeCosmoshubPath(0);
 
-import { SigningCosmWasmClient } from '@cosmjs/cosmwasm-stargate';
+  // Setup signer
+  const offlineSigner = await DirectSecp256k1HdWallet.fromMnemonic(mnemonic, {
+    prefix: chainInfo.prefix,
+    hdPaths: [hdPath],
+  });
 
-let RPC = "https://rpc.orai.io"
+  const { address } = (await offlineSigner.getAccounts())[0];
+  console.log(`Connected to ${address}`);
 
-const getWallet = async (
-    chain_id: string
-): Promise<OfflineAminoSigner | OfflineDirectSigner> => {
-	// open keplr
-	const keplr = window as KeplrWindow;
-	if (keplr === undefined) {			
-		throw new Error('Keplr can not found');
-	}
-	let signer = keplr.getOfflineSignerAuto;
-	if (signer === undefined) {
-		throw new Error('Keplr can not found');
-	}
-	return signer(chain_id);
+  // Init SigningCosmWasmClient client
+  const client = await SigningCosmWasmClient.connectWithSigner(
+    chainInfo.rpcEndpoint,
+    offlineSigner,
+    {
+      gasPrice: chainInfo.gasPrice,
+    }
+  );
+
+  const balance = await client.getBalance(address, chainInfo.feeToken);
+  console.log("balance: ", balance);
+
+  const sendCoin = coin(1000, "orai");
+  const tx = await client.execute(
+    address,
+    "CONTRACT_ADDRESS",
+    "CONTRACT_MSG",
+    "auto",
+    "memo",
+    [sendCoin]
+  );
+
+  console.log("txhash: ", tx.transactionHash);
 };
 
-let wallet = await get_wallet_for_chain("oraichain");
-let address = (await wallet.getAccounts())[0].address;
-
-let from_client = await SigningCosmWasmClient.connectWithSigner(RPC, wallet, {
-	prefix: "orai"
-});
-
-const msg = {"some_endpoint": {}}
-
-let fee: StdFee = {
-    amount: [{amount: "5000",denom: "orai"}],
-    gas: "200000"
-}
-
-let send_amount: Coin = {
-    amount: "100000",
-    denom: "orai"
-}
-
-await from_client.execute(
-	address,
-	REVIEWS_CONTRACT_ADDRESS,
-	msg,
-	fee,
-	"memo",
-	send_amount,
-).then((res) => {
-    console.log(`Success @ height ${res.height}\n\nTxHash: ${res.transactionHash}`)
-});
+main();
 ```
