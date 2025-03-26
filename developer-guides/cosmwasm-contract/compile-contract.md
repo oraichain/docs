@@ -3,7 +3,7 @@
 This guide will provide step-by-step instructions for compiling the cosmwasm smart contract. Example contracts for this can be found at [https://github.com/CosmWasm/cw-examples](https://github.com/CosmWasm/cw-examples).
 
 {% hint style="info" %}
-If you have ZERO experience with smart contracts, you need to check out [book.cosmwasm.com](https://book.cosmwasm.com) for setting up your environment, testnet, and the basics of CosmWasm.\
+If you have ZERO experience with smart contracts, you need to check out [book.cosmwasm.com](https://book.cosmwasm.com) for setting up your environment, testnet, and the basics of CosmWasm.
 {% endhint %}
 
 ## Install cosmwasm-tools

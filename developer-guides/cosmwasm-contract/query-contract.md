@@ -14,15 +14,14 @@ Now we attempt to query this contract address and extract some data from it and 
 
 **NOTE**: A Query can never be empty such as `'{}'` given you need to specify the path of data you want to reach.
 
-<pre class="language-sh"><code class="lang-sh">CONTRACT=orai1anh4pf98fe8uh64uuhaasqdmg89qe6kk5xsklxuvtjmu6rhpg53sj9uejj
-oraid q wasm contract-state smart $CONTRACT '{"abcde":{}}'
+<pre class="language-sh"><code class="lang-sh">CONTRACT=orai1ase8wkkhczqdda83f0cd9lnuyvf47465j70hyk
+oraid q wasm contract-state smart $CONTRACT '{"abcde":{}}' --node https://rpc.orai.io
 
 <strong># Error parsing into type 
-</strong><strong>#    cw721_base::msg::QueryMsg&#x3C;cosmwasm_std::results::empty::Empty>
+</strong><strong>#    Error parsing into type oraichain_nft::msg::QueryMsg: 
 </strong>#    unknown variant `abcde`, 
-#    expected one of `owner_of`, `approval`, `approvals`, `all_operators`, 
-#    `num_tokens`, `contract_info`, `nft_info`, `all_nft_info`, `tokens`, 
-#    `all_tokens`, `minter`, `extension`
+#    expected one of `owner_of`, `approved_for_all`, `num_tokens`, `contract_info`, 
+#    `nft_info`, `all_nft_info`, `tokens`, `all_tokens`, `minter` 
 </code></pre>
 
 {% hint style="info" %}
@@ -34,30 +33,31 @@ The query shows CW721 Base is this contracts name. As this is a standard contrac
 From this, we now know all of the query endpoints and can requests something more specific from the contract for our usage. Let's get
 
 ```sh
-CONTRACT=orai1anh4pf98fe8uh64uuhaasqdmg89qe6kk5xsklxuvtjmu6rhpg53sj9uejj
-oraid q wasm contract-state smart $CONTRACT '{"all_tokens":{}}'
+CONTRACT=orai1ase8wkkhczqdda83f0cd9lnuyvf47465j70hyk
+oraid q wasm contract-state smart $CONTRACT '{"all_tokens":{}}' --node https://rpc.orai.io
 
 data:
   tokens:
-  - "0"
-  - "1"
-  - "2"
-  - "3"
-  - "4"
-  - "5"
-  - "6"
-  - "7"
-  - "8"
+  - "10"
+  - "100"
+  - "1000"
+  - "10005"
+  - "10006"
+  - "10009"
+  - "1001"
+  - "10010"
+  - "10011"
+  - "10023"
   
-# You can use --output=json to read it via JSON form
-# oraid q wasm contract-state smart $CONTRACT '{"all_tokens":{}}' --output=json | jq .data
+# You can use --output json to read it via JSON form
+# oraid q wasm contract-state smart $CONTRACT '{"all_tokens":{}}' --output json | jq .data
 ```
 
 Here we can see there are 8 tokens in this set. Lets query one of the NFTs information
 
 ```bash
-CONTRACT=orai1anh4pf98fe8uh64uuhaasqdmg89qe6kk5xsklxuvtjmu6rhpg53sj9uejj
-oraid q wasm contract-state smart $CONTRACT '{"nft_info":{}}'
+CONTRACT=orai1ase8wkkhczqdda83f0cd9lnuyvf47465j70hyk
+oraid q wasm contract-state smart $CONTRACT '{"nft_info":{}}' --node https://rpc.orai.io
 
 # missing field `token_id`: query wasm contract failed
 ```
@@ -65,10 +65,11 @@ oraid q wasm contract-state smart $CONTRACT '{"nft_info":{}}'
 Just like the first query, we can see that the payload needs more information. It returned an error that we need to specify the token\_id we want the nft\_info for. Note, Uint128 sized numbers are read as a string
 
 ```bash
-CONTRACT=orai1anh4pf98fe8uh64uuhaasqdmg89qe6kk5xsklxuvtjmu6rhpg53sj9uejj
-oraid q wasm contract-state smart $CONTRACT '{"nft_info":{"token_id":"8"}}'
+CONTRACT=orai1ase8wkkhczqdda83f0cd9lnuyvf47465j70hyk
+oraid q wasm contract-state smart $CONTRACT '{"nft_info":{"token_id":"10"}}' --node https://rpc.orai.io
 
 # data:
-#   extension: null
-#   token_uri: ipfs://bafyreib42csdu7426ki7mxk6firvbz4uk3fo4dxpjy2kkskzdhtgj3rriq/metadata.json
+#   description: Thay pagoda, Hoai Duc, Ha Noi
+#   image: https://gateway.ipfs.airight.io/ipfs/QmPhRnGtGWEd1He6zegcKZK86X5uRg2r17AZDNoCXoFqRL
+#   name: Thay pagoda
 ```
