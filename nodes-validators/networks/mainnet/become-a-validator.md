@@ -3,7 +3,7 @@
 ## Requirements
 
 ### 1. A Synced Node
-You need to have a fully synced node running on the Oraichain mainnet. Follow our [tutorial](#) to set up a node.
+You need to have a fully synced node running on the Oraichain mainnet. Follow our [tutorial](./become-a-full-node-operator-from-source.md) to set up a node.
 
 ### 2. A Wallet
 Your wallet must have some ORAI tokens to delegate and pay transaction fees.
